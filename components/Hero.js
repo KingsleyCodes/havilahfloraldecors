@@ -6,12 +6,12 @@ import Image from 'next/image';
 const heroImages = [
   {
     id: 'hero-1',
-    src: '/h1.png',
+    src: '/a2.jpg',
     alt: 'Luxury floral arrangement and table styling for a high-end wedding reception',
   },
   {
     id: 'hero-2',
-    src: '/a2.jpg',
+    src: '/h1.png',
     alt: 'Sophisticated bridal bouquet with bespoke botanical elements',
   },
   {
