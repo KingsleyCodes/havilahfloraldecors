@@ -62,10 +62,11 @@ export default function Navbar() {
       : "bg-transparent py-5 lg:py-7"
     : isScrolled || mobileMenuOpen
       ? "bg-[#F4EFEB]/95 backdrop-blur-md shadow-sm border-b border-[#E6DDD0]/60 py-4"
-      : "bg-[#5F327B] py-5 lg:py-7";
+      : "bg-[#5F327B] py-4 lg:py-5"; // Fixed: Standardized compact padding on non-home pages
 
+  // Turn logo white when over transparent home hero OR over purple navbar background
   const logoBrightnessClass =
-    isHome && !isScrolled && !mobileMenuOpen
+    (isHome && !isScrolled && !mobileMenuOpen) || (!isHome && !isScrolled && !mobileMenuOpen)
       ? "brightness-0 invert"
       : "brightness-100 filter-none";
 

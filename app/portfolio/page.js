@@ -14,7 +14,7 @@ const projectsData = [
     category: "Weddings",
     location: "Lagos, Nigeria",
     year: "2026",
-    image: "/images/portfolio/project-01.jpg",
+    image: "/a1.jpg",
     aspect: "aspect-[16/9]",
     featuredType: "hero",
     description:
@@ -26,7 +26,7 @@ const projectsData = [
     category: "Event Decor",
     location: "Abuja",
     year: "2026",
-    image: "/images/portfolio/project-02.jpg",
+    image: "/por1.jpg",
     aspect: "aspect-[4/5]",
     description: "Avant-garde floral sculptures tailored for a high-profile corporate anniversary."
   },
@@ -36,7 +36,7 @@ const projectsData = [
     category: "Floral Design",
     location: "Victoria Island",
     year: "2025",
-    image: "/images/portfolio/project-03.jpg",
+    image: "/por2.jpg",
     aspect: "aspect-[3/4]",
     description: "Organic asymmetrical ceremony arch blending dried pampas and fresh phalaenopsis orchids."
   },
@@ -46,7 +46,7 @@ const projectsData = [
     category: "Venue Styling",
     location: "Ikoyi",
     year: "2025",
-    image: "/images/portfolio/project-04.jpg",
+    image: "/por3.jpg",
     aspect: "aspect-[16/10]",
     description: "Custom crystal tableware paired with low, immersive botanical arrangements."
   },
@@ -56,7 +56,7 @@ const projectsData = [
     category: "Installations",
     location: "Lagos",
     year: "2025",
-    image: "/images/portfolio/project-05.jpg",
+    image: "/por4.jpg",
     aspect: "aspect-[4/3]",
     description: "A suspended ceiling canopy of emerald greenery and floating white blooms."
   },
@@ -66,7 +66,7 @@ const projectsData = [
     category: "Weddings",
     location: "Eko Atlantic",
     year: "2025",
-    image: "/images/portfolio/project-06.jpg",
+    image: "/por5.jpg",
     aspect: "aspect-[4/5]",
     featuredType: "split-left",
     description:
@@ -78,7 +78,7 @@ const projectsData = [
     category: "Weddings",
     location: "Lekki",
     year: "2025",
-    image: "/images/portfolio/project-07.jpg",
+    image: "/por6.jpg",
     aspect: "aspect-[3/4]",
     description: "Full indoor venue transformation with lush foliage and bespoke floral arches."
   },
@@ -88,7 +88,7 @@ const projectsData = [
     category: "Event Decor",
     location: "Abuja",
     year: "2025",
-    image: "/images/portfolio/project-08.jpg",
+    image: "/po9.jpg",
     aspect: "aspect-[4/5]",
     description: "Warm earthy tones, dried botanical accents, and hand-poured ceramic details."
   },
@@ -98,7 +98,7 @@ const projectsData = [
     category: "Installations",
     location: "Victoria Island",
     year: "2026",
-    image: "/images/portfolio/project-09.jpg",
+    image: "/pp2.jpg",
     aspect: "aspect-[4/5]",
     featuredType: "split-right",
     description:
@@ -110,7 +110,7 @@ const projectsData = [
     category: "Venue Styling",
     location: "Lagos",
     year: "2026",
-    image: "/images/portfolio/project-10.jpg",
+    image: "/po7.jpg",
     aspect: "aspect-[16/10]",
     description: "Sleek contemporary venue arrangement featuring monochromatic dahlia clusters."
   },
@@ -120,7 +120,7 @@ const projectsData = [
     category: "Installations",
     location: "Abuja",
     year: "2026",
-    image: "/images/portfolio/project-11.jpg",
+    image: "/po8.jpg",
     aspect: "aspect-[16/9]",
     featuredType: "final",
     description:
@@ -358,7 +358,7 @@ export default function PortfolioPage() {
         <section className="w-full mb-20 md:mb-32">
           <div className="relative w-full h-[50vh] md:h-[75vh] bg-[#1A1A1A]">
             <Image
-              src="/images/portfolio/project-fullwidth.jpg"
+              src="/pp1.jpg"
               alt="Havilah Grand Floral Installation"
               fill
               loading="lazy"

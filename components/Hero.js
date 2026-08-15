@@ -11,7 +11,7 @@ const heroImages = [
   },
   {
     id: 'hero-2',
-    src: '/h2.png',
+    src: '/a2.jpg',
     alt: 'Sophisticated bridal bouquet with bespoke botanical elements',
   },
   {

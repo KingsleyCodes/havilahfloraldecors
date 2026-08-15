@@ -2,28 +2,28 @@ import Link from "next/link";
 
 const services = [
   {
-   
+    id: "wedding-decor",
     title: "Wedding Decor",
     tagline: "Atmospheric & Intimate",
     description:
       "Curated environments designed around the unique emotion and spatial rhythm of your wedding day.",
   },
   {
-    
+    id: "floral-styling",
     title: "Floral Styling",
     tagline: "Sculptural & Botanical",
     description:
       "Bespoke floral compositions, from delicate bouquets to dramatic living installations and tablescapes.",
   },
   {
-    
+    id: "event-venue-styling",
     title: "Event & Venue Styling",
     tagline: "Immersive Environmental Design",
     description:
       "Full spatial transformation unifying florals, custom lighting, tactile fabrics, and custom furniture.",
   },
   {
-    
+    id: "custom-installations",
     title: "Custom Installations",
     tagline: "Architectural Statements",
     description:
@@ -45,7 +45,7 @@ export default function ServicesSection() {
           {/* LEFT SIDE: RICH BRAND ARCHIVE PANEL */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 bg-[#231326] text-[#FAF6F0] p-6 sm:p-8 md:p-10 rounded-none shadow-sm">
             <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#C4B5C7] block mb-4 sm:mb-6">
-              02 &nbsp;—&nbsp; Portfolio of Services
+              Portfolio of Services
             </span>
             
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.15] mb-4 sm:mb-6 text-[#FAF6F0]">
@@ -77,18 +77,15 @@ export default function ServicesSection() {
 
               return (
                 <div
-                  key={service.number}
+                  key={service.id}
                   className={`group relative bg-[#F3EDF6]/60 p-5 sm:p-6 md:p-8 transition-all duration-500 hover:bg-[#F3EDF6] hover:-translate-y-1 ${
                     isEven ? "lg:mr-4 xl:mr-6" : "lg:ml-4 xl:ml-6"
                   }`}
                 >
                   <Link href="/services" className="block focus:outline-none">
                     
-                    {/* CARD HEADER: NUMBER + TAGLINE */}
+                    {/* CARD HEADER: TAGLINE */}
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                      <span className="font-serif text-xl sm:text-2xl text-[#471963] font-normal italic">
-                        {service.number}
-                      </span>
                       <span className="text-[10px] sm:text-xs uppercase tracking-[0.18em] text-[#5C555B] font-medium">
                         {service.tagline}
                       </span>

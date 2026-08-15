@@ -6,21 +6,21 @@ import Footer from "@/components/Footer";
 // Data structures reflecting Havilah Florals & Decor actual brand positioning and editorial flow
 const philosophies = [
   {
-    number: "01",
+   
     title: "Architectural Intent",
     subtitle: "Beyond Ornamentation",
     description:
       "We believe floral design is an architectural discipline. We do not simply fill tables with blooms; we analyze spatial proportions, sightlines, ceiling heights, and guest movement to construct immersive structures that reframe venues into living canvases.",
   },
   {
-    number: "02",
+  
     title: "Organic Materiality",
     subtitle: "Harmonious Curation",
     description:
       "Our work celebrates the natural movement, texture, and rare seasonal beauty of botanicals. Paired with custom linen selections, bespoke lighting design, and tactile tableware, every element is curated to evoke authentic sensory warmth.",
   },
   {
-    number: "03",
+
     title: "Atmospheric Storytelling",
     subtitle: "Emotionally Grounded",
     description:
@@ -30,28 +30,28 @@ const philosophies = [
 
 const experienceSteps = [
   {
-    step: "01",
+  
     title: "The Vision & Discovery",
     duration: "Phase I",
     description:
       "We begin with an in-depth creative consultation to understand the emotional heart of your event, exploring color palettes, architectural themes, floral preferences, and physical venue dynamics.",
   },
   {
-    step: "02",
+   
     title: "Spatial & Floral Design",
     duration: "Phase II",
     description:
       "Our design studio translates ideas into spatial concepts, floral selections, lighting schematics, and custom structural mockups—ensuring every detail aligns with your refined taste.",
   },
   {
-    step: "03",
+   
     title: "Bespoke Curation",
     duration: "Phase III",
     description:
       "From sourcing rare botanical varieties to crafting custom installation frameworks and selecting complementary tableware, every physical component is meticulously curated.",
   },
   {
-    step: "04",
+   
     title: "Flawless Execution",
     duration: "Phase IV",
     description:
@@ -61,22 +61,22 @@ const experienceSteps = [
 
 const distinctionPoints = [
   {
-    num: "01",
+   
     heading: "Bespoke Event Architecture",
     text: "We specialize in grand-scale transformations—turning blank exhibition halls, private estates, and ballroom venues into intimate, emotionally captivating environments.",
   },
   {
-    num: "02",
+    
     heading: "Artisan Botanical Mastery",
     text: "Our floral artists treat stems like brushstrokes, blending rare local and imported blooms into living installations that honor both natural form and structural balance.",
   },
   {
-    num: "03",
+   
     heading: "Seamless Production Precision",
     text: "Behind our delicate aesthetic lies a disciplined logistical framework. We handle every detail, timeline, and spatial installation so you can experience your day fully.",
   },
   {
-    num: "04",
+    
     heading: "Uncompromising Quality",
     text: "We deliberately limit the number of commissions we accept each season to ensure every couple and host receives our absolute focus, devotion, and artistic rigor.",
   },
@@ -122,7 +122,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
               <div className="lg:col-span-8 relative min-h-[350px] sm:min-h-[480px] md:min-h-[560px] bg-[#E6DFDA] overflow-hidden group">
                 <Image
-                  src="/images/about/hero-main.jpg"
+                  src="/a1.jpg"
                   alt="Havilah Florals luxury botanical event installation setup"
                   fill
                   priority
@@ -138,7 +138,7 @@ export default function AboutPage() {
               <div className="lg:col-span-4 flex flex-col justify-between gap-6">
                 <div className="relative aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/5] bg-[#E6DFDA] overflow-hidden group">
                   <Image
-                    src="/images/about/hero-detail.jpg"
+                    src="/a2.jpg"
                     alt="Close-up detail of rare seasonal blooms and table styling"
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
@@ -182,7 +182,7 @@ export default function AboutPage() {
 
                 <div className="relative aspect-[3/4] w-full max-w-md bg-[#E6DFDA] overflow-hidden border border-[#E6DFDA]">
                   <Image
-                    src="/images/about/story-portrait.jpg"
+                    src="/o1.png"
                     alt="Havilah Florals creative process and arrangement styling"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -371,7 +371,7 @@ export default function AboutPage() {
           className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] min-h-[400px] bg-[#E6DFDA] overflow-hidden"
         >
           <Image
-            src="/images/about/brand-moment.jpg"
+            src="/a1.jpg"
             alt="Immersive floral reception canopy designed by Havilah Florals & Decor"
             fill
             sizes="100vw"
