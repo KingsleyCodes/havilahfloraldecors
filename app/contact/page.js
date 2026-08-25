@@ -4,48 +4,48 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// Customizable direct contact placeholder constants
 const CONTACT_DETAILS = {
-  email: "hello@yourdomain.com",
-  phone: "+234 XXX XXX XXXX",
-  location: "Lagos, Nigeria",
-  instagram: "@yourhandle",
+  email: "havilahflorals@gmail.com",
+  phone: "+2349026810641",
+  location: "Abuja, Nigeria",
+  instagram: "@havilahfloralsdecor",
   instagramUrl: "https://instagram.com",
 };
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     fullName: "",
+    referralSource: "",
     email: "",
     phone: "",
-    eventType: "Wedding",
+    celebrationType: "",
+    celebrationOther: "",
     eventDate: "",
     eventLocation: "",
     guestCount: "",
-    services: [],
-    vision: "",
+    decorTheme: "",
+    eventVision: "",
+    keyElements: [],
+    keyElementOther: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const eventTypeOptions = [
+  const celebrationOptions = [
     "Wedding",
-    "Traditional Wedding",
-    "Engagement",
-    "Birthday Celebration",
-    "Corporate Event",
-    "Private Event",
+    "Birthday",
+    "Dinner",
+    "Bridal shower",
     "Other",
   ];
 
-  const serviceOptions = [
-    "Floral Design",
-    "Wedding Décor",
-    "Venue Styling",
-    "Event Styling",
-    "Floral Installations",
-    "Full Event Design",
+  const keyElementOptions = [
+    "Large florals",
+    "Minimal lush florals",
+    "Ceiling drapery",
+    "Dancefloor installations",
+    "Ambience Lighting",
+    "Table styling",
     "Other",
   ];
 
@@ -54,14 +54,21 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleServiceToggle = (service) => {
+  const handleElementToggle = (element) => {
     setFormData((prev) => {
-      const exists = prev.services.includes(service);
+      const exists = prev.keyElements.includes(element);
+      if (exists) {
+        return {
+          ...prev,
+          keyElements: prev.keyElements.filter((item) => item !== element),
+        };
+      }
+      if (prev.keyElements.length >= 3) {
+        return prev;
+      }
       return {
         ...prev,
-        services: exists
-          ? prev.services.filter((s) => s !== service)
-          : [...prev.services, service],
+        keyElements: [...prev.keyElements, element],
       };
     });
   };
@@ -69,11 +76,10 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate brief interaction delay
+
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1200);
+      window.location.href = "https://calendly.com/havilahflorals";
+    }, 1000);
   };
 
   const scrollToForm = () => {
@@ -88,7 +94,7 @@ export default function ContactPage() {
       <Navbar />
 
       <main className="w-full">
-        {/* 1. HERO SECTION */}
+        {/* HERO SECTION */}
         <section className="pt-28 pb-16 md:pt-36 md:pb-24 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <span className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#5F327B] font-semibold block mb-4">
@@ -108,30 +114,26 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* 2. CONSULTATION INTRODUCTION */}
+        {/* CONSULTATION INTRODUCTION */}
         <section className="py-12 md:py-16 px-6 sm:px-10 lg:px-16 bg-white border-y border-[#EAE5DF]">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-baseline">
             <div className="md:col-span-4">
               <h2 className="font-serif text-2xl sm:text-3xl font-light text-[#1A1A1A]">
-                The First Step Toward Your Vision
+                Hello! Welcome to Havilah Florals Decor!
               </h2>
             </div>
             <div className="md:col-span-8 text-base sm:text-lg text-[#4A4A4A] font-light leading-relaxed space-y-4">
               <p>
-                Every celebration we design is deeply personal. We limit the number
-                of commissions we accept each season to ensure uncompromising
-                attention to detail, thoughtful creative collaboration, and high-touch
-                service from concept to execution.
+                We are absolutely thrilled to be part of this journey with you! Graciously take a few minutes to fill this form so we can better understand your needs and ensure our consultation call is tailored to you! Take your time, every answer matters.
               </p>
-              <p>
-                Please share the details of your upcoming event below, and our team
-                will respond promptly to schedule an initial discovery conversation.
+              <p className="text-sm font-medium text-[#5F327B]">
+                Once submitted, we'll review your details and reach out to confirm your consultation within 24 hours. Thank You!
               </p>
             </div>
           </div>
         </section>
 
-        {/* 3 & 4. CONTACT FORM + DIRECT CONTACT INFORMATION */}
+        {/* CONTACT FORM + DIRECT CONTACT */}
         <section id="enquiry-form" className="py-16 md:py-24 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             
@@ -139,215 +141,283 @@ export default function ContactPage() {
             <div className="lg:col-span-8 bg-white p-6 sm:p-10 md:p-12 border border-[#EAE5DF]">
               <div className="mb-8">
                 <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#1A1A1A] mb-2">
-                  Commission Enquiry
+                  Consultation Enquiry Form
                 </h3>
                 <p className="text-sm text-[#6A6A6A] font-light">
-                  Fields marked with an asterisk (<span className="text-[#5F327B]">*</span>) are required.
+                  All fields marked with an asterisk (<span className="text-[#5F327B]">*</span>) are required.
                 </p>
               </div>
 
-              {isSubmitted ? (
-                <div className="py-12 text-center space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-[#5F327B]/10 text-[#5F327B] flex items-center justify-center mx-auto text-xl font-serif">
-                    ✓
-                  </div>
-                  <h4 className="font-serif text-2xl font-light text-[#1A1A1A]">
-                    Enquiry Received
-                  </h4>
-                  <p className="text-sm sm:text-base text-[#4A4A4A] max-w-md mx-auto font-light">
-                    Thank you for reaching out to Havilah Florals & Decor. We have received your event details and will review them carefully.
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="mt-6 text-xs uppercase tracking-[0.2em] text-[#5F327B] font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
-                  >
-                    Submit Another Enquiry
-                  </button>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                {/* 1. Full Name */}
+                <div className="space-y-2">
+                  <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                    Your Full Name (If it’s for a wedding please respond as eg. Christine Okafor &amp; Frank Akande) <span className="text-[#5F327B]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    required
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    placeholder="e.g. Christine Okafor & Frank Akande"
+                    className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  {/* Personal Info */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="fullName" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                        Full Name <span className="text-[#5F327B]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        required
-                        value={formData.fullName}
-                        onChange={handleInputChange}
-                        placeholder="e.g. Amina Bello"
-                        className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
-                      />
-                    </div>
 
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                        Email Address <span className="text-[#5F327B]">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="e.g. amina@example.com"
-                        className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
-                      />
-                    </div>
+                {/* 2. How did you hear about us */}
+                <div className="space-y-2">
+                  <label htmlFor="referralSource" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                    How did you hear about us? <span className="text-[#5F327B]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="referralSource"
+                    name="referralSource"
+                    required
+                    value={formData.referralSource}
+                    onChange={handleInputChange}
+                    placeholder="e.g. Instagram, Friend recommendation, Google Search"
+                    className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                  />
+                </div>
+
+                {/* 3 & 4. Email & Phone */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                      Your Email Address (suitable for communication) <span className="text-[#5F327B]">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="e.g. christine@example.com"
+                      className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                        Phone Number <span className="text-[#5F327B]">*</span>
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="e.g. +234 800 000 0000"
-                        className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="eventType" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                        Event Type <span className="text-[#5F327B]">*</span>
-                      </label>
-                      <select
-                        id="eventType"
-                        name="eventType"
-                        value={formData.eventType}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors cursor-pointer"
-                      >
-                        {eventTypeOptions.map((option) => (
-                          <option key={option} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                      Your Phone Number (WhatsApp Enabled) <span className="text-[#5F327B]">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="e.g. +234 800 000 0000"
+                      className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
                   </div>
+                </div>
 
-                  {/* Event Details */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="eventDate" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                        Event Date
-                      </label>
-                      <input
-                        type="date"
-                        id="eventDate"
-                        name="eventDate"
-                        value={formData.eventDate}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
-                      />
-                    </div>
+                {/* 5. What are we celebrating? */}
+                <div className="space-y-3">
+                  <label className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                    What are we celebrating? <span className="text-[#5F327B]">*</span>
+                  </label>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {celebrationOptions.map((type) => {
+                      const isSelected = formData.celebrationType === type;
+                      return (
+                        <button
+                          type="button"
+                          key={type}
+                          onClick={() => setFormData((prev) => ({ ...prev, celebrationType: type }))}
+                          className={`px-4 py-3 text-left border text-sm transition-all ${
+                            isSelected
+                              ? "border-[#5F327B] bg-[#5F327B]/5 text-[#5F327B] font-medium"
+                              : "border-[#EAE5DF] bg-[#FAF8F5] text-[#4A4A4A] hover:border-[#CCCCCC]"
+                          }`}
+                        >
+                          <div className="flex items-center gap-2">
+                            <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
+                              isSelected ? "border-[#5F327B] bg-[#5F327B]" : "border-[#B0B0B0]"
+                            }`}>
+                              {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                            </span>
+                            {type}
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {formData.celebrationType === "Other" && (
+                    <input
+                      type="text"
+                      name="celebrationOther"
+                      required
+                      value={formData.celebrationOther}
+                      onChange={handleInputChange}
+                      placeholder="Please specify what you are celebrating *"
+                      className="w-full mt-2 px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
+                  )}
+                  <input type="hidden" name="celebrationTypeHidden" required value={formData.celebrationType} />
+                </div>
 
-                    <div className="space-y-2">
-                      <label htmlFor="guestCount" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                        Estimated Guest Count
-                      </label>
-                      <input
-                        type="text"
-                        id="guestCount"
-                        name="guestCount"
-                        value={formData.guestCount}
-                        onChange={handleInputChange}
-                        placeholder="e.g. 250 - 300"
-                        className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
-                      />
-                    </div>
+                {/* 6 & 7. Date & Location */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="eventDate" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                      Event Date? <span className="text-[#5F327B]">*</span>
+                    </label>
+                    <input
+                      type="date"
+                      id="eventDate"
+                      name="eventDate"
+                      required
+                      value={formData.eventDate}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="eventLocation" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                      Event Location / Venue
+                      Event Venue and Location? <span className="text-[#5F327B]">*</span>
                     </label>
                     <input
                       type="text"
                       id="eventLocation"
                       name="eventLocation"
+                      required
                       value={formData.eventLocation}
                       onChange={handleInputChange}
-                      placeholder="e.g. Victoria Island, Lagos or Destination"
+                     
+                      className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
+                  </div>
+                </div>
+
+                {/* 8 & 9. Guest Count & Theme */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="guestCount" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                      Estimated number of Guests? (eg. 1500) <span className="text-[#5F327B]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="guestCount"
+                      name="guestCount"
+                      required
+                      value={formData.guestCount}
+                      onChange={handleInputChange}
+                      placeholder="e.g. 1500"
                       className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
                     />
                   </div>
 
-                  {/* Checkboxes */}
-                  <div className="space-y-3">
-                    <label className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                      Services Required (Select all that apply)
+                  <div className="space-y-2">
+                    <label htmlFor="decorTheme" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                      What is your decor theme or style? (eg. Rustic, Minimalist, Modern, Arabian) <span className="text-[#5F327B]">*</span>
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                      {serviceOptions.map((service) => {
-                        const isSelected = formData.services.includes(service);
-                        return (
-                          <button
-                            type="button"
-                            key={service}
-                            onClick={() => handleServiceToggle(service)}
-                            className={`flex items-center gap-3 px-4 py-3 text-left border text-sm transition-all ${
+                    <input
+                      type="text"
+                      id="decorTheme"
+                      name="decorTheme"
+                      required
+                      value={formData.decorTheme}
+                      onChange={handleInputChange}
+                      placeholder="e.g. Modern Minimalist, Rustic"
+                      className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
+                  </div>
+                </div>
+
+                {/* 10. Event Vision */}
+                <div className="space-y-2">
+                  <label htmlFor="eventVision" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                    Tell us a bit about your event vision. How do you want to feel as you enter your venue? <span className="text-[#5F327B]">*</span>
+                  </label>
+                  <textarea
+                    id="eventVision"
+                    name="eventVision"
+                    required
+                    rows={4}
+                    value={formData.eventVision}
+                    onChange={handleInputChange}
+                    placeholder="Share your thoughts, feelings, and overall aesthetic goals for the day..."
+                    className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors resize-y min-h-[120px]"
+                  ></textarea>
+                </div>
+
+                {/* 11. Key Decor Elements (Top 3) */}
+                <div className="space-y-3">
+                  <div className="flex justify-between items-baseline">
+                    <label className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
+                      What are the Key Decor Elements most important to you? (Select your Top 3) <span className="text-[#5F327B]">*</span>
+                    </label>
+                    <span className="text-xs text-[#5F327B] font-medium">
+                      {formData.keyElements.length}/3 Selected
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                    {keyElementOptions.map((element) => {
+                      const isSelected = formData.keyElements.includes(element);
+                      return (
+                        <button
+                          type="button"
+                          key={element}
+                          onClick={() => handleElementToggle(element)}
+                          className={`flex items-center gap-3 px-4 py-3 text-left border text-sm transition-all ${
+                            isSelected
+                              ? "border-[#5F327B] bg-[#5F327B]/5 text-[#5F327B] font-medium"
+                              : "border-[#EAE5DF] bg-[#FAF8F5] text-[#4A4A4A] hover:border-[#CCCCCC]"
+                          }`}
+                        >
+                          <span
+                            className={`w-4 h-4 border flex items-center justify-center text-xs transition-colors ${
                               isSelected
-                                ? "border-[#5F327B] bg-[#5F327B]/5 text-[#5F327B] font-medium"
-                                : "border-[#EAE5DF] bg-[#FAF8F5] text-[#4A4A4A] hover:border-[#CCCCCC]"
+                                ? "border-[#5F327B] bg-[#5F327B] text-white"
+                                : "border-[#B0B0B0] bg-white"
                             }`}
                           >
-                            <span
-                              className={`w-4 h-4 border flex items-center justify-center text-xs transition-colors ${
-                                isSelected
-                                  ? "border-[#5F327B] bg-[#5F327B] text-white"
-                                  : "border-[#B0B0B0] bg-white"
-                              }`}
-                            >
-                              {isSelected && "✓"}
-                            </span>
-                            {service}
-                          </button>
-                        );
-                      })}
-                    </div>
+                            {isSelected && "✓"}
+                          </span>
+                          {element}
+                        </button>
+                      );
+                    })}
                   </div>
 
-                  {/* Textarea */}
-                  <div className="space-y-2">
-                    <label htmlFor="vision" className="block text-xs uppercase tracking-wider text-[#1A1A1A] font-semibold">
-                      Tell Us About Your Vision
-                    </label>
-                    <textarea
-                      id="vision"
-                      name="vision"
-                      rows={5}
-                      value={formData.vision}
+                  {formData.keyElements.includes("Other") && (
+                    <input
+                      type="text"
+                      name="keyElementOther"
+                      required
+                      value={formData.keyElementOther}
                       onChange={handleInputChange}
-                      placeholder="Describe the mood, color palette, architectural details, or personal touches you imagine for your event..."
-                      className="w-full px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors resize-y min-h-[120px]"
-                    ></textarea>
-                  </div>
+                      placeholder="Please specify other decor element *"
+                      className="w-full mt-2 px-4 py-3 bg-[#FAF8F5] border border-[#EAE5DF] focus:border-[#5F327B] focus:bg-white text-sm text-[#1A1A1A] outline-none transition-colors"
+                    />
+                  )}
+                  <input
+                    type="hidden"
+                    name="keyElementsValidation"
+                    required
+                    value={formData.keyElements.length > 0 ? "valid" : ""}
+                  />
+                </div>
 
-                  {/* Submit */}
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full sm:w-auto px-10 py-4 bg-[#5F327B] text-white text-xs uppercase tracking-[0.25em] font-semibold hover:bg-[#4C2763] transition-colors disabled:opacity-50"
-                    >
-                      {isSubmitting ? "Sending Enquiry..." : "Send Enquiry"}
-                    </button>
-                  </div>
-                </form>
-              )}
+                {/* Submit Button */}
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto px-10 py-4 bg-[#5F327B] text-white text-xs uppercase tracking-[0.25em] font-semibold hover:bg-[#4C2763] transition-colors disabled:opacity-50"
+                  >
+                    {isSubmitting ? "Redirecting to Schedule..." : "Submit & Schedule Consultation"}
+                  </button>
+                </div>
+              </form>
             </div>
 
             {/* Direct Contact Info Column */}
@@ -358,7 +428,7 @@ export default function ContactPage() {
                     Direct Contact
                   </span>
                   <h3 className="font-serif text-2xl font-light text-[#1A1A1A]">
-                    Studio & Inquiries
+                    Studio &amp; Inquiries
                   </h3>
                 </div>
 
@@ -413,7 +483,7 @@ export default function ContactPage() {
 
                 <div className="pt-6 border-t border-[#EAE5DF]">
                   <p className="text-xs text-[#6A6A6A] leading-relaxed font-light">
-                    Consultations are held by appointment only in our Lagos studio or virtually for international clients.
+                    Consultations are held by appointment only in our studio or virtually for international clients.
                   </p>
                 </div>
               </div>
@@ -422,7 +492,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* 5. WHAT HAPPENS NEXT */}
+        {/* WHAT HAPPENS NEXT */}
         <section className="py-16 md:py-24 bg-white border-t border-[#EAE5DF]">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <div className="mb-12 md:mb-16 max-w-xl">
@@ -452,10 +522,10 @@ export default function ContactPage() {
                   02
                 </span>
                 <h3 className="font-serif text-xl font-light text-[#1A1A1A]">
-                  Consultation & Discovery
+                  Book Consultation
                 </h3>
                 <p className="text-sm text-[#6A6A6A] font-light leading-relaxed">
-                  We invite you to a private studio or virtual session to explore your creative direction in depth.
+                  You will be automatically redirected to Calendly to select a suitable time slot.
                 </p>
               </div>
 
@@ -464,7 +534,7 @@ export default function ContactPage() {
                   03
                 </span>
                 <h3 className="font-serif text-xl font-light text-[#1A1A1A]">
-                  Design & Planning
+                  Design &amp; Planning
                 </h3>
                 <p className="text-sm text-[#6A6A6A] font-light leading-relaxed">
                   Our team curates custom floral concepts, spatial layouts, and detailed mood boards tailored to you.
@@ -486,7 +556,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* 6. FINAL EDITORIAL CTA */}
+        {/* FINAL EDITORIAL CTA */}
         <section className="bg-[#5F327B] text-white py-20 md:py-28 px-6 sm:px-10 lg:px-16 text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-tight">

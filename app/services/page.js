@@ -38,9 +38,7 @@ export default function ServicesPage() {
           <div className="max-w-[1280px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10 items-center">
             
             <div className="col-span-1 md:col-span-7 space-y-8 reveal active">
-              <span className="inline-block px-4 py-1 bg-[#E9E1F0] text-[#471963] text-xs font-semibold rounded-full uppercase tracking-widest">
-                Bespoke Curation
-              </span>
+             
               <h1 className="text-4xl md:text-[72px] font-serif leading-[1.1] text-[#5f327b] tracking-tight">
                 Elevating Moments<br />Through Botanical<br />Artistry.
               </h1>
@@ -211,41 +209,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 px-5 md:px-16 bg-[#5f327b] text-white text-center relative overflow-hidden" id="inquire">
-          <div className="absolute inset-0 opacity-5 pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white"></div>
-          </div>
-          <div className="max-w-2xl mx-auto relative z-10 reveal">
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">Let&apos;s Create Something Beautiful.</h2>
-            <p className="text-lg text-white/80 mb-10 font-sans">
-              Currently accepting commissions for the upcoming season. Reach out to secure your date and begin the design journey.
-            </p>
-            <form className="space-y-6 max-w-md mx-auto text-left">
-              <div>
-                <input
-                  className="w-full bg-transparent border-0 border-b border-white/30 text-white placeholder-white/50 focus:ring-0 focus:border-white text-base pb-2 px-0 transition-colors"
-                  placeholder="Your Name"
-                  type="text"
-                />
-              </div>
-              <div>
-                <input
-                  className="w-full bg-transparent border-0 border-b border-white/30 text-white placeholder-white/50 focus:ring-0 focus:border-white text-base pb-2 px-0 transition-colors"
-                  placeholder="Email Address"
-                  type="email"
-                />
-              </div>
-              <button
-                className="w-full py-4 bg-white text-[#5f327b] text-xs font-semibold uppercase tracking-widest hover:bg-[#EEEDE7] transition-colors duration-300 mt-4 rounded-md"
-                type="button"
-              >
-                Inquire Now
-              </button>
-            </form>
-          </div>
-        </section>
 
       </main>
 

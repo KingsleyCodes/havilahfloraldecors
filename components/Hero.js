@@ -15,19 +15,9 @@ const heroImages = [
     alt: 'Sophisticated bridal bouquet with bespoke botanical elements',
   },
   {
-    id: 'hero-3',
-    src: '/h3.png',
-    alt: 'Grand floral installation and event venue styling',
-  },
-  {
     id: 'hero-4',
     src: '/h4.png',
     alt: 'Elegant candlelit wedding table decor and floral centerpieces',
-  },
-  {
-    id: 'hero-5',
-    src: '/h3.png',
-    alt: 'Immersive luxury event setup and floral design architecture',
   },
 ];
 
@@ -64,7 +54,7 @@ export default function Hero() {
   }, [prefersReducedMotion]);
 
   return (
-    <section className="relative h-screen min-h-[100svh] w-full overflow-hidden bg-[#1A1A1A]">
+    <section className="relative mt-[52px] lg:mt-[64px] h-[calc(100svh-52px)] lg:h-[calc(100svh-64px)] w-full overflow-hidden bg-[#1A1A1A]">
       {heroImages.map((image, index) => {
         const isActive = index === currentIndex;
         const isPrevious = index === previousIndex;
@@ -101,11 +91,6 @@ export default function Hero() {
           </div>
         );
       })}
-
-      {/* Very subtle dark gradient just for the navbar area */}
-      <div className="absolute top-0 left-0 right-0 h-32 z-20 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/5 to-transparent" />
-      </div>
 
       {/* Subtle bottom gradient for smooth transition */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/20 via-transparent to-transparent z-20 pointer-events-none" />

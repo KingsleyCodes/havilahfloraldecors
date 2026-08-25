@@ -12,7 +12,7 @@ const projectsData = [
     id: "project-01",
     title: "The Ivory Cathedral Wedding",
     category: "Weddings",
-    location: "Lagos, Nigeria",
+   
     year: "2026",
     image: "/a1.jpg",
     aspect: "aspect-[16/9]",
@@ -54,7 +54,7 @@ const projectsData = [
     id: "project-05",
     title: "Overhead Hanging Flora",
     category: "Installations",
-    location: "Lagos",
+   
     year: "2025",
     image: "/por4.jpg",
     aspect: "aspect-[4/3]",
@@ -108,7 +108,7 @@ const projectsData = [
     id: "project-10",
     title: "Monochrome Dahlia Pavilion",
     category: "Venue Styling",
-    location: "Lagos",
+    
     year: "2026",
     image: "/po7.jpg",
     aspect: "aspect-[16/10]",
@@ -371,7 +371,7 @@ export default function PortfolioPage() {
               Ethereal Pavilion Environment
             </h4>
             <span className="text-xs uppercase tracking-[0.18em] text-[#8C8275]">
-              Venue Styling · Lagos
+          
             </span>
           </div>
         </section>

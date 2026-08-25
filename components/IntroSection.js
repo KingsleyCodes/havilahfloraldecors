@@ -7,15 +7,9 @@ export default function IntroSection() {
   return (
     <section 
       aria-label="About Havilah Florals and Decor" 
-      className="relative w-full bg-[#FBF9F6] text-[#1A1A1A] py-16 sm:py-24 md:py-32 lg:py-40 transition-colors duration-300"
+      className="relative w-full bg-[#FBF9F6] text-[#1A1A1A] py-8 sm:py-12 md:py-16 lg:py-20 transition-colors duration-300"
     >
       <div className="max-w-[1500px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-        
-        {/* EDITORIAL EYEBROW */}
-        <div className="flex items-center space-x-3 sm:space-x-4 mb-8 sm:mb-12 md:mb-16">
-        
-          <div className="h-[1px] flex-grow bg-[#E8E1DC] max-w-[120px] sm:max-w-[200px]" />
-        </div>
 
         {/* ASYMMETRICAL EDITORIAL GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-start">
@@ -73,11 +67,11 @@ export default function IntroSection() {
             {/* EDITORIAL TEXT CTA LINK */}
             <div className="pt-6 sm:pt-8 border-t border-[#E8E1DC]">
               <Link
-                href="/about"
+                href="/contact"
                 className="group inline-flex items-center space-x-3 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium text-[#471963] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#471963] focus-visible:ring-offset-2"
               >
                 <span className="relative py-1 border-b border-[#471963]/30 group-hover:border-[#471963] transition-colors duration-300">
-                  Discover Our Story
+                 Book A Consultation
                 </span>
                 <span 
                   aria-hidden="true" 

@@ -198,20 +198,20 @@ export default function Footer() {
               Studio & Contact
             </span>
             <div className="space-y-3 text-sm font-light text-[#D4C8D6]">
-              <p className="text-[#FAF6F0]">Lagos, Nigeria</p>
+            
               <p>Available worldwide for destination celebrations.</p>
               <div className="pt-2 space-y-1">
                 <a
-                  href="mailto:hello@havilahfloralsdecor.com"
+                  href="mailto:havilahflorals@gmail.com"
                   className="block text-[#FAF6F0] underline underline-offset-4 decoration-[#3B223E] hover:decoration-[#B388B5] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B388B5]"
                 >
-                  hello@havilahfloralsdecor.com
+                  havilahflorals@gmail.com
                 </a>
                 <a
-                  href="tel:+2340000000000"
+                  href="tel:+2349026810641"
                   className="block text-[#FAF6F0] hover:text-[#B388B5] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B388B5]"
                 >
-                  +234 (0) 800 000 0000
+                  +2349026810641
                 </a>
               </div>
             </div>

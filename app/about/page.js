@@ -6,21 +6,18 @@ import Footer from "@/components/Footer";
 // Data structures reflecting Havilah Florals & Decor actual brand positioning and editorial flow
 const philosophies = [
   {
-   
     title: "Architectural Intent",
     subtitle: "Beyond Ornamentation",
     description:
       "We believe floral design is an architectural discipline. We do not simply fill tables with blooms; we analyze spatial proportions, sightlines, ceiling heights, and guest movement to construct immersive structures that reframe venues into living canvases.",
   },
   {
-  
     title: "Organic Materiality",
     subtitle: "Harmonious Curation",
     description:
       "Our work celebrates the natural movement, texture, and rare seasonal beauty of botanicals. Paired with custom linen selections, bespoke lighting design, and tactile tableware, every element is curated to evoke authentic sensory warmth.",
   },
   {
-
     title: "Atmospheric Storytelling",
     subtitle: "Emotionally Grounded",
     description:
@@ -30,28 +27,24 @@ const philosophies = [
 
 const experienceSteps = [
   {
-  
     title: "The Vision & Discovery",
     duration: "Phase I",
     description:
       "We begin with an in-depth creative consultation to understand the emotional heart of your event, exploring color palettes, architectural themes, floral preferences, and physical venue dynamics.",
   },
   {
-   
     title: "Spatial & Floral Design",
     duration: "Phase II",
     description:
       "Our design studio translates ideas into spatial concepts, floral selections, lighting schematics, and custom structural mockups—ensuring every detail aligns with your refined taste.",
   },
   {
-   
     title: "Bespoke Curation",
     duration: "Phase III",
     description:
       "From sourcing rare botanical varieties to crafting custom installation frameworks and selecting complementary tableware, every physical component is meticulously curated.",
   },
   {
-   
     title: "Flawless Execution",
     duration: "Phase IV",
     description:
@@ -61,22 +54,18 @@ const experienceSteps = [
 
 const distinctionPoints = [
   {
-   
     heading: "Bespoke Event Architecture",
     text: "We specialize in grand-scale transformations—turning blank exhibition halls, private estates, and ballroom venues into intimate, emotionally captivating environments.",
   },
   {
-    
     heading: "Artisan Botanical Mastery",
     text: "Our floral artists treat stems like brushstrokes, blending rare local and imported blooms into living installations that honor both natural form and structural balance.",
   },
   {
-   
     heading: "Seamless Production Precision",
     text: "Behind our delicate aesthetic lies a disciplined logistical framework. We handle every detail, timeline, and spatial installation so you can experience your day fully.",
   },
   {
-    
     heading: "Uncompromising Quality",
     text: "We deliberately limit the number of commissions we accept each season to ensure every couple and host receives our absolute focus, devotion, and artistic rigor.",
   },
@@ -90,7 +79,7 @@ export default function AboutPage() {
 
       <main>
         {/* =========================================================================
-            SECTION 01 — EDITORIAL HERO
+            SECTION — EDITORIAL HERO
             ========================================================================= */}
         <section
           aria-label="About Havilah Florals & Decor"
@@ -102,7 +91,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-12 sm:mb-16 md:mb-20">
               <div className="lg:col-span-8">
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
-                  01 &nbsp;—&nbsp; About Our Studio
+                  About Our Studio
                 </span>
                 <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08] text-[#1A1A1A]">
                   Where thoughtful design becomes an{" "}
@@ -160,7 +149,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 02 — OUR STORY
+            SECTION — OUR STORY
             ========================================================================= */}
         <section
           aria-label="Our Story"
@@ -172,12 +161,9 @@ export default function AboutPage() {
               
               {/* LEFT COLUMN — EDITORIAL STATEMENT */}
               <div className="lg:col-span-5 space-y-6 sm:space-y-8">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block">
-                  02 &nbsp;—&nbsp; The Origin
-                </span>
-
-                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] text-[#1A1A1A]">
-                  Born from a passion for botanical artistry &amp; spatial transformation.
+               
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] text-[#1A1A1A] text-center mx-auto">
+                  Meet the Creative Director
                 </h2>
 
                 <div className="relative aspect-[3/4] w-full max-w-md bg-[#E6DFDA] overflow-hidden border border-[#E6DFDA]">
@@ -194,32 +180,29 @@ export default function AboutPage() {
 
               {/* RIGHT COLUMN — DETAILED STORY NARRATIVE */}
               <div className="lg:col-span-7 space-y-6 sm:space-y-8 lg:pl-6 text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed">
-                <p className="font-serif text-xl sm:text-2xl text-[#1A1A1A] leading-relaxed italic border-l-2 border-[#5F327B] pl-6 py-1">
-                  Havilah Florals &amp; Decor was founded on a simple yet profound premise: celebrations should not look like temporary stages, but feel like bespoke, living environments.
+                <p>
+                  Havilah Florals Decor started because I believe wedding decor should be more than beautiful—it should feel personal. It should reflect the people at the heart of the celebration and tell a story that guests can experience the moment they walk into the space.
                 </p>
 
                 <p>
-                  What started as an intimate passion for floral artistry quickly expanded into a sought-after event styling studio. Based in Nigeria and serving premier destinations, Havilah has established a reputation for balancing artistic freedom with meticulous spatial execution.
+                  Over the years, we&apos;ve had the privilege of helping couples transform ordinary venues into meaningful experiences that celebrate their journey, their personalities, and the love that brought them here.
                 </p>
 
                 <p>
-                  Whether designing a lavish wedding, an exclusive private gala, or a high-profile corporate evening, our philosophy remains steadfast. We curate every flower stem, custom installation, ambient light fixture, and linen fold with intention.
+                  When we work together, I&apos;m not simply thinking about colours, florals, or aesthetics. I&apos;m thinking about the atmosphere you want to create, the memories you want your guests to leave with, and the feeling you want to remember every time you look back on your wedding day.
                 </p>
 
                 <p>
-                  We recognize that our clients are trusting us with their most momentous personal chapters. We do not take that trust lightly; we honor it by delivering an experience marked by professionalism, creative rigor, and absolute calm.
+                  I design for the engaged couple—not just the bride, not just the details, but the story you&apos;re building together.
                 </p>
 
-                <div className="pt-4 grid grid-cols-2 gap-6 border-t border-[#E6DFDA] text-xs uppercase tracking-[0.2em] font-medium text-[#1A1A1A]">
-                  <div>
-                    <span className="text-[#5F327B] block font-serif italic text-lg lowercase tracking-normal">aesthetic</span>
-                    Editorial &amp; Architectural
-                  </div>
-                  <div>
-                    <span className="text-[#5F327B] block font-serif italic text-lg lowercase tracking-normal">focus</span>
-                    Weddings &amp; Luxury Events
-                  </div>
-                </div>
+                <p>
+                  Beyond Havilah, I&apos;m a wife, a mother, and a woman deeply rooted in faith. Those roles shape how I serve every couple: with thoughtfulness, excellence, integrity, and joy.
+                </p>
+
+                <p>
+                  It would be an honour to help you create a celebration that feels beautifully and authentically yours.
+                </p>
               </div>
 
             </div>
@@ -228,7 +211,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 03 — THE HAVILAH PHILOSOPHY
+            SECTION — THE HAVILAH PHILOSOPHY
             ========================================================================= */}
         <section
           aria-label="The Havilah Philosophy"
@@ -238,7 +221,7 @@ export default function AboutPage() {
             
             <div className="max-w-3xl mb-12 sm:mb-16">
               <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
-                03 &nbsp;—&nbsp; Our Philosophy
+                Our Philosophy
               </span>
               <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1A1A] leading-[1.1]">
                 Three pillars that govern every stem, structure, and space we compose.
@@ -246,15 +229,12 @@ export default function AboutPage() {
             </div>
 
             <div className="divide-y divide-[#E6DFDA] border-t border-b border-[#E6DFDA]">
-              {philosophies.map((item) => (
+              {philosophies.map((item, index) => (
                 <article
-                  key={item.number}
+                  key={index}
                   className="py-8 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-baseline group"
                 >
                   <div className="lg:col-span-2 flex items-baseline space-x-3">
-                    <span className="font-serif text-2xl sm:text-3xl italic text-[#5F327B]">
-                      ({item.number})
-                    </span>
                     <span className="text-xs uppercase tracking-widest text-[#5C555B]">
                       Pillar
                     </span>
@@ -282,7 +262,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 04 — WHAT WE BELIEVE
+            SECTION — WHAT WE BELIEVE
             ========================================================================= */}
         <section
           aria-label="What We Believe"
@@ -291,7 +271,7 @@ export default function AboutPage() {
           <div className="max-w-[1300px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
             
             <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-6">
-              04 &nbsp;—&nbsp; Core Belief
+              Core Belief
             </span>
 
             <blockquote className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#1A1A1A] leading-[1.18] max-w-5xl mx-auto mb-8 sm:mb-10">
@@ -306,7 +286,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 05 — THE HAVILAH EXPERIENCE
+            SECTION — THE HAVILAH EXPERIENCE
             ========================================================================= */}
         <section
           aria-label="The Havilah Experience"
@@ -317,7 +297,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-12 sm:mb-16">
               <div className="lg:col-span-8">
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
-                  05 &nbsp;—&nbsp; The Experience
+                  The Experience
                 </span>
                 <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1A1A] leading-[1.1]">
                   A collaborative creative journey designed for absolute peace of mind.
@@ -332,16 +312,13 @@ export default function AboutPage() {
 
             {/* PROCESS GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-              {experienceSteps.map((step) => (
+              {experienceSteps.map((step, index) => (
                 <div
-                  key={step.step}
+                  key={index}
                   className="p-6 sm:p-8 bg-[#FAF8F5] border border-[#E6DFDA] flex flex-col justify-between group hover:border-[#5F327B] transition-colors duration-500"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#E6DFDA]">
-                      <span className="font-serif text-2xl italic text-[#5F327B]">
-                        ({step.step})
-                      </span>
+                    <div className="flex items-center justify-end mb-6 pb-4 border-b border-[#E6DFDA]">
                       <span className="text-[10px] font-mono uppercase tracking-widest text-[#5C555B]">
                         {step.duration}
                       </span>
@@ -364,7 +341,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 06 — VISUAL BRAND MOMENT
+            SECTION — VISUAL BRAND MOMENT
             ========================================================================= */}
         <section
           aria-label="Visual Brand Moment"
@@ -392,7 +369,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 07 — WHY HAVILAH
+            SECTION — WHY HAVILAH
             ========================================================================= */}
         <section
           aria-label="Why Havilah"
@@ -402,7 +379,7 @@ export default function AboutPage() {
             
             <div className="max-w-3xl mb-12 sm:mb-16">
               <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
-                07 &nbsp;—&nbsp; The Distinction
+                The Distinction
               </span>
               <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1A1A] leading-[1.1]">
                 Why discerning hosts and couples partner with our studio.
@@ -410,15 +387,12 @@ export default function AboutPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              {distinctionPoints.map((item) => (
+              {distinctionPoints.map((item, index) => (
                 <div
-                  key={item.num}
+                  key={index}
                   className="p-8 sm:p-10 border border-[#E6DFDA] bg-[#FAF8F5] flex flex-col justify-between group hover:border-[#5F327B] transition-colors duration-300"
                 >
                   <div>
-                    <span className="font-serif text-xl sm:text-2xl italic text-[#5F327B] block mb-4">
-                      ({item.num})
-                    </span>
                     <h3 className="font-serif text-2xl sm:text-3xl text-[#1A1A1A] font-normal mb-3 group-hover:text-[#5F327B] transition-colors duration-300">
                       {item.heading}
                     </h3>
@@ -434,7 +408,7 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            SECTION 08 — CLOSING BRAND STATEMENT
+            SECTION — CLOSING BRAND STATEMENT
             ========================================================================= */}
         <section
           aria-label="Closing Invitation"
@@ -448,7 +422,7 @@ export default function AboutPage() {
           <div className="relative z-10 max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
             
             <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FAF8F5]/70 block mb-4">
-              08 &nbsp;—&nbsp; Begin Your Story
+              Begin Your Story
             </span>
 
             <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] text-[#FAF8F5] max-w-4xl mx-auto mb-6 sm:mb-8">

@@ -106,13 +106,7 @@ export default function FinalCTA() {
 
         </div>
 
-        {/* BOTTOM FRAME & ACCESSIBILITY FOOTNOTE */}
-        <div className="w-full border-b border-[#FAF8F5]/20 mt-16 sm:mt-20 md:mt-24 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] sm:text-xs text-[#FAF8F5]/60">
-          <p>© HAVILAH FLORALS & DECOR. ALL RIGHTS RESERVED.</p>
-          <p className="font-serif italic text-xs text-[#FAF8F5]/80">
-            Crafting memories across West Africa & global destinations.
-          </p>
-        </div>
+       
 
       </div>
     </section>

@@ -16,7 +16,7 @@ export default function Home() {
         <Hero />
         <IntroSection />
         <ServicesSection />
-        <FeaturedPortfolio />
+        {/* <FeaturedPortfolio /> */}
         <HavilahDifference />
         <Testimonials />
         <FinalCTA />

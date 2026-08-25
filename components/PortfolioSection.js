@@ -6,7 +6,7 @@ const portfolioItems = [
     id: "01",
     title: "The Ivory Cathedral",
     category: "Weddings",
-    location: "Lagos",
+ 
     year: "2025",
     image: "/p1.jpg",
     aspectRatio: "aspect-[4/5]",
