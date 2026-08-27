@@ -64,7 +64,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#5F327B] text-white shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white text-black shadow-md border-b border-black/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* DESKTOP LAYOUT (Single Row 3-Column Grid) */}
         <div className="hidden lg:grid grid-cols-3 items-center py-2.5">
@@ -79,12 +79,12 @@ export default function Navbar() {
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                   className={`text-[11px] uppercase tracking-[0.2em] font-light transition-colors duration-300 relative py-1 ${
-                    isActive ? "text-white font-normal" : "text-white/80 hover:text-white"
+                    isActive ? "text-black font-semibold" : "text-black/80 hover:text-black"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[8px] text-amber-200">
+                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[8px] text-[#5F327B]">
                       •
                     </span>
                   )}
@@ -109,7 +109,7 @@ export default function Navbar() {
                   width={320}
                   height={394}
                   priority
-                  className="h-full w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+                  className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </Link>
@@ -127,12 +127,12 @@ export default function Navbar() {
                     href={link.href}
                     aria-current={isActive ? "page" : undefined}
                     className={`text-[11px] uppercase tracking-[0.2em] font-light transition-colors duration-300 relative py-1 ${
-                      isActive ? "text-white font-normal" : "text-white/80 hover:text-white"
+                      isActive ? "text-black font-semibold" : "text-black/80 hover:text-black"
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[8px] text-amber-200">
+                      <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[8px] text-[#5F327B]">
                         •
                       </span>
                     )}
@@ -143,7 +143,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center text-[10px] uppercase tracking-[0.18em] font-medium px-4 py-1.5 rounded-full border border-white/40 hover:bg-white hover:text-[#5F327B] transition-all duration-300 whitespace-nowrap"
+              className="inline-flex items-center justify-center text-[10px] uppercase tracking-[0.18em] font-medium px-4 py-1.5 rounded-full border border-black/40 hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap"
             >
               Book Consultation
             </Link>
@@ -160,7 +160,7 @@ export default function Navbar() {
                 width={320}
                 height={394}
                 priority
-                className="h-full w-auto object-contain brightness-0 invert"
+                className="h-full w-auto object-contain"
               />
             </div>
           </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className="p-1.5 text-white focus-visible:outline-none"
+            className="p-1.5 text-black focus-visible:outline-none"
           >
             <AnimatePresence mode="wait" initial={false}>
               {mobileMenuOpen ? (

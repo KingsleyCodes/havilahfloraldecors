@@ -28,25 +28,25 @@ const philosophies = [
 const experienceSteps = [
   {
     title: "The Vision & Discovery",
-    duration: "Phase I",
+    duration: "Phase",
     description:
       "We begin with an in-depth creative consultation to understand the emotional heart of your event, exploring color palettes, architectural themes, floral preferences, and physical venue dynamics.",
   },
   {
     title: "Spatial & Floral Design",
-    duration: "Phase II",
+    duration: "Phase",
     description:
       "Our design studio translates ideas into spatial concepts, floral selections, lighting schematics, and custom structural mockups—ensuring every detail aligns with your refined taste.",
   },
   {
     title: "Bespoke Curation",
-    duration: "Phase III",
+    duration: "Phase",
     description:
       "From sourcing rare botanical varieties to crafting custom installation frameworks and selecting complementary tableware, every physical component is meticulously curated.",
   },
   {
     title: "Flawless Execution",
-    duration: "Phase IV",
+    duration: "Phase",
     description:
       "On the day of your celebration, our artisan production team manages on-site build-outs, floral conditioning, atmospheric styling, and precise installation with calm, professional rigor.",
   },
@@ -77,110 +77,41 @@ export default function AboutPage() {
       {/* GLOBAL NAVBAR */}
       <Navbar />
 
-      <main>
-        {/* =========================================================================
-            SECTION — EDITORIAL HERO
-            ========================================================================= */}
-        <section
-          aria-label="About Havilah Florals & Decor"
-          className="relative pt-28 sm:pt-36 md:pt-40 pb-16 sm:pb-20 md:pb-24 overflow-hidden border-b border-[#E6DFDA]"
-        >
-          <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-            
-            {/* HERO EDITORIAL HEADER */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-12 sm:mb-16 md:mb-20">
-              <div className="lg:col-span-8">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
-                  About Our Studio
-                </span>
-                <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08] text-[#1A1A1A]">
-                  Where thoughtful design becomes an{" "}
-                  <span className="italic font-light text-[#5F327B]">
-                    unforgettable experience.
-                  </span>
-                </h1>
-              </div>
-              <div className="lg:col-span-4 lg:pb-2">
-                <p className="text-xs sm:text-sm md:text-base text-[#5C555B] font-light leading-relaxed">
-                  Havilah Florals &amp; Decor is a premier floral design and luxury event styling studio. We compose immersive, architectural atmospheres for weddings, galas, and landmark celebrations.
-                </p>
-              </div>
-            </div>
-
-            {/* ASYMMETRIC EDITORIAL PHOTO COMPOSITION */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-              <div className="lg:col-span-8 relative min-h-[350px] sm:min-h-[480px] md:min-h-[560px] bg-[#E6DFDA] overflow-hidden group">
-                <Image
-                  src="/a1.jpg"
-                  alt="Havilah Florals luxury botanical event installation setup"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 66vw"
-                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.02]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-6 left-6 right-6 text-white text-xs font-mono tracking-widest uppercase">
-                  Studio Portfolio &nbsp;|&nbsp; Custom Floral Architecture
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 flex flex-col justify-between gap-6">
-                <div className="relative aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/5] bg-[#E6DFDA] overflow-hidden group">
-                  <Image
-                    src="/a2.jpg"
-                    alt="Close-up detail of rare seasonal blooms and table styling"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div className="p-6 sm:p-8 bg-[#FAF8F5] border border-[#E6DFDA] flex flex-col justify-between">
-                  <span className="font-serif italic text-2xl text-[#5F327B] mb-2 block">
-                    “Atmosphere is everything.”
-                  </span>
-                  <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
-                    Our work blends botanical organic forms with structured spatial layout to turn physical spaces into emotional memories.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
+      <main className="pt-20 lg:pt-24">
         {/* =========================================================================
             SECTION — OUR STORY
             ========================================================================= */}
         <section
           aria-label="Our Story"
-          className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-[#FAF8F5] border-b border-[#E6DFDA]"
+          className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]"
         >
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
               
-              {/* LEFT COLUMN — EDITORIAL STATEMENT */}
-              <div className="lg:col-span-5 space-y-6 sm:space-y-8">
-               
-                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] text-[#1A1A1A] text-center mx-auto">
+              {/* LEFT COLUMN — CREATIVE DIRECTOR PHOTO & TITLE */}
+              <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
+                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block">
+                  Creative Leadership
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#1A1A1A]">
                   Meet the Creative Director
                 </h2>
 
-                <div className="relative aspect-[3/4] w-full max-w-md bg-[#E6DFDA] overflow-hidden border border-[#E6DFDA]">
+                <div className="relative aspect-[4/5] w-full bg-[#E6DFDA] overflow-hidden rounded-sm shadow-sm border border-[#E6DFDA]">
                   <Image
                     src="/o1.png"
                     alt="Havilah Florals creative process and arrangement styling"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
                   />
-                  <div className="absolute inset-0 border-[8px] border-[#FAF8F5]/30 pointer-events-none" />
+                  <div className="absolute inset-0 border-[6px] border-[#FAF8F5]/20 pointer-events-none" />
                 </div>
               </div>
 
               {/* RIGHT COLUMN — DETAILED STORY NARRATIVE */}
-              <div className="lg:col-span-7 space-y-6 sm:space-y-8 lg:pl-6 text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed">
-                <p>
+              <div className="lg:col-span-7 bg-white/60 p-6 sm:p-8 rounded-sm border border-[#E6DFDA]/80 shadow-xs space-y-4 text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl font-serif text-[#1A1A1A] italic leading-snug">
                   Havilah Florals Decor started because I believe wedding decor should be more than beautiful—it should feel personal. It should reflect the people at the heart of the celebration and tell a story that guests can experience the moment they walk into the space.
                 </p>
 
@@ -200,13 +131,12 @@ export default function AboutPage() {
                   Beyond Havilah, I&apos;m a wife, a mother, and a woman deeply rooted in faith. Those roles shape how I serve every couple: with thoughtfulness, excellence, integrity, and joy.
                 </p>
 
-                <p>
+                <p className="pt-2 font-medium text-[#1A1A1A]">
                   It would be an honour to help you create a celebration that feels beautifully and authentically yours.
                 </p>
               </div>
 
             </div>
-
           </div>
         </section>
 
@@ -215,42 +145,42 @@ export default function AboutPage() {
             ========================================================================= */}
         <section
           aria-label="The Havilah Philosophy"
-          className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-[#FAF8F5] border-b border-[#E6DFDA]"
+          className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]"
         >
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
             
-            <div className="max-w-3xl mb-12 sm:mb-16">
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
-                Our Philosophy
-              </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1A1A] leading-[1.1]">
-                Three pillars that govern every stem, structure, and space we compose.
-              </h2>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-4 border-b border-[#E6DFDA]">
+              <div className="max-w-2xl">
+                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-1.5">
+                  Our Philosophy
+                </span>
+                <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#1A1A1A] leading-[1.1]">
+                  Pillars that govern every stem, structure, and space we compose.
+                </h2>
+              </div>
             </div>
 
-            <div className="divide-y divide-[#E6DFDA] border-t border-b border-[#E6DFDA]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {philosophies.map((item, index) => (
                 <article
                   key={index}
-                  className="py-8 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-baseline group"
+                  className="p-6 bg-white border border-[#E6DFDA] rounded-sm flex flex-col justify-between group hover:shadow-md hover:border-[#5F327B]/40 transition-all duration-300"
                 >
-                  <div className="lg:col-span-2 flex items-baseline space-x-3">
-                    <span className="text-xs uppercase tracking-widest text-[#5C555B]">
-                      Pillar
-                    </span>
-                  </div>
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[10px] uppercase tracking-widest text-[#5C555B] font-mono">
+                        Pillar
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.18em] text-[#5F327B] font-medium px-2 py-0.5 bg-[#F4EFF6] rounded">
+                        {item.subtitle}
+                      </span>
+                    </div>
 
-                  <div className="lg:col-span-4">
-                    <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300">
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#1A1A1A] mb-3 group-hover:text-[#5F327B] transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <span className="text-xs uppercase tracking-[0.18em] text-[#5F327B] font-medium block mt-1">
-                      {item.subtitle}
-                    </span>
-                  </div>
 
-                  <div className="lg:col-span-6">
-                    <p className="text-xs sm:text-sm md:text-base text-[#5C555B] font-light leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -266,19 +196,19 @@ export default function AboutPage() {
             ========================================================================= */}
         <section
           aria-label="What We Believe"
-          className="relative py-20 sm:py-24 md:py-28 bg-[#F4EFF6] text-[#1A1A1A] border-b border-[#E6DFDA]"
+          className="relative py-8 sm:py-10 bg-[#F4EFF6] text-[#1A1A1A] border-b border-[#E6DFDA]"
         >
           <div className="max-w-[1300px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
             
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-6">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3">
               Core Belief
             </span>
 
-            <blockquote className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#1A1A1A] leading-[1.18] max-w-5xl mx-auto mb-8 sm:mb-10">
+            <blockquote className="font-serif text-xl sm:text-3xl md:text-4xl font-normal text-[#1A1A1A] leading-[1.25] max-w-4xl mx-auto mb-4">
               “Beauty is not an afterthought added to a room. True design is the invisible energy that makes guests feel genuinely honored to be there.”
             </blockquote>
 
-            <p className="max-w-2xl mx-auto text-xs sm:text-sm md:text-base text-[#5C555B] font-light leading-relaxed">
+            <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
               We believe in the quiet luxury of thoughtful detail, the power of organic botanical composition, and the lasting impact of a seamlessly executed event environment.
             </p>
 
@@ -290,20 +220,20 @@ export default function AboutPage() {
             ========================================================================= */}
         <section
           aria-label="The Havilah Experience"
-          className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-[#FAF8F5] border-b border-[#E6DFDA]"
+          className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]"
         >
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-12 sm:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-end mb-6">
               <div className="lg:col-span-8">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-1.5">
                   The Experience
                 </span>
-                <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1A1A] leading-[1.1]">
+                <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#1A1A1A] leading-[1.1]">
                   A collaborative creative journey designed for absolute peace of mind.
                 </h2>
               </div>
-              <div className="lg:col-span-4 lg:pb-2">
+              <div className="lg:col-span-4 lg:pb-1">
                 <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
                   From initial vision mapping to late-night event teardown, our structural process guarantees clarity and artistic perfection.
                 </p>
@@ -311,26 +241,26 @@ export default function AboutPage() {
             </div>
 
             {/* PROCESS GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {experienceSteps.map((step, index) => (
                 <div
                   key={index}
-                  className="p-6 sm:p-8 bg-[#FAF8F5] border border-[#E6DFDA] flex flex-col justify-between group hover:border-[#5F327B] transition-colors duration-500"
+                  className="p-5 bg-white border border-[#E6DFDA] rounded-sm flex flex-col justify-between group hover:border-[#5F327B] transition-colors duration-300"
                 >
                   <div>
-                    <div className="flex items-center justify-end mb-6 pb-4 border-b border-[#E6DFDA]">
+                    <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#E6DFDA]">
                       <span className="text-[10px] font-mono uppercase tracking-widest text-[#5C555B]">
                         {step.duration}
                       </span>
                     </div>
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#1A1A1A] mb-3 group-hover:text-[#5F327B] transition-colors duration-300">
+                    <h3 className="font-serif text-lg sm:text-xl font-normal text-[#1A1A1A] mb-2 group-hover:text-[#5F327B] transition-colors duration-300">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
+                    <p className="text-xs text-[#5C555B] font-light leading-relaxed">
                       {step.description}
                     </p>
                   </div>
-                  <div className="mt-8 pt-4 border-t border-[#E6DFDA]/60 text-[10px] uppercase tracking-widest text-[#5F327B]">
+                  <div className="mt-4 pt-2 border-t border-[#E6DFDA]/60 text-[9px] uppercase tracking-widest text-[#5F327B]">
                     Studio Standard
                   </div>
                 </div>
@@ -345,7 +275,7 @@ export default function AboutPage() {
             ========================================================================= */}
         <section
           aria-label="Visual Brand Moment"
-          className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] min-h-[400px] bg-[#E6DFDA] overflow-hidden"
+          className="relative w-full h-[35vh] sm:h-[45vh] min-h-[280px] bg-[#E6DFDA] overflow-hidden"
         >
           <Image
             src="/a1.jpg"
@@ -354,14 +284,14 @@ export default function AboutPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/25" />
+          <div className="absolute inset-0 bg-black/40" />
           
-          <div className="absolute inset-0 flex items-center justify-center text-center p-6">
-            <div className="max-w-3xl space-y-4">
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-white/80 block">
+          <div className="absolute inset-0 flex items-center justify-center text-center p-4">
+            <div className="max-w-2xl space-y-2">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-white/90 block">
                 Immersion &amp; Artistry
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal leading-tight">
+              <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-white font-normal leading-tight">
                 Transforming spaces into living, breathing stories.
               </h2>
             </div>
@@ -373,30 +303,30 @@ export default function AboutPage() {
             ========================================================================= */}
         <section
           aria-label="Why Havilah"
-          className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-[#FAF8F5] border-b border-[#E6DFDA]"
+          className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]"
         >
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
             
-            <div className="max-w-3xl mb-12 sm:mb-16">
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3 sm:mb-4">
+            <div className="max-w-2xl mb-6">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-1.5">
                 The Distinction
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1A1A] leading-[1.1]">
+              <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#1A1A1A] leading-[1.1]">
                 Why discerning hosts and couples partner with our studio.
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
               {distinctionPoints.map((item, index) => (
                 <div
                   key={index}
-                  className="p-8 sm:p-10 border border-[#E6DFDA] bg-[#FAF8F5] flex flex-col justify-between group hover:border-[#5F327B] transition-colors duration-300"
+                  className="p-6 border border-[#E6DFDA] bg-white rounded-sm flex items-start group hover:border-[#5F327B] transition-colors duration-300"
                 >
                   <div>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#1A1A1A] font-normal mb-3 group-hover:text-[#5F327B] transition-colors duration-300">
+                    <h3 className="font-serif text-xl text-[#1A1A1A] font-normal mb-2 group-hover:text-[#5F327B] transition-colors duration-300">
                       {item.heading}
                     </h3>
-                    <p className="text-xs sm:text-sm md:text-base text-[#5C555B] font-light leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
                       {item.text}
                     </p>
                   </div>
@@ -412,7 +342,7 @@ export default function AboutPage() {
             ========================================================================= */}
         <section
           aria-label="Closing Invitation"
-          className="relative py-20 sm:py-24 md:py-28 bg-[#5F327B] text-[#FAF8F5] overflow-hidden"
+          className="relative py-8 sm:py-12 bg-[#5F327B] text-[#FAF8F5] overflow-hidden"
         >
           <div 
             aria-hidden="true" 
@@ -421,25 +351,25 @@ export default function AboutPage() {
 
           <div className="relative z-10 max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
             
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FAF8F5]/70 block mb-4">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FAF8F5]/70 block mb-2">
               Begin Your Story
             </span>
 
-            <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] text-[#FAF8F5] max-w-4xl mx-auto mb-6 sm:mb-8">
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#FAF8F5] max-w-3xl mx-auto mb-4">
               Let’s create something <br className="hidden sm:inline" />
               <span className="italic font-light text-[#FAF8F5]/90">
                 truly unforgettable.
               </span>
             </h2>
 
-            <p className="max-w-2xl mx-auto text-xs sm:text-sm md:text-base text-[#FAF8F5]/80 font-light leading-relaxed mb-8 sm:mb-10">
+            <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
               Whether you are planning an intimate gathering or a grand destination wedding, we invite you to start a conversation with our design team.
             </p>
 
             <div>
               <Link
                 href="/contact"
-                className="group inline-flex items-center space-x-3 px-8 sm:px-10 py-4 sm:py-5 bg-[#FAF8F5] text-[#5F327B] text-xs sm:text-sm uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:bg-[#FAF8F5]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
+                className="group inline-flex items-center space-x-3 px-6 sm:px-8 py-3.5 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-full transition-all duration-300 hover:bg-[#FAF8F5]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
               >
                 <span>Let’s Create Your Experience</span>
                 <span

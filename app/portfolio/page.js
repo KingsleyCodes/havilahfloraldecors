@@ -9,11 +9,9 @@ import Footer from "@/components/Footer";
 // Structured Portfolio Archives Data
 const projectsData = [
   {
-    id: "project-01",
+    id: "ivory-cathedral-wedding",
     title: "The Ivory Cathedral Wedding",
     category: "Weddings",
-   
-    year: "2026",
     image: "/a1.jpg",
     aspect: "aspect-[16/9]",
     featuredType: "hero",
@@ -21,51 +19,45 @@ const projectsData = [
       "An ethereal floral installation featuring thousands of cascading white garden roses, bespoke acrylic architectural structures, and warm ambient candlelight."
   },
   {
-    id: "project-02",
+    id: "sculptural-botanical-gala",
     title: "Sculptural Botanical Gala",
     category: "Event Decor",
     location: "Abuja",
-    year: "2026",
     image: "/por1.jpg",
     aspect: "aspect-[4/5]",
     description: "Avant-garde floral sculptures tailored for a high-profile corporate anniversary."
   },
   {
-    id: "project-03",
+    id: "minimalist-champagne-arch",
     title: "Minimalist Champagne Arch",
     category: "Floral Design",
     location: "Victoria Island",
-    year: "2025",
     image: "/por2.jpg",
     aspect: "aspect-[3/4]",
     description: "Organic asymmetrical ceremony arch blending dried pampas and fresh phalaenopsis orchids."
   },
   {
-    id: "project-04",
+    id: "opulent-banquet-tablescape",
     title: "Opulent Banquet Tablescape",
     category: "Venue Styling",
     location: "Ikoyi",
-    year: "2025",
     image: "/por3.jpg",
     aspect: "aspect-[16/10]",
     description: "Custom crystal tableware paired with low, immersive botanical arrangements."
   },
   {
-    id: "project-05",
+    id: "overhead-hanging-flora",
     title: "Overhead Hanging Flora",
     category: "Installations",
-   
-    year: "2025",
     image: "/por4.jpg",
     aspect: "aspect-[4/3]",
     description: "A suspended ceiling canopy of emerald greenery and floating white blooms."
   },
   {
-    id: "project-06",
+    id: "glasshouse-soiree",
     title: "The Glasshouse Soirée",
     category: "Weddings",
     location: "Eko Atlantic",
-    year: "2025",
     image: "/por5.jpg",
     aspect: "aspect-[4/5]",
     featuredType: "split-left",
@@ -73,31 +65,28 @@ const projectsData = [
       "A light-filled botanical transformation using transparent glass columns, warm amber lighting, and layered neutral floral textures."
   },
   {
-    id: "project-07",
+    id: "botanical-canopy-reception",
     title: "Botanical Canopy Reception",
     category: "Weddings",
     location: "Lekki",
-    year: "2025",
     image: "/por6.jpg",
     aspect: "aspect-[3/4]",
     description: "Full indoor venue transformation with lush foliage and bespoke floral arches."
   },
   {
-    id: "project-08",
+    id: "earthy-terracotta-soiree",
     title: "Earthy Terracotta Soirée",
     category: "Event Decor",
     location: "Abuja",
-    year: "2025",
     image: "/po9.jpg",
     aspect: "aspect-[4/5]",
     description: "Warm earthy tones, dried botanical accents, and hand-poured ceramic details."
   },
   {
-    id: "project-09",
+    id: "terrace-sunset-installation",
     title: "Terrace Sunset Installation",
     category: "Installations",
     location: "Victoria Island",
-    year: "2026",
     image: "/pp2.jpg",
     aspect: "aspect-[4/5]",
     featuredType: "split-right",
@@ -105,21 +94,18 @@ const projectsData = [
       "A dramatic outdoor sunset backdrop meticulously built with layered ivory roses and botanical greenery overlooking the coast."
   },
   {
-    id: "project-10",
+    id: "monochrome-dahlia-pavilion",
     title: "Monochrome Dahlia Pavilion",
     category: "Venue Styling",
-    
-    year: "2026",
     image: "/po7.jpg",
     aspect: "aspect-[16/10]",
     description: "Sleek contemporary venue arrangement featuring monochromatic dahlia clusters."
   },
   {
-    id: "project-11",
+    id: "cascading-orchid-backdrop",
     title: "Cascading Orchid Backdrop",
     category: "Installations",
     location: "Abuja",
-    year: "2026",
     image: "/po8.jpg",
     aspect: "aspect-[16/9]",
     featuredType: "final",
@@ -140,298 +126,143 @@ const categories = [
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // Deterministic derived data (no unnecessary React state or useEffect)
   const filteredProjects =
     activeCategory === "All"
       ? projectsData
       : projectsData.filter((project) => project.category === activeCategory);
 
-  // Extract special featured items for rhythmic placement when "All" is selected
   const isAll = activeCategory === "All";
   const primaryHero = isAll ? projectsData.find((p) => p.featuredType === "hero") : null;
   const splitLeftProject = isAll ? projectsData.find((p) => p.featuredType === "split-left") : null;
   const splitRightProject = isAll ? projectsData.find((p) => p.featuredType === "split-right") : null;
   const finalFeatured = isAll ? projectsData.find((p) => p.featuredType === "final") : null;
 
-  // Split gallery projects into two natural sections to frame the full-width & split features
   const regularProjects = filteredProjects.filter((p) => !p.featuredType);
   const galleryPart1 = regularProjects.slice(0, 4);
   const galleryPart2 = regularProjects.slice(4);
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5] text-[#1A1A1A] font-sans antialiased selection:bg-[#E2D2C0] selection:text-[#1A1A1A]">
-      {/* Existing Navbar Integration */}
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] font-sans antialiased selection:bg-[#5F327B] selection:text-white flex flex-col">
+      {/* GLOBAL NAVBAR */}
       <Navbar />
 
-      <main className="pt-24 md:pt-32 lg:pt-40 pb-20 md:pb-28">
-        {/* EDITORIAL PORTFOLIO INTRO HERO */}
-        <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-16 md:mb-24">
-          <div className="border-b border-[#E8E2D8] pb-10 md:pb-16">
-            <span className="block text-xs uppercase tracking-[0.25em] text-[#8C8275] mb-4 font-semibold">
-              Selected Archives
-            </span>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[1.08] tracking-tight text-[#1A1A1A] max-w-5xl">
-              Our Portfolio
-            </h1>
-          </div>
-        </section>
-
-        {/* SELECTED WORK INTRODUCTION */}
-        <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-16 md:mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            <div className="md:col-span-5">
-              <span className="text-xs uppercase tracking-[0.2em] text-[#8C8275] font-semibold block mb-2">
-                01 / Philosophy
+      <main className="pt-20 lg:pt-24 flex-grow">
+        {/* =========================================================================
+            SECTION — PORTFOLIO INTRO HERO
+            ========================================================================= */}
+        <section className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]">
+          <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+            
+            <div className="max-w-4xl space-y-3 mb-6">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block">
+                Selected Archives
               </span>
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-[#1A1A1A] leading-snug">
-                A collection of floral designs, wedding environments, and event experiences created with intention.
-              </h2>
-            </div>
-            <div className="md:col-span-6 md:col-start-7">
-              <p className="text-base md:text-lg text-[#555048] leading-relaxed font-light">
-                Every space holds a story. At Havilah Florals & Decor, our portfolio showcases bespoke botanical sculpting, refined event styling, and atmospheric venue transformations designed to elevate moments into timeless memories.
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] text-[#1A1A1A]">
+                Our Portfolio
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed max-w-2xl pt-1">
+                A collection of floral designs, wedding environments, and bespoke event experiences created with architectural intention.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* CATEGORY FILTER */}
-        <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-16 md:mb-20">
-          <div className="flex items-center space-x-6 md:space-x-10 overflow-x-auto no-scrollbar border-b border-[#E8E2D8] pb-4">
-            {categories.map((cat) => {
-              const isActive = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`text-xs md:text-sm uppercase tracking-[0.18em] transition-all duration-300 whitespace-nowrap relative pb-2 focus:outline-none ${
-                    isActive
-                      ? "text-[#1A1A1A] font-semibold"
-                      : "text-[#8C8275] hover:text-[#1A1A1A] font-normal"
-                  }`}
-                  aria-pressed={isActive}
-                >
-                  {cat}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#C5A059]" />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* PRIMARY FEATURED PROJECT (HERO EXHIBIT) */}
-        {primaryHero && (
-          <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-20 md:mb-32">
-            <Link
-              href={`/portfolio/${primaryHero.id}`}
-              className="group block relative overflow-hidden bg-[#F2EDE4]"
-            >
-              <div className="relative aspect-[16/9] w-full overflow-hidden">
-                <Image
-                  src={primaryHero.image}
-                  alt={primaryHero.title}
-                  fill
-                  priority
-                  sizes="(max-width: 1200px) 100vw, 1600px"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                />
-              </div>
-              <div className="mt-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
-                <div>
-                  <div className="flex items-center space-x-3 text-xs uppercase tracking-[0.18em] text-[#8C8275] mb-2 font-medium">
-                    <span>{primaryHero.category}</span>
-                    <span>•</span>
-                    <span>{primaryHero.location}</span>
-                  </div>
-                  <h3 className="font-serif text-2xl md:text-4xl text-[#1A1A1A] group-hover:text-[#C5A059] transition-colors duration-300">
-                    {primaryHero.title}
-                  </h3>
-                  {primaryHero.description && (
-                    <p className="text-sm md:text-base text-[#666055] font-light max-w-2xl mt-2">
-                      {primaryHero.description}
-                    </p>
-                  )}
-                </div>
-                <div className="flex items-center text-xs uppercase tracking-[0.2em] font-medium text-[#1A1A1A] group-hover:text-[#C5A059] transition-colors duration-300 whitespace-nowrap pt-2 md:pt-0">
-                  <span>View Project</span>
-                  <span className="ml-2 transform group-hover:translate-x-1.5 transition-transform duration-300">
-                    →
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </section>
-        )}
-
-        {/* GALLERY PART 1 — ASYMMETRIC PORTFOLIO GRID */}
-        <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-20 md:mb-32">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
-            {galleryPart1.map((project, idx) => {
-              // Version 1 Asymmetric Layout Engine
-              let colSpan = "md:col-span-6";
-              if (idx % 4 === 0) colSpan = "md:col-span-7";
-              if (idx % 4 === 1) colSpan = "md:col-span-5";
-              if (idx % 4 === 2) colSpan = "md:col-span-5";
-              if (idx % 4 === 3) colSpan = "md:col-span-7";
-
-              return (
-                <div key={project.id} className={`${colSpan} group`}>
-                  <Link href={`/portfolio/${project.id}`} className="block">
-                    <div
-                      className={`relative w-full ${project.aspect} overflow-hidden bg-[#F2EDE4] mb-4`}
-                    >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        loading="lazy"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                      />
-                    </div>
-                    <div className="flex items-baseline justify-between pt-1">
-                      <div>
-                        <span className="block text-[11px] uppercase tracking-[0.18em] text-[#8C8275] mb-1">
-                          {project.category} — {project.location}
-                        </span>
-                        <h4 className="font-serif text-lg md:text-2xl text-[#1A1A1A] group-hover:text-[#C5A059] transition-colors duration-300">
-                          {project.title}
-                        </h4>
-                      </div>
-                      <span className="text-xs uppercase tracking-[0.15em] text-[#8C8275] group-hover:text-[#1A1A1A] transition-colors duration-300 ml-4 hidden sm:inline-block">
-                        {project.year}
-                      </span>
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* FEATURED PROJECT 02 — SPLIT LAYOUT (IMAGE LEFT / TEXT RIGHT) */}
-        {splitLeftProject && (
-          <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-20 md:mb-32">
-            <div className="border-t border-[#E8E2D8] pt-16 md:pt-24">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
-                <div className="md:col-span-7">
-                  <Link
-                    href={`/portfolio/${splitLeftProject.id}`}
-                    className="group block relative aspect-[4/3] w-full overflow-hidden bg-[#F2EDE4]"
+            {/* CATEGORY FILTER NAV */}
+            <div className="flex items-center space-x-6 overflow-x-auto no-scrollbar pt-2 border-t border-[#E6DFDA]">
+              {categories.map((cat) => {
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`text-xs uppercase tracking-[0.18em] transition-all duration-300 whitespace-nowrap relative py-2 focus:outline-none ${
+                      isActive
+                        ? "text-[#5F327B] font-semibold"
+                        : "text-[#5C555B] hover:text-[#1A1A1A] font-normal"
+                    }`}
+                    aria-pressed={isActive}
                   >
-                    <Image
-                      src={splitLeftProject.image}
-                      alt={splitLeftProject.title}
-                      fill
-                      loading="lazy"
-                      sizes="(max-width: 768px) 100vw, 900px"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                    />
-                  </Link>
-                </div>
-                <div className="md:col-span-5">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#8C8275] font-semibold block mb-3">
-                    {splitLeftProject.category} · {splitLeftProject.location}
-                  </span>
-                  <h3 className="font-serif text-3xl md:text-5xl text-[#1A1A1A] leading-tight mb-4">
-                    {splitLeftProject.title}
-                  </h3>
-                  <p className="text-base text-[#666055] font-light leading-relaxed mb-8">
-                    {splitLeftProject.description}
-                  </p>
-                  <Link
-                    href={`/portfolio/${splitLeftProject.id}`}
-                    className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-[#1A1A1A] hover:text-[#C5A059] transition-colors duration-300"
-                  >
-                    <span>View Project</span>
-                    <span className="ml-2">→</span>
-                  </Link>
-                </div>
-              </div>
+                    {cat}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5F327B]" />
+                    )}
+                  </button>
+                );
+              })}
             </div>
-          </section>
-        )}
 
-        {/* FULL-WIDTH PHOTOGRAPH MOMENT */}
-        <section className="w-full mb-20 md:mb-32">
-          <div className="relative w-full h-[50vh] md:h-[75vh] bg-[#1A1A1A]">
-            <Image
-              src="/pp1.jpg"
-              alt="Havilah Grand Floral Installation"
-              fill
-              loading="lazy"
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-            <h4 className="font-serif text-xl text-[#1A1A1A]">
-              Ethereal Pavilion Environment
-            </h4>
-            <span className="text-xs uppercase tracking-[0.18em] text-[#8C8275]">
-          
-            </span>
           </div>
         </section>
 
-        {/* FEATURED PROJECT 03 — SPLIT LAYOUT (TEXT LEFT / IMAGE RIGHT) */}
-        {splitRightProject && (
-          <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-20 md:mb-32">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
-              <div className="md:col-span-5 order-2 md:order-1">
-                <span className="text-xs uppercase tracking-[0.2em] text-[#8C8275] font-semibold block mb-3">
-                  {splitRightProject.category} · {splitRightProject.location}
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#1A1A1A] leading-tight mb-4">
-                  {splitRightProject.title}
-                </h3>
-                <p className="text-base text-[#666055] font-light leading-relaxed mb-8">
-                  {splitRightProject.description}
-                </p>
-                <Link
-                  href={`/portfolio/${splitRightProject.id}`}
-                  className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-[#1A1A1A] hover:text-[#C5A059] transition-colors duration-300"
-                >
-                  <span>View Project</span>
-                  <span className="ml-2">→</span>
-                </Link>
-              </div>
-              <div className="md:col-span-7 order-1 md:order-2">
-                <Link
-                  href={`/portfolio/${splitRightProject.id}`}
-                  className="group block relative aspect-[4/3] w-full overflow-hidden bg-[#F2EDE4]"
-                >
+        {/* =========================================================================
+            SECTION — PRIMARY FEATURED HERO EXHIBIT
+            ========================================================================= */}
+        {primaryHero && (
+          <section className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+              <Link
+                href={`/portfolio/${primaryHero.id}`}
+                className="group block relative overflow-hidden bg-[#E6DFDA] rounded-sm border border-[#E6DFDA]"
+              >
+                <div className="relative aspect-[16/9] w-full overflow-hidden">
                   <Image
-                    src={splitRightProject.image}
-                    alt={splitRightProject.title}
+                    src={primaryHero.image}
+                    alt={primaryHero.title}
                     fill
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 900px"
+                    priority
+                    sizes="(max-width: 1200px) 100vw, 1500px"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
-                </Link>
-              </div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+                </div>
+                <div className="p-5 sm:p-6 bg-white flex flex-col md:flex-row md:items-end justify-between gap-4 border-t border-[#E6DFDA]">
+                  <div>
+                    <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.18em] text-[#5F327B] font-medium mb-1">
+                      <span>{primaryHero.category}</span>
+                      {primaryHero.location && (
+                        <>
+                          <span>•</span>
+                          <span>{primaryHero.location}</span>
+                        </>
+                      )}
+                    </div>
+                    <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300">
+                      {primaryHero.title}
+                    </h3>
+                    {primaryHero.description && (
+                      <p className="text-xs sm:text-sm text-[#5C555B] font-light max-w-2xl mt-1">
+                        {primaryHero.description}
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex items-center text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] group-hover:text-[#1A1A1A] transition-colors duration-300 whitespace-nowrap pt-2 md:pt-0">
+                    <span>Explore Project</span>
+                    <span className="ml-2 transform group-hover:translate-x-1.5 transition-transform duration-300">
+                      →
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
           </section>
         )}
 
-        {/* GALLERY PART 2 — MORE ASYMMETRIC WORK */}
-        {galleryPart2.length > 0 && (
-          <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-20 md:mb-32">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
-              {galleryPart2.map((project, idx) => {
+        {/* =========================================================================
+            SECTION — GALLERY PART 1 (GRID)
+            ========================================================================= */}
+        <section className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]">
+          <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+              {galleryPart1.map((project, idx) => {
                 let colSpan = "md:col-span-6";
-                if (idx % 3 === 0) colSpan = "md:col-span-5";
-                if (idx % 3 === 1) colSpan = "md:col-span-7";
-                if (idx % 3 === 2) colSpan = "md:col-span-12";
+                if (idx % 4 === 0) colSpan = "md:col-span-7";
+                if (idx % 4 === 1) colSpan = "md:col-span-5";
+                if (idx % 4 === 2) colSpan = "md:col-span-5";
+                if (idx % 4 === 3) colSpan = "md:col-span-7";
 
                 return (
                   <div key={project.id} className={`${colSpan} group`}>
                     <Link href={`/portfolio/${project.id}`} className="block">
                       <div
-                        className={`relative w-full ${project.aspect} overflow-hidden bg-[#F2EDE4] mb-4`}
+                        className={`relative w-full ${project.aspect} overflow-hidden bg-[#E6DFDA] rounded-sm border border-[#E6DFDA] mb-3`}
                       >
                         <Image
                           src={project.image}
@@ -444,46 +275,207 @@ export default function PortfolioPage() {
                       </div>
                       <div className="flex items-baseline justify-between pt-1">
                         <div>
-                          <span className="block text-[11px] uppercase tracking-[0.18em] text-[#8C8275] mb-1">
-                            {project.category} — {project.location}
+                          <span className="block text-[10px] uppercase tracking-[0.18em] text-[#5F327B] font-medium mb-0.5">
+                            {project.category} {project.location ? `— ${project.location}` : ""}
                           </span>
-                          <h4 className="font-serif text-lg md:text-2xl text-[#1A1A1A] group-hover:text-[#C5A059] transition-colors duration-300">
+                          <h4 className="font-serif text-lg sm:text-xl text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300">
                             {project.title}
                           </h4>
                         </div>
-                        <span className="text-xs uppercase tracking-[0.15em] text-[#8C8275] group-hover:text-[#1A1A1A] transition-colors duration-300 ml-4 hidden sm:inline-block">
-                          {project.year}
-                        </span>
                       </div>
                     </Link>
                   </div>
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            SECTION — FEATURED SPLIT (IMAGE LEFT / TEXT RIGHT)
+            ========================================================================= */}
+        {splitLeftProject && (
+          <section className="relative py-6 sm:py-8 md:py-10 bg-[#F4EFF6] border-b border-[#E6DFDA]">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div className="md:col-span-7">
+                  <Link
+                    href={`/portfolio/${splitLeftProject.id}`}
+                    className="group block relative aspect-[4/3] w-full overflow-hidden bg-[#E6DFDA] rounded-sm border border-[#E6DFDA]"
+                  >
+                    <Image
+                      src={splitLeftProject.image}
+                      alt={splitLeftProject.title}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 900px"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    />
+                  </Link>
+                </div>
+                <div className="md:col-span-5 space-y-3">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#5F327B] font-semibold block">
+                    {splitLeftProject.category} {splitLeftProject.location ? `· ${splitLeftProject.location}` : ""}
+                  </span>
+                  <h3 className="font-serif text-2xl sm:text-4xl text-[#1A1A1A] leading-tight">
+                    {splitLeftProject.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
+                    {splitLeftProject.description}
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      href={`/portfolio/${splitLeftProject.id}`}
+                      className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] hover:text-[#1A1A1A] transition-colors duration-300"
+                    >
+                      <span>Explore Project</span>
+                      <span className="ml-2">→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         )}
 
-        {/* FINAL FEATURED PROJECT EXHIBIT */}
-        {finalFeatured && (
-          <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto mb-20 md:mb-32">
-            <div className="border-t border-[#E8E2D8] pt-16 md:pt-24">
-              <div className="flex flex-col md:flex-row md:items-end justify-between mb-8">
-                <div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#8C8275] font-semibold">
-                    02 / Highlight Archive
+        {/* =========================================================================
+            SECTION — FULL-WIDTH BRAND MOMENT
+            ========================================================================= */}
+        <section className="relative w-full h-[35vh] sm:h-[45vh] min-h-[280px] bg-[#E6DFDA] overflow-hidden border-b border-[#E6DFDA]">
+          <Image
+            src="/pp1.jpg"
+            alt="Havilah Grand Floral Canopy"
+            fill
+            loading="lazy"
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 flex items-center justify-center text-center p-4">
+            <h4 className="font-serif text-2xl sm:text-4xl text-white font-normal max-w-2xl leading-tight">
+              Ethereal Pavilion Environment
+            </h4>
+          </div>
+        </section>
+
+        {/* =========================================================================
+            SECTION — FEATURED SPLIT (TEXT LEFT / IMAGE RIGHT)
+            ========================================================================= */}
+        {splitRightProject && (
+          <section className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                <div className="md:col-span-5 order-2 md:order-1 space-y-3">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#5F327B] font-semibold block">
+                    {splitRightProject.category} {splitRightProject.location ? `· ${splitRightProject.location}` : ""}
                   </span>
-                  <h3 className="font-serif text-3xl md:text-5xl text-[#1A1A1A] mt-2">
+                  <h3 className="font-serif text-2xl sm:text-4xl text-[#1A1A1A] leading-tight">
+                    {splitRightProject.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
+                    {splitRightProject.description}
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      href={`/portfolio/${splitRightProject.id}`}
+                      className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] hover:text-[#1A1A1A] transition-colors duration-300"
+                    >
+                      <span>Explore Project</span>
+                      <span className="ml-2">→</span>
+                    </Link>
+                  </div>
+                </div>
+                <div className="md:col-span-7 order-1 md:order-2">
+                  <Link
+                    href={`/portfolio/${splitRightProject.id}`}
+                    className="group block relative aspect-[4/3] w-full overflow-hidden bg-[#E6DFDA] rounded-sm border border-[#E6DFDA]"
+                  >
+                    <Image
+                      src={splitRightProject.image}
+                      alt={splitRightProject.title}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 900px"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* =========================================================================
+            SECTION — GALLERY PART 2 (GRID)
+            ========================================================================= */}
+        {galleryPart2.length > 0 && (
+          <section className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                {galleryPart2.map((project, idx) => {
+                  let colSpan = "md:col-span-6";
+                  if (idx % 3 === 0) colSpan = "md:col-span-5";
+                  if (idx % 3 === 1) colSpan = "md:col-span-7";
+                  if (idx % 3 === 2) colSpan = "md:col-span-12";
+
+                  return (
+                    <div key={project.id} className={`${colSpan} group`}>
+                      <Link href={`/portfolio/${project.id}`} className="block">
+                        <div
+                          className={`relative w-full ${project.aspect} overflow-hidden bg-[#E6DFDA] rounded-sm border border-[#E6DFDA] mb-3`}
+                        >
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                          />
+                        </div>
+                        <div className="flex items-baseline justify-between pt-1">
+                          <div>
+                            <span className="block text-[10px] uppercase tracking-[0.18em] text-[#5F327B] font-medium mb-0.5">
+                              {project.category} {project.location ? `— ${project.location}` : ""}
+                            </span>
+                            <h4 className="font-serif text-lg sm:text-xl text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300">
+                              {project.title}
+                            </h4>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* =========================================================================
+            SECTION — FINAL FEATURED EXHIBIT
+            ========================================================================= */}
+        {finalFeatured && (
+          <section className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+              
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-4">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#5F327B] font-semibold block mb-1">
+                    Highlight Archive
+                  </span>
+                  <h3 className="font-serif text-2xl sm:text-4xl text-[#1A1A1A]">
                     {finalFeatured.title}
                   </h3>
                 </div>
-                <p className="text-sm md:text-base text-[#666055] font-light max-w-md mt-4 md:mt-0">
+                <p className="text-xs sm:text-sm text-[#5C555B] font-light max-w-md mt-2 md:mt-0">
                   {finalFeatured.description}
                 </p>
               </div>
 
               <Link
                 href={`/portfolio/${finalFeatured.id}`}
-                className="group block relative overflow-hidden bg-[#F2EDE4]"
+                className="group block relative overflow-hidden bg-[#E6DFDA] rounded-sm border border-[#E6DFDA]"
               >
                 <div className="relative aspect-[16/9] w-full overflow-hidden">
                   <Image
@@ -491,38 +483,62 @@ export default function PortfolioPage() {
                     alt={finalFeatured.title}
                     fill
                     loading="lazy"
-                    sizes="(max-width: 1200px) 100vw, 1600px"
+                    sizes="(max-width: 1200px) 100vw, 1500px"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
                 </div>
               </Link>
+
             </div>
           </section>
         )}
 
-        {/* ELEGANT CONSULTATION CTA */}
-        <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto">
-          <div className="bg-[#FAF6F0] border border-[#E8E2D8] p-10 md:p-20 text-center rounded-none">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#8C8275] font-semibold block mb-4">
-              Let's Create Something Beautiful
+        {/* =========================================================================
+            SECTION — CLOSING INVITATION CTA
+            ========================================================================= */}
+        <section className="relative py-8 sm:py-12 bg-[#5F327B] text-[#FAF8F5] overflow-hidden">
+          <div 
+            aria-hidden="true" 
+            className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#FAF8F5_1px,transparent_1px)] [background-size:24px_24px]" 
+          />
+
+          <div className="relative z-10 max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
+            
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FAF8F5]/70 block mb-2">
+              Let&apos;s Create Something Beautiful
             </span>
-            <h2 className="font-serif text-3xl md:text-5xl text-[#1A1A1A] font-normal max-w-2xl mx-auto mb-6">
-              Your celebration deserves a setting designed with intention.
+
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#FAF8F5] max-w-3xl mx-auto mb-4">
+              Your celebration deserves a setting <br className="hidden sm:inline" />
+              <span className="italic font-light text-[#FAF8F5]/90">
+                designed with intention.
+              </span>
             </h2>
-            <p className="text-base md:text-lg text-[#666055] font-light max-w-xl mx-auto mb-10">
+
+            <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
               Allow us to bring our signature botanical aesthetic to your upcoming wedding, gala, or private event.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#1A1A1A] text-[#FBF9F5] px-8 py-4 text-xs uppercase tracking-[0.2em] font-medium hover:bg-[#C5A059] hover:text-white transition-colors duration-300"
-            >
-              Book a Consultation →
-            </Link>
+
+            <div>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center space-x-3 px-6 sm:px-8 py-3.5 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-full transition-all duration-300 hover:bg-[#FAF8F5]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
+              >
+                <span>Book a Consultation</span>
+                <span
+                  aria-hidden="true"
+                  className="transform transition-transform duration-300 group-hover:translate-x-1.5 text-base"
+                >
+                  →
+                </span>
+              </Link>
+            </div>
+
           </div>
         </section>
       </main>
 
-      {/* Existing Footer Integration */}
+      {/* GLOBAL FOOTER */}
       <Footer />
     </div>
   );
