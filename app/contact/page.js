@@ -110,9 +110,12 @@ export default function ContactPage() {
                   Unforgettable.
                 </span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed max-w-2xl pt-1">
-                Havilah creates bespoke floral and décor experiences for weddings, grand celebrations, and intimate moments across Nigeria and beyond.
-              </p>
+              <p>
+                  We are absolutely thrilled to be part of this journey with you. Graciously take a few minutes to fill out this form so we can better understand your vision and ensure our consultation call is tailored specifically to you.
+                </p>
+                <p className="text-xs font-medium text-[#5F327B]">
+                  Once submitted, we'll review your details and confirm your consultation within 24 hours. Thank you!
+                </p>
             </div>
           </div>
         </section>
@@ -120,7 +123,7 @@ export default function ContactPage() {
         {/* =========================================================================
             SECTION — CONSULTATION INTRO
             ========================================================================= */}
-        <section className="py-6 sm:py-8 bg-white border-b border-[#E6DFDA]">
+        {/* <section className="py-6 sm:py-8 bg-white border-b border-[#E6DFDA]">
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-center">
               <div className="md:col-span-5">
@@ -138,7 +141,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* =========================================================================
             SECTION — FORM & DIRECT CONTACT
