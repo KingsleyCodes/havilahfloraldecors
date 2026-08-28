@@ -13,6 +13,18 @@ const testimonials = [
     image: "/tt3.png",
     alt: "Havilah Florals & Decor testimonial 3",
   },
+  {
+    image: "/tt1.png",
+    alt: "Havilah Florals & Decor testimonial 4",
+  },
+  {
+    image: "/tt2.png",
+    alt: "Havilah Florals & Decor testimonial 5",
+  },
+  {
+    image: "/tt3.png",
+    alt: "Havilah Florals & Decor testimonial 6",
+  },
 ];
 
 export default function Testimonials() {
@@ -45,27 +57,29 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* 3-IMAGE CARDS GRID WITH EDITORIAL FRAMING */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+      </div>
+
+      {/* STRICT NATIVE SCROLL SNAP CONTAINER WITH TAILWIND UTILITIES TO HIDE SCROLLBAR */}
+      <div className="w-full overflow-x-auto snap-x snap-mandatory scroll-smooth px-4 sm:px-6 md:px-8 lg:px-12 max-w-[1500px] mx-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex space-x-6 sm:space-x-8 py-2 w-max">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-[#FAF8F5] border border-[#E8E1DC] overflow-hidden group shadow-sm hover:shadow-md transition-all duration-500 rounded-sm p-2 sm:p-2.5"
+              className="snap-start w-[280px] sm:w-[340px] md:w-[380px] shrink-0 bg-[#FAF8F5] border border-[#E8E1DC] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-500 rounded-sm p-2 sm:p-2.5"
             >
               <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] bg-[#E6DFDA] overflow-hidden rounded-sm border border-[#E8E1DC]/60">
                 <Image
                   src={item.image}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority={index === 0}
+                  sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, 380px"
+                  priority={index < 3}
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
