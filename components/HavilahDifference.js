@@ -3,19 +3,16 @@ import Link from "next/link";
 
 const principles = [
   {
-    number: "01",
     title: "Intentional Architecture",
     description:
       "We design beyond surface-level ornamentation. Every arch, canopy, and botanical line is drawn with spatial scale, lighting, and movement in mind.",
   },
   {
-    number: "02",
     title: "Bespoke Materiality",
     description:
       "A curated harmony of rare seasonal blooms, tactile linens, custom structures, and atmospheric lighting that honors the distinct emotion of your event.",
   },
   {
-    number: "03",
     title: "Complete Transformation",
     description:
       "We re-imagine grand halls and intimate grounds alike, turning blank canvases into immersive environments that transport your guests from the moment they arrive.",
@@ -26,96 +23,96 @@ export default function HavilahDifference() {
   return (
     <section
       aria-label="The Havilah Difference"
-      className="relative w-full bg-[#FAF8F5] text-[#1A1A1A] py-16 sm:py-20 md:py-24 lg:py-28"
+      className="relative w-full bg-white text-[#1A1A1A] py-10 sm:py-12 md:py-16 border-b border-[#E8E1DC] overflow-hidden"
     >
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         
-        {/* EDITORIAL HEADER */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-12 sm:mb-16 md:mb-20">
-          <div className="lg:col-span-8">
-           
-            <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal leading-[1.08] text-[#1A1A1A]">
-              We don’t simply decorate spaces. <br className="hidden sm:inline" />
-              <span className="italic font-light text-[#5F327B]">
-                We compose atmospheres.
-              </span>
-            </h2>
+        {/* CENTERED EDITORIAL HEADER BLOCK */}
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14">
+          <div className="inline-flex items-center justify-center space-x-3 mb-3 sm:mb-4">
+            <span className="w-8 h-[1px] bg-[#5F327B]/40" />
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-[#5F327B]">
+              The Havilah Difference
+            </span>
+            <span className="w-8 h-[1px] bg-[#5F327B]/40" />
           </div>
-          <div className="lg:col-span-4 lg:pb-2">
-            <p className="text-xs sm:text-sm md:text-base text-[#5C555B] font-light leading-relaxed">
-              Every celebration is a singular story. Our approach merges architectural precision with organic botanical artistry to craft environments that leave an indelible memory.
-            </p>
-          </div>
+
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] text-[#1A1A1A] mb-4 sm:mb-5">
+            We don’t simply decorate spaces. <br className="hidden sm:inline" />
+            <span className="italic font-light text-[#5F327B]">
+              We compose atmospheres.
+            </span>
+          </h2>
+
+          <p className="font-serif text-base sm:text-lg md:text-xl text-[#5C555B] font-light italic max-w-2xl mx-auto leading-relaxed">
+            “Every celebration is a singular story. Our approach merges architectural precision with organic botanical artistry to craft environments that leave an indelible memory.”
+          </p>
         </div>
 
-        {/* ASYMMETRIC CONTENT & IMAGERY COMPOSITION */}
+        {/* ASYMMETRIC GRID (PRINCIPLES LEFT / SIDE-BY-SIDE IMAGES RIGHT) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
           
-          {/* LEFT COLUMN: OVERLAPPING ART-DIRECTED PHOTOGRAPHY */}
-          <div className="lg:col-span-6 relative">
-            {/* Primary Large Image */}
-            <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] bg-[#E6DFDA] overflow-hidden">
-              <Image
-                src="/d1.png"
-                alt="Grand floral installation with custom lighting designed by Havilah Florals & Decor"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-              />
-            </div>
-
-            {/* Accent Overlapping Detail Image (Desktop/Tablet) */}
-            <div className="hidden sm:block absolute -bottom-8 -right-6 lg:-right-8 w-1/2 aspect-[4/5] border-[6px] border-[#FAF8F5] bg-[#DCD2DF] overflow-hidden shadow-xl">
-              <Image
-                src="/d2.jpg"
-                alt="Close-up botanical detail showing texture and floral artistry"
-                fill
-                sizes="(max-width: 1024px) 30vw, 25vw"
-                className="object-cover transition-transform duration-700 ease-out hover:scale-[1.04]"
-              />
-            </div>
-          </div>
-
-          {/* RIGHT COLUMN: EDITORIAL PRINCIPLES LIST */}
-          <div className="lg:col-span-6 lg:pl-6 space-y-8 sm:space-y-10 mt-4 lg:mt-0">
+          {/* LEFT COLUMN: EDITORIAL PRINCIPLES LIST & CTA */}
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div className="divide-y divide-[#E6DFDA]">
               {principles.map((principle) => (
                 <article
-                  key={principle.number}
-                  className="pt-6 sm:pt-8 first:pt-0 group"
+                  key={principle.title}
+                  className="pt-4 sm:pt-5 first:pt-0 group"
                 >
-                  <div className="flex items-baseline space-x-3 sm:space-x-4 mb-2 sm:mb-3">
-                    <span className="font-serif text-lg sm:text-xl italic text-[#5F327B] font-normal">
-                      ({principle.number})
-                    </span>
-                    <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300">
-                      {principle.title}
-                    </h3>
-                  </div>
-                  <p className="text-xs sm:text-sm md:text-base text-[#5C555B] font-light leading-relaxed pl-8 sm:pl-10">
+                  <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300 mb-1 sm:mb-1.5">
+                    {principle.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
                     {principle.description}
                   </p>
                 </article>
               ))}
             </div>
 
-            {/* EDITORIAL LINK */}
-            <div className="pt-4 sm:pt-6">
+            {/* ACTION CTA BUTTON */}
+            <div className="pt-2">
               <Link
                 href="/about"
-                className="group inline-flex items-center space-x-3 text-xs sm:text-sm uppercase tracking-[0.22em] font-medium text-[#5F327B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B] focus-visible:ring-offset-2"
+                className="group inline-flex items-center space-x-3 bg-[#5F327B] hover:bg-[#1A1A1A] text-white px-6 py-3.5 text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B]"
               >
-                <span className="relative py-1 border-b border-[#5F327B]/30 group-hover:border-[#5F327B] transition-colors duration-300">
-                  Discover Our Story
-                </span>
+                <span>Discover Our Story</span>
                 <span
                   aria-hidden="true"
-                  className="text-sm transform transition-transform duration-300 group-hover:translate-x-1.5"
+                  className="text-xs transform transition-transform duration-300 group-hover:translate-x-1"
                 >
                   →
                 </span>
               </Link>
             </div>
+          </div>
+
+          {/* RIGHT COLUMN: SIDE-BY-SIDE DUAL PHOTOGRAPHY */}
+          <div className="lg:col-span-7 grid grid-cols-12 gap-4 items-center order-1 lg:order-2">
+            
+            {/* Primary Main Image */}
+            <div className="col-span-7 relative aspect-[3/4] bg-[#FAF8F5] overflow-hidden rounded-sm border border-[#E8E1DC] shadow-sm group">
+              <Image
+                src="/d1.png"
+                alt="Grand floral installation with custom lighting designed by Havilah Florals & Decor"
+                fill
+                sizes="(max-width: 1024px) 60vw, 35vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                priority={false}
+              />
+            </div>
+
+            {/* Accent Detail Image */}
+            <div className="col-span-5 relative aspect-[4/5] bg-[#FAF8F5] overflow-hidden rounded-sm border border-[#E8E1DC] shadow-sm group -mt-6 sm:-mt-8">
+              <Image
+                src="/d2.jpg"
+                alt="Close-up botanical detail showing texture and floral artistry"
+                fill
+                sizes="(max-width: 1024px) 40vw, 25vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              />
+            </div>
+
           </div>
 
         </div>

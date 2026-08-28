@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import IntroSection from "@/components/IntroSection";
 import ServicesSection from "@/components/Services";
-import FeaturedPortfolio from "@/components/PortfolioSection";
 import HavilahDifference from "@/components/HavilahDifference";
 import Testimonials from "@/components/TestimonialSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -16,7 +15,7 @@ export default function Home() {
         <Hero />
         <IntroSection />
         <ServicesSection />
-        {/* <FeaturedPortfolio /> */}
+     
         <HavilahDifference />
         <Testimonials />
         <FinalCTA />
