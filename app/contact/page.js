@@ -441,7 +441,7 @@ export default function ContactPage() {
                       Direct Contact
                     </span>
                     <h3 className="font-serif text-xl sm:text-2xl text-[#1A1A1A]">
-                      Studio &amp; Inquiries
+                      Inquiries
                     </h3>
                   </div>
 
