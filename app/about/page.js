@@ -7,19 +7,19 @@ import Footer from "@/components/Footer";
 const philosophies = [
   {
     title: "Architectural Intent",
-    subtitle: "Beyond Ornamentation",
+ 
     description:
       "We believe floral design is an architectural discipline. We do not simply fill tables with blooms; we analyze spatial proportions, sightlines, ceiling heights, and guest movement to construct immersive structures that reframe venues into living canvases.",
   },
   {
     title: "Organic Materiality",
-    subtitle: "Harmonious Curation",
+ 
     description:
       "Our work celebrates the natural movement, texture, and rare seasonal beauty of botanicals. Paired with custom linen selections, bespoke lighting design, and tactile tableware, every element is curated to evoke authentic sensory warmth.",
   },
   {
     title: "Atmospheric Storytelling",
-    subtitle: "Emotionally Grounded",
+  
     description:
       "Every celebration possesses a singular narrative. We reject template aesthetics, listening deeply to your vision to compose an environment that feels profoundly personal, emotionally resonant, and distinctly unforgettable.",
   },
@@ -90,20 +90,18 @@ export default function AboutPage() {
               
               {/* LEFT COLUMN — CREATIVE DIRECTOR PHOTO & TITLE */}
               <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block">
-                  Creative Leadership
-                </span>
+                
                 <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#1A1A1A]">
                   Meet the Creative Director
                 </h2>
 
-                <div className="relative aspect-[4/5] w-full bg-[#E6DFDA] overflow-hidden rounded-sm shadow-sm border border-[#E6DFDA]">
+<div className="relative aspect-[4/5] w-full bg-[#E6DFDA] overflow-hidden rounded-sm shadow-sm border border-[#E6DFDA]">
                   <Image
                     src="/o1.png"
                     alt="Havilah Florals creative process and arrangement styling"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-contain object-top transition-transform duration-700 hover:scale-105"
                   />
                   <div className="absolute inset-0 border-[6px] border-[#FAF8F5]/20 pointer-events-none" />
                 </div>
@@ -151,9 +149,7 @@ export default function AboutPage() {
             
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-4 border-b border-[#E6DFDA]">
               <div className="max-w-2xl">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-1.5">
-                  Our Philosophy
-                </span>
+                
                 <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#1A1A1A] leading-[1.1]">
                   Pillars that govern every stem, structure, and space we compose.
                 </h2>
@@ -300,7 +296,6 @@ export default function AboutPage() {
 
         {/* =========================================================================
             SECTION — WHY HAVILAH
-            ========================================================================= */}
         <section
           aria-label="Why Havilah"
           className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]"
