@@ -6,30 +6,27 @@ import { motion } from "framer-motion";
 const mergedServices = [
   {
     id: "full-scale-event-styling",
-    title: "Full-Scale Event & Venue Styling",
-    tagline: "Atmospheric & Environmental Design",
+    title: "Event & Venue Styling",
+    tagline: "Atmospheric Design",
     description:
-      "Curated wedding and event environments designed around the unique spatial rhythm of your venue. We unify custom venue layouts, tactile fabrics, ambient lighting, and bespoke furniture to turn grand spaces into deeply personal experiences.",
-    highlights: ["Weddings & Celebrations", "Venue Spatial Transformation", "Lighting & Ambient Styling"],
+      "Curated wedding and event environments tailored to your venue. We unify custom layouts, fabrics, ambient lighting, and furniture for deeply personal experiences.",
+    highlights: ["Weddings & Celebrations", "Spatial Transformation", "Ambient Lighting"],
   },
   {
     id: "botanical-floral-artistry",
-    title: "Botanical & Floral Artistry",
-    tagline: "Sculptural & Architectural Statements",
+    title: "Floral Artistry",
+    tagline: "Architectural Statements",
     description:
-      "Bespoke floral compositions crafted with architectural precision. From delicate bridal party bouquets and immersive banquet tablescapes to dramatic suspended ceiling canopies and grand living botanical structures.",
-    highlights: ["Bespoke Floral Compositions", "Tablescapes & Centerpieces", "Custom Ceiling & Arch Installations"],
+      "Bespoke floral compositions crafted with precision—from delicate bridal bouquets and banquet tablescapes to dramatic suspended ceilings and grand botanical arches.",
+    highlights: ["Bespoke Floral Design", "Tablescapes & Centerpieces", "Ceiling & Arch Installations"],
   },
 ];
 
-// Motion variants for smooth staggered slide-in entrance
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: {},
   visible: {
-    opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -37,18 +34,14 @@ const containerVariants = {
 const cardVariants = {
   hidden: { 
     opacity: 0, 
-    y: 70,
-    scale: 0.97,
+    y: 50,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      type: "spring",
-      stiffness: 60,
-      damping: 16,
-      mass: 0.8,
+      duration: 0.6,
+      ease: [0.215, 0.61, 0.355, 1],
     },
   },
 };
@@ -61,22 +54,12 @@ export default function ServicesSection() {
     >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
         
-        {/* CENTERED EDITORIAL HEADER BLOCK */}
-        <motion.div 
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14"
-        >
-        </motion.div>
-
         {/* CONSOLIDATED 2-CARD GRID */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-30px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12"
         >
           {mergedServices.map((service) => (
@@ -92,7 +75,6 @@ export default function ServicesSection() {
                     <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#5F327B] font-semibold">
                       {service.tagline}
                     </span>
-                  
                   </div>
 
                   {/* TITLE */}
@@ -136,7 +118,7 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center"
         >
           <Link

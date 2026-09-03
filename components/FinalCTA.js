@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function FinalCTA() {
   return (
@@ -25,8 +28,6 @@ export default function FinalCTA() {
 
       <div className="relative z-10 max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         
-        {/* EDITORIAL TOP DIVIDER FRAME */}
-       
         {/* ASYMMETRICAL EDITORIAL LAYOUT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
@@ -59,27 +60,21 @@ export default function FinalCTA() {
                   →
                 </span>
               </Link>
-
-              <Link
-                href="/portfolio"
-                className="group inline-flex items-center space-x-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-[#FAF8F5]/80 hover:text-[#FAF8F5] transition-colors duration-300 py-2 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FAF8F5]"
-              >
-                <span className="border-b border-[#FAF8F5]/30 group-hover:border-[#FAF8F5] transition-colors duration-300">
-                  Explore Our Work
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="transform transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </Link>
             </div>
           </div>
 
           {/* EDITORIAL BOTANICAL / ARCHITECTURAL ACCENT (RIGHT COLUMN) */}
           <div className="lg:col-span-4 relative mt-8 lg:mt-0 flex justify-start lg:justify-end">
-            <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[340px] aspect-[4/5] p-2 border border-[#FAF8F5]/20 bg-[#5F327B]">
+            <motion.div 
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.8,
+                ease: [0.21, 0.47, 0.32, 0.98]
+              }}
+              className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[340px] aspect-[4/5] p-2 border border-[#FAF8F5]/20 bg-[#5F327B]"
+            >
               <div className="relative w-full h-full overflow-hidden bg-[#5F327B]/50">
                 <Image
                   src="/fcta.jpg"
@@ -91,22 +86,10 @@ export default function FinalCTA() {
                 {/* SUBTLE INNER BORDER FRAME */}
                 <div className="absolute inset-2 border border-[#FAF8F5]/20 pointer-events-none" />
               </div>
-
-              {/* OVERLAY CAPTION DETAIL */}
-              <div className="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 bg-[#5F327B] border border-[#FAF8F5]/20 p-3 sm:p-4 max-w-[200px]">
-                <span className="block font-serif text-xs italic text-[#FAF8F5]/90">
-                  Tailored Atmosphere
-                </span>
-                <span className="block text-[9px] uppercase tracking-wider text-[#FAF8F5]/60 mt-0.5">
-                  Bespoke Floral Architecture
-                </span>
-              </div>
-            </div>
+            </motion.div>
           </div>
 
         </div>
-
-       
 
       </div>
     </section>

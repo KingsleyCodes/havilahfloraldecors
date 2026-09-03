@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const CONTACT_DETAILS = {
   email: "havilahflorals@gmail.com",
@@ -91,9 +89,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] font-sans antialiased selection:bg-[#5F327B] selection:text-white flex flex-col">
-      {/* GLOBAL NAVBAR */}
-      <Navbar />
-
       <main className="pt-20 lg:pt-24 flex-grow">
         {/* =========================================================================
             SECTION — CONTACT HERO
@@ -604,9 +599,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
-      {/* GLOBAL FOOTER */}
-      <Footer />
     </div>
   );
 }

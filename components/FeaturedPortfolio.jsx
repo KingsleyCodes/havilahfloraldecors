@@ -7,37 +7,37 @@ import { motion } from "framer-motion";
 const portfolioEvents = [
   {
     title: "Orchid Gala",
-    category: "Gala",
+    category: "",
     slug: "royal-orchid-gala",
     image: "/couple1.jpg",
   },
   {
     title: "Botanical Wedding",
-    category: "Wedding",
+    category: "",
     slug: "celestial-botanical-wedding",
     image: "/h1.png",
   },
   {
     title: "Garden Reception",
-    category: "Tablescape",
+    category: "",
     slug: "candlelit-garden-reception",
     image: "/couple2.jpg",
   },
   {
     title: "Floral Arch",
-    category: "Installation",
+    category: "",
     slug: "grand-arch-floral-installation",
     image: "/couple4.jpg",
   },
   {
     title: "Velvet Soirée",
-    category: "Private Event",
+    category: "",
     slug: "velvet-galia-soiree",
     image: "/d2.jpg",
   },
   {
     title: "Imperial Reception",
-    category: "Destination",
+    category: "",
     slug: "opulent-imperial-reception",
     image: "/couple6.png",
   },

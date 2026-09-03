@@ -4,99 +4,57 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 // Structured Portfolio Archives Data
+// NOTE: Ensure these IDs match the keys in your [slug] page's eventGalleries object
 const projectsData = [
   {
-    id: "ivory-cathedral-wedding",
-    title: "The Ivory Cathedral Wedding",
-    category: "Weddings",
+    id: "royal-orchid-gala",
+    title: "Orchid Gala",
+    category: "Event Decor",
+    location: "The Grand Pavilion",
     image: "/a1.jpg",
-    description:
-      "An ethereal floral installation featuring thousands of cascading white garden roses and ambient candlelight."
+    description: "An ethereal evening environment defined by rare orchid compositions."
   },
   {
-    id: "sculptural-botanical-gala",
-    title: "Sculptural Botanical Gala",
-    category: "Event Decor",
-    location: "Abuja",
+    id: "celestial-botanical-wedding",
+    title: "Botanical Wedding",
+    category: "Weddings",
+    location: "Estate Conservatory",
     image: "/por1.jpg",
-    description: "Avant-garde floral sculptures tailored for a high-profile corporate anniversary."
+    description: "A lush botanical installation featuring immersive ceiling greenery."
   },
   {
-    id: "minimalist-champagne-arch",
-    title: "Minimalist Champagne Arch",
-    category: "Floral Design",
-    location: "Victoria Island",
+    id: "candlelit-garden-reception",
+    title: "Garden Reception",
+    category: "Weddings",
+    location: "Private Residence",
     image: "/por2.jpg",
-    description: "Organic asymmetrical ceremony arch blending dried pampas and fresh phalaenopsis orchids."
+    description: "An intimate outdoor dining experience featuring warm candlelit long tables."
   },
   {
-    id: "opulent-banquet-tablescape",
-    title: "Opulent Banquet Tablescape",
-    category: "Venue Styling",
-    location: "Ikoyi",
+    id: "grand-arch-floral-installation",
+    title: "Floral Arch",
+    category: "Installations",
+    location: "Metropolitan Hall",
     image: "/por3.jpg",
-    description: "Custom crystal tableware paired with low, immersive botanical arrangements."
+    description: "A dramatic botanical sculpture designed to anchor ceremony vows."
   },
   {
-    id: "overhead-hanging-flora",
-    title: "Overhead Hanging Flora",
-    category: "Installations",
-    image: "/por4.jpg",
-    description: "A suspended ceiling canopy of emerald greenery and floating white blooms."
-  },
-  {
-    id: "glasshouse-soiree",
-    title: "The Glasshouse Soirée",
-    category: "Weddings",
-    location: "Eko Atlantic",
-    image: "/por5.jpg",
-    description:
-      "A light-filled botanical transformation using transparent glass columns and amber lighting."
-  },
-  {
-    id: "botanical-canopy-reception",
-    title: "Botanical Canopy Reception",
-    category: "Weddings",
-    location: "Lekki",
-    image: "/por6.jpg",
-    description: "Full indoor venue transformation with lush foliage and bespoke floral arches."
-  },
-  {
-    id: "earthy-terracotta-soiree",
-    title: "Earthy Terracotta Soirée",
+    id: "velvet-galia-soiree",
+    title: "Velvet Soirée",
     category: "Event Decor",
-    location: "Abuja",
-    image: "/po9.jpg",
-    description: "Warm earthy tones, dried botanical accents, and hand-poured ceramic details."
+    location: "The Glasshouse",
+    image: "/por4.jpg",
+    description: "Rich velvet textures paired with moody floral arrangements."
   },
   {
-    id: "terrace-sunset-installation",
-    title: "Terrace Sunset Installation",
-    category: "Installations",
-    location: "Victoria Island",
-    image: "/pp2.jpg",
-    description:
-      "A dramatic outdoor sunset backdrop meticulously built with layered ivory roses."
-  },
-  {
-    id: "monochrome-dahlia-pavilion",
-    title: "Monochrome Dahlia Pavilion",
-    category: "Venue Styling",
-    image: "/po7.jpg",
-    description: "Sleek contemporary venue arrangement featuring monochromatic dahlia clusters."
-  },
-  {
-    id: "cascading-orchid-backdrop",
-    title: "Cascading Orchid Backdrop",
-    category: "Installations",
-    location: "Abuja",
-    image: "/po8.jpg",
-    description:
-      "A grand statement backdrop constructed entirely with white Phalaenopsis orchids."
+    id: "opulent-imperial-reception",
+    title: "Imperial Reception",
+    category: "Weddings",
+    location: "Royal Ballroom",
+    image: "/por5.jpg",
+    description: "Grand ballroom transformation incorporating height-scaled floral arrangements."
   }
 ];
 
@@ -155,9 +113,6 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] font-sans antialiased selection:bg-[#5F327B] selection:text-white flex flex-col">
-      {/* GLOBAL NAVBAR */}
-      <Navbar />
-
       <main className="pt-20 lg:pt-24 flex-grow">
         {/* HERO SECTION */}
         <section className="relative py-12 sm:py-16 bg-white border-b border-[#E8E1DC] overflow-hidden">
@@ -168,14 +123,9 @@ export default function PortfolioPage() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="max-w-2xl mx-auto text-center mb-8 sm:mb-10"
             >
-             
-
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.15] text-[#1A1A1A] mb-3">
-                Curated Portfolio <br className="hidden sm:inline" />
-              
+                Curated Portfolio
               </h1>
-
-            
             </motion.div>
 
             {/* CATEGORY FILTER NAV */}
@@ -308,9 +258,6 @@ export default function PortfolioPage() {
           </div>
         </section>
       </main>
-
-      {/* GLOBAL FOOTER */}
-      <Footer />
     </div>
   );
 }

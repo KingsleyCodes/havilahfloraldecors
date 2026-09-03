@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 // Data structures reflecting Havilah Florals & Decor actual brand positioning and editorial flow
 const philosophies = [
@@ -74,9 +72,6 @@ const distinctionPoints = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] font-sans antialiased selection:bg-[#5F327B] selection:text-white">
-      {/* GLOBAL NAVBAR */}
-      <Navbar />
-
       <main className="pt-20 lg:pt-24">
         {/* =========================================================================
             SECTION — OUR STORY
@@ -379,9 +374,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-
-      {/* GLOBAL FOOTER */}
-      <Footer />
     </div>
   );
 }
