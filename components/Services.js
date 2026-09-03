@@ -1,84 +1,102 @@
-import Link from "next/link";
+'use client';
 
-const services = [
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+const mergedServices = [
   {
-    id: "wedding-decor",
-    title: "Wedding Decor",
-    tagline: "Atmospheric & Intimate",
+    id: "full-scale-event-styling",
+    title: "Full-Scale Event & Venue Styling",
+    tagline: "Atmospheric & Environmental Design",
     description:
-      "Curated environments designed around the unique emotion and spatial rhythm of your wedding day.",
+      "Curated wedding and event environments designed around the unique spatial rhythm of your venue. We unify custom venue layouts, tactile fabrics, ambient lighting, and bespoke furniture to turn grand spaces into deeply personal experiences.",
+    highlights: ["Weddings & Celebrations", "Venue Spatial Transformation", "Lighting & Ambient Styling"],
   },
   {
-    id: "floral-styling",
-    title: "Floral Styling",
-    tagline: "Sculptural & Botanical",
+    id: "botanical-floral-artistry",
+    title: "Botanical & Floral Artistry",
+    tagline: "Sculptural & Architectural Statements",
     description:
-      "Bespoke floral compositions, from delicate bouquets to dramatic living installations and tablescapes.",
-  },
-  {
-    id: "event-venue-styling",
-    title: "Event & Venue Styling",
-    tagline: "Immersive Environmental Design",
-    description:
-      "Full spatial transformation unifying florals, custom lighting, tactile fabrics, and custom furniture.",
-  },
-  {
-    id: "custom-installations",
-    title: "Custom Installations",
-    tagline: "Architectural Statements",
-    description:
-      "Grand ceiling canopies and structural floral art crafted to transform any venue into a work of art.",
+      "Bespoke floral compositions crafted with architectural precision. From delicate bridal party bouquets and immersive banquet tablescapes to dramatic suspended ceiling canopies and grand living botanical structures.",
+    highlights: ["Bespoke Floral Compositions", "Tablescapes & Centerpieces", "Custom Ceiling & Arch Installations"],
   },
 ];
+
+// Motion variants for smooth staggered slide-in entrance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 70,
+    scale: 0.97,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 60,
+      damping: 16,
+      mass: 0.8,
+    },
+  },
+};
 
 export default function ServicesSection() {
   return (
     <section
       aria-label="What We Create - Havilah Services"
-      className="relative w-full bg-white text-[#1A1A1A] py-10 sm:py-12 md:py-16 border-b border-[#E8E1DC] overflow-hidden"
+      className="relative w-full bg-white text-[#1A1A1A] py-12 sm:py-16 md:py-20 border-b border-[#E8E1DC] overflow-hidden"
     >
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
         
         {/* CENTERED EDITORIAL HEADER BLOCK */}
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14">
-          <div className="inline-flex items-center justify-center space-x-3 mb-3 sm:mb-4">
-            <span className="w-8 h-[1px] bg-[#5F327B]/40" />
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-[#5F327B]">
-              Portfolio of Services
-            </span>
-            <span className="w-8 h-[1px] bg-[#5F327B]/40" />
-          </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 md:mb-14"
+        >
+        </motion.div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] text-[#1A1A1A] mb-4 sm:mb-5">
-            Curating environments that <br className="hidden sm:inline" />
-            <span className="italic font-light text-[#5F327B]">
-              stir the emotions.
-            </span>
-          </h2>
-
-          <p className="font-serif text-base sm:text-lg md:text-xl text-[#5C555B] font-light italic max-w-2xl mx-auto leading-relaxed">
-            “Beyond simple floral arrangements, we craft spatial experiences tailored to transform grand venues into intimate moments.”
-          </p>
-        </div>
-
-        {/* ELEGANT 2x2 SERVICES GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12">
-          {services.map((service) => (
-            <div
+        {/* CONSOLIDATED 2-CARD GRID */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-30px" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12"
+        >
+          {mergedServices.map((service) => (
+            <motion.div
               key={service.id}
-              className="group relative bg-[#FAF8F5] border border-[#E8E1DC] p-6 sm:p-8 rounded-sm shadow-sm hover:shadow-md transition-all duration-500 hover:border-[#5F327B]/40 flex flex-col justify-between"
+              variants={cardVariants}
+              className="group relative bg-[#FAF8F5] border border-[#E8E1DC] p-6 sm:p-8 md:p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-500 hover:border-[#5F327B]/50 flex flex-col justify-between"
             >
               <Link href="/services" className="block focus:outline-none h-full flex flex-col justify-between">
                 <div>
                   {/* CARD TOP: TAGLINE */}
-                  <div className="border-b border-[#E8E1DC] pb-4 mb-5">
+                  <div className="border-b border-[#E8E1DC] pb-4 mb-6 flex items-center justify-between">
                     <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#5F327B] font-semibold">
                       {service.tagline}
                     </span>
+                  
                   </div>
 
                   {/* TITLE */}
-                  <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300 mb-3">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300 mb-4">
                     {service.title}
                   </h3>
 
@@ -86,11 +104,21 @@ export default function ServicesSection() {
                   <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed mb-6">
                     {service.description}
                   </p>
+
+                  {/* HIGHLIGHT BULLETS */}
+                  <ul className="space-y-2 mb-8 border-t border-[#E8E1DC]/60 pt-4">
+                    {service.highlights.map((item, idx) => (
+                      <li key={idx} className="flex items-center text-xs text-[#1A1A1A] font-medium tracking-wide">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#5F327B] mr-2.5 opacity-75" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* HOVER LINK ACTION */}
-                <div className="flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] group-hover:text-[#1A1A1A] transition-colors duration-300 pt-2">
-                  <span>Explore Services</span>
+                <div className="flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] group-hover:text-[#1A1A1A] transition-colors duration-300 pt-2 border-t border-[#E8E1DC]">
+                  <span>Explore Service</span>
                   <span
                     aria-hidden="true"
                     className="transform transition-transform duration-300 group-hover:translate-x-1.5"
@@ -99,15 +127,21 @@ export default function ServicesSection() {
                   </span>
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* BOTTOM CENTERED EXPLORE ALL CTA */}
-        <div className="text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-center"
+        >
           <Link
             href="/services"
-            className="group inline-flex items-center space-x-3 bg-[#5F327B] hover:bg-[#1A1A1A] text-white px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B]"
+            className="group inline-flex items-center space-x-3 bg-[#5F327B] hover:bg-[#1A1A1A] text-white px-8 py-4 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-sm shadow-md hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B]"
           >
             <span>Explore All Services</span>
             <span
@@ -117,7 +151,7 @@ export default function ServicesSection() {
               →
             </span>
           </Link>
-        </div>
+        </motion.div>
 
       </div>
     </section>
