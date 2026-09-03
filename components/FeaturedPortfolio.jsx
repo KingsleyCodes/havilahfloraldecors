@@ -9,7 +9,7 @@ const portfolioEvents = [
     title: "Orchid Gala",
     category: "Gala",
     slug: "royal-orchid-gala",
-    image: "/a2.jpg",
+    image: "/couple1.jpg",
   },
   {
     title: "Botanical Wedding",
@@ -21,13 +21,13 @@ const portfolioEvents = [
     title: "Garden Reception",
     category: "Tablescape",
     slug: "candlelit-garden-reception",
-    image: "/h4.png",
+    image: "/couple2.jpg",
   },
   {
     title: "Floral Arch",
     category: "Installation",
     slug: "grand-arch-floral-installation",
-    image: "/d1.png",
+    image: "/couple4.jpg",
   },
   {
     title: "Velvet Soirée",
@@ -39,7 +39,7 @@ const portfolioEvents = [
     title: "Imperial Reception",
     category: "Destination",
     slug: "opulent-imperial-reception",
-    image: "/a2.jpg",
+    image: "/couple6.png",
   },
 ];
 

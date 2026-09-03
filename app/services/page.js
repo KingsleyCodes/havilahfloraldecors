@@ -265,11 +265,11 @@ export default function ServicesPage() {
             </p>
 
             <div>
-              <Link
+               <Link
                 href="/contact"
-                className="group inline-flex items-center space-x-3 px-6 sm:px-8 py-3.5 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-full transition-all duration-300 hover:bg-[#FAF8F5]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
+                className="group inline-flex items-center space-x-3 px-8 py-4 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-sm transition-all duration-300 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
               >
-                <span>Inquire About Your Date</span>
+                <span>Book a Consultation</span>
                 <span
                   aria-hidden="true"
                   className="transform transition-transform duration-300 group-hover:translate-x-1.5 text-base"

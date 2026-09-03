@@ -425,7 +425,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto px-8 py-3.5 bg-[#5F327B] text-white text-xs uppercase tracking-[0.2em] font-medium rounded-full transition-all duration-300 hover:bg-[#4C2763] focus:outline-none focus:ring-2 focus:ring-[#5F327B] focus:ring-offset-2 disabled:opacity-50"
+                      className="group inline-flex items-center space-x-3 px-8 py-4 bg-[#5F327B] text-[#FAF8F5] text-xs uppercase tracking-[0.2em] font-medium rounded-sm transition-all duration-300 hover:bg-[#FAF8F5] hover:text-[#5F327B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF8F5]"
                     >
                       {isSubmitting ? "Redirecting to Schedule..." : "Submit & Schedule Consultation"}
                     </button>
@@ -589,7 +589,7 @@ export default function ContactPage() {
             <div>
               <button
                 onClick={scrollToForm}
-                className="group inline-flex items-center space-x-3 px-6 sm:px-8 py-3.5 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-full transition-all duration-300 hover:bg-[#FAF8F5]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
+                className="group inline-flex items-center space-x-3 px-8 py-4 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-sm transition-all duration-300 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
               >
                 <span>Begin Your Enquiry</span>
                 <span
