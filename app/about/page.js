@@ -4,7 +4,7 @@ import Link from "next/link";
 // Data structures reflecting Havilah Florals & Decor actual brand positioning and editorial flow
 const philosophies = [
   {
-    title: "Architectural Intent",
+    title: "We Get To Know The Couple",
  
     description:
       "We believe floral design is an architectural discipline. We do not simply fill tables with blooms; we analyze spatial proportions, sightlines, ceiling heights, and guest movement to construct immersive structures that reframe venues into living canvases.",
@@ -31,7 +31,7 @@ const experienceSteps = [
       "We begin with an in-depth creative consultation to understand the emotional heart of your event, exploring color palettes, architectural themes, floral preferences, and physical venue dynamics.",
   },
   {
-    title: "Spatial & Floral Design",
+    title: "Personalized Floral Design",
     duration: "Phase",
     description:
       "Our design studio translates ideas into spatial concepts, floral selections, lighting schematics, and custom structural mockups—ensuring every detail aligns with your refined taste.",
@@ -105,7 +105,7 @@ export default function AboutPage() {
               {/* RIGHT COLUMN — DETAILED STORY NARRATIVE */}
               <div className="lg:col-span-7 bg-white/60 p-6 sm:p-8 rounded-sm border border-[#E6DFDA]/80 shadow-xs space-y-4 text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed">
                 <p className="text-base sm:text-lg md:text-xl font-serif text-[#1A1A1A] italic leading-snug">
-                  Havilah Florals Decor started because I believe wedding decor should be more than beautiful—it should feel personal. It should reflect the people at the heart of the celebration and tell a story that guests can experience the moment they walk into the space.
+                  Havilah Florals Decor started because I believe wedding decor should be more than beautiful, it should feel personal. It should reflect the people at the heart of the celebration and tell a story that guests can experience the moment they walk into the space.
                 </p>
 
                 <p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  I design for the engaged couple—not just the bride, not just the details, but the story you&apos;re building together.
+                  We design for the engaged couple, not just the bride, not just the details, but the story you&apos;re building together.
                 </p>
 
                 <p>

@@ -6,12 +6,12 @@ import Image from 'next/image';
 
 const services = [
   {
-    category: "Signature",
-    title: "Intimate Wedding Decor",
+    category: "",
+    title: "Personalized Wedding Decor",
     description:
-      "Curated environments for smaller gatherings, focusing on deep connection and exquisite detailing. We transform venues to reflect your personal narrative.",
+      "Creating spaces that feel like your love story.We transform venues into personalized wedding experiences where every detail works together beautifully, allowing you and your guests to feel immersed in the celebration of your journey.",
     image:
-      "https://lh3.googleusercontent.com/aida/AP1WRLvKc0d4Ez7sYXPeU7abeSlFhydihKpNL9O0jljglbromZ0MdEuX3Xhq_dYGnM9sdOs3iLTaSIJAE4AfhpjnJ1BPwXBfvvVeFcZ5jZZnWbjSzXpY3rWUfFHdejHvxA4vgfiJdy90d18ehQ1g_uh8HUAfOxYvojOFn7GmtZ7VIECIWnzUaqY3blk5Iz4_lgidWc5cf_IjsT9QS38KV-wfZaywkCIfZ6L-WaC3y8G4rqcejnts_NpTLvu0dx3_",
+      "/couple1.jpg",
     features: [
       "Spatial & Tabletop Styling",
       "Custom Botanical Installations",
@@ -19,16 +19,42 @@ const services = [
     ],
   },
   {
-    category: "Bespoke",
-    title: "Luxe Floral Styling",
+    category: "",
+    title: "Milestone Celebrations",
     description:
-      "Bespoke arrangements using premium, highly-coveted blooms. From dramatic hanging installations to delicate, sculptural bridal bouquets.",
+      "Beautifully celebrating life's meaningful moments. Whether it's a milestone birthday, anniversary, baby shower, proposal, engagement, or special gathering, we design experiences that honour the occasion and the people at the heart of it.",
     image:
-      "https://lh3.googleusercontent.com/aida/AP1WRLvsffVKAkbmjhgZG_W2IKLDtexwbLOtvgk3Xc8I29QUC7SJX3iGGCp33Ahhpkt_YJ4O57L-68wt2KziUH6fqb3R6yww9aXW-7pHYN0Hqu6OCKVuPcbrMsHCP8Vrgznfue4D-hu4X3jYlh3cjMYlWGCfachg7HWkFlJR3ah4HEzyyV4LlCjVRFKtDoOuLJbhwJPeNaQvC3M6_68QlZZIV-zIND9A3jJs8oXdaAoT6FWqdxSX3sABqDNDdsnK",
+      "/couple1.jpg",
     features: [
       "Botanical Sculptures",
       "Bridal & Party Artistry",
       "On-Site Conditioning & Build",
+    ],
+  },
+  {
+    category: "",
+    title: "Floral Design and Installations",
+    description:
+      "Designed to completely elevate your venue, our bespoke floral installations transform architectural spaces into unforgettable, atmospheric backdrops that capture the beauty and emotion of your event.",
+    image:
+      "/couple1.jpg",
+    features: [
+      "Custom Backdrop & Stage Design",
+      "Brand-Aligned Color Curation",
+      "Complete On-Site Management",
+    ],
+  },
+  {
+    category: "",
+    title: "Design Development",
+    description:
+      "For clients who want professional guidance before making decor decisions, we help shape your inspiration into a cohesive concept that brings clarity, confidence, and direction to your celebration.",
+    image:
+      "/couple1.jpg",
+    features: [
+      "Overhead Suspended Greenery",
+      "Architectural Entrance Arches",
+      "Custom Drapery & Mood Lighting",
     ],
   },
 ];
@@ -85,7 +111,7 @@ export default function ServicesPage() {
                   Design &amp; Curation Services
                 </span>
                 <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] text-[#1A1A1A]">
-                  Elevating Moments Through Botanical Artistry.
+                  We Curate Wedding Decor Experiences
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed max-w-xl">
                   We design immersive floral environments that tell your unique story. From intimate gatherings to grand celebrations, our approach is rooted in modern luxury and editorial refinement.
@@ -112,7 +138,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-5 reveal active">
                 <div className="relative aspect-[4/5] w-full bg-[#E6DFDA] overflow-hidden rounded-sm border border-[#E6DFDA] shadow-sm">
                   <Image
-                    src="/h2.png"
+                    src="/serviceshavilahfloralsdecor.jpg"
                     alt="Elegant Havilah floral arrangement"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -137,55 +163,46 @@ export default function ServicesPage() {
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-1.5">
                   What We Offer
                 </span>
-                <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#1A1A1A] leading-[1.1]">
+                <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#1A1A1A] leading-[1.1]">
                   Bespoke offerings crafted for extraordinary celebrations.
                 </h2>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* 4 CARDS AT A GLANCE ON DESKTOP */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {services.map((item, index) => (
                 <article
                   key={index}
                   className="bg-white border border-[#E6DFDA] rounded-sm overflow-hidden flex flex-col justify-between group hover:shadow-md hover:border-[#5F327B]/40 transition-all duration-300"
                 >
-                  <div className="relative aspect-[16/9] w-full bg-[#E6DFDA] overflow-hidden">
+                  <div className="relative aspect-[4/3] w-full bg-[#E6DFDA] overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
-                    <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.18em] text-[#5F327B] font-medium px-2.5 py-1 bg-[#FAF8F5] rounded-sm shadow-xs">
-                      {item.category}
-                    </span>
+                    {item.category && (
+                      <span className="absolute top-3 left-3 text-[9px] uppercase tracking-[0.15em] text-[#5F327B] font-semibold px-2 py-0.5 bg-[#FAF8F5] rounded-xs shadow-xs">
+                        {item.category}
+                      </span>
+                    )}
                   </div>
 
-                  <div className="p-6 sm:p-8 flex flex-col flex-grow justify-between">
-                    <div className="space-y-3 mb-6">
-                      <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300">
+                  <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between">
+                    <div className="space-y-2 mb-4">
+                      <h3 className="font-serif text-lg sm:text-xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300 leading-snug">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
+                      <p className="text-xs text-[#5C555B] font-light leading-relaxed">
                         {item.description}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-[#E6DFDA]/80 space-y-2">
-                      <span className="text-[10px] uppercase tracking-widest text-[#5C555B] font-mono block">
-                        Included Focus:
-                      </span>
-                      <ul className="space-y-1.5 text-xs text-[#1A1A1A]">
-                        {item.features.map((feat, fIdx) => (
-                          <li key={fIdx} className="flex items-center space-x-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#5F327B]" />
-                            <span className="font-light">{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    
                   </div>
                 </article>
               ))}
@@ -251,7 +268,7 @@ export default function ServicesPage() {
             <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#FAF8F5] max-w-3xl mx-auto mb-4">
               Ready to bring your <br className="hidden sm:inline" />
               <span className="italic font-light text-[#FAF8F5]/90">
-                floral vision to life?
+                event vision to life?
               </span>
             </h2>
 

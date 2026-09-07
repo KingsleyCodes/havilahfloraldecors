@@ -96,14 +96,7 @@ export default function Footer() {
                 >
                   Pinterest <span className="text-[10px] text-[#C4B5C7]">↗</span>
                 </a>
-                <a
-                  href="https://tiktok.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
-                >
-                  TikTok <span className="text-[10px] text-[#C4B5C7]">↗</span>
-                </a>
+             
               </div>
             </div>
           </div>
@@ -148,11 +141,7 @@ export default function Footer() {
               Services
             </span>
             <ul className="space-y-3 text-xs sm:text-sm font-light text-[#FAF6F0]">
-              <li>
-                <Link href="/services#floral-design" className="transition-colors duration-300 hover:text-[#C4B5C7]">
-                  Floral Design
-                </Link>
-              </li>
+             
               <li>
                 <Link href="/services#wedding-decor" className="transition-colors duration-300 hover:text-[#C4B5C7]">
                   Wedding Decor
@@ -168,11 +157,7 @@ export default function Footer() {
                   Venue Styling
                 </Link>
               </li>
-              <li>
-                <Link href="/services#installations" className="transition-colors duration-300 hover:text-[#C4B5C7]">
-                  Floral Installations
-                </Link>
-              </li>
+            
             </ul>
           </div>
 
@@ -211,9 +196,7 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-[#FAF6F0] transition-colors duration-300">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-[#FAF6F0] transition-colors duration-300">
-              Terms of Experience
-            </Link>
+            
           </div>
         </div>
       </div>

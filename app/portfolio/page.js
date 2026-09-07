@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -58,15 +57,6 @@ const projectsData = [
   }
 ];
 
-const categories = [
-  "All",
-  "Weddings",
-  "Floral Design",
-  "Event Decor",
-  "Venue Styling",
-  "Installations"
-];
-
 // Staggered motion variants for card animations
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -104,13 +94,6 @@ const cardVariants = {
 };
 
 export default function PortfolioPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projectsData
-      : projectsData.filter((project) => project.category === activeCategory);
-
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] font-sans antialiased selection:bg-[#5F327B] selection:text-white flex flex-col">
       <main className="pt-20 lg:pt-24 flex-grow">
@@ -121,39 +104,12 @@ export default function PortfolioPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="max-w-2xl mx-auto text-center mb-8 sm:mb-10"
+              className="max-w-2xl mx-auto text-center"
             >
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.15] text-[#1A1A1A] mb-3">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.15] text-[#1A1A1A]">
                 Curated Portfolio
               </h1>
             </motion.div>
-
-            {/* CATEGORY FILTER NAV */}
-            <div className="flex items-center justify-center space-x-4 sm:space-x-8 overflow-x-auto no-scrollbar pt-2">
-              {categories.map((cat) => {
-                const isActive = activeCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => setActiveCategory(cat)}
-                    className={`text-[11px] sm:text-xs uppercase tracking-[0.2em] transition-all duration-300 whitespace-nowrap relative py-2 focus:outline-none ${
-                      isActive
-                        ? "text-[#5F327B] font-semibold"
-                        : "text-[#5C555B] hover:text-[#1A1A1A] font-normal"
-                    }`}
-                    aria-pressed={isActive}
-                  >
-                    {cat}
-                    {isActive && (
-                      <motion.span 
-                        layoutId="activeFilterBorder"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5F327B]" 
-                      />
-                    )}
-                  </button>
-                );
-              })}
-            </div>
           </div>
         </section>
 
@@ -162,14 +118,13 @@ export default function PortfolioPage() {
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeCategory}
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6"
               >
-                {filteredProjects.map((event) => (
+                {projectsData.map((event) => (
                   <motion.div key={event.id} variants={cardVariants}>
                     <Link
                       href={`/portfolio/${event.id}`}
