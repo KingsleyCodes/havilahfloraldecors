@@ -9,48 +9,52 @@ import { X, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 
 // YOUR EVENT IMAGES & DETAILS DATA
 const eventGalleries = {
-  "royal-orchid-gala": {
-    title: "Orchid Gala",
-    category: "Galas & Soirées",
-    date: "Autumn 2025",
-    location: "The Grand Pavilion",
+  "featured-wedding-one": {
+    title: "",
+    category: "",
+    date: "",
+    location: "",
     description: "An ethereal evening environment defined by rare orchid compositions.",
     gallery: [
-      { src: "/couple1.jpg", alt: "Welcome Entrance", caption: "Welcome Entrance Setup" },
-      { src: "/h1.png", alt: "Tablescape", caption: "Tablescape Details" },
-      { src: "/couple2.jpg", alt: "Ambient Dining", caption: "Ambient Dining Experience" },
+      { src: "/couple1.jpg", alt: "", caption: "" },
+      { src: "/personalizedwedding.jpg", alt: "", caption: "" },
+      { src: "/a2.jpg", alt: "", caption: "" },
     ],
   },
-  "celestial-botanical-wedding": {
-    title: "Botanical Wedding",
+  "featured-wedding-two": {
+    title: "",
     category: "Weddings",
     date: "Summer 2025",
     location: "Estate Conservatory",
     description: "A lush botanical installation featuring immersive ceiling greenery.",
     gallery: [
-      { src: "/h1.png", alt: "Ceremony Backdrop", caption: "Ceremony Backdrop" },
-      { src: "/couple1.jpg", alt: "Bridal Artistry", caption: "Custom Bridal Artistry" },
+      { src: "/por5.jpg", alt: "", caption: "" },
+      { src: "/porr.jpg", alt: "", caption: "" },
+      {src:"/ff2.png", alt:"", caption:""},
     ],
   },
-  "candlelit-garden-reception": {
-    title: "Garden Reception",
+  "featured-wedding-three": {
+    title: "",
     category: "Weddings",
-    date: "Spring 2025",
-    location: "Private Residence",
-    description: "An intimate outdoor dining experience featuring warm candlelit long tables.",
+    date: "",
+    location: "",
+    description: "",
     gallery: [
-      { src: "/couple2.jpg", alt: "Reception", caption: "Nighttime Reception Lighting" },
-      { src: "/couple4.jpg", alt: "Archway", caption: "Custom Floral Archway" },
+      { src: "/couple4.jpg", alt: "", caption: "" },
+      { src: "/ref.jpg", alt: "", caption: "" },
+        { src: "/couple44.jpg", alt: "", caption: "" },
     ],
   },
-  "grand-arch-floral-installation": {
+  "featured-wedding-three": {
     title: "Floral Arch",
     category: "Installations",
     date: "Winter 2025",
     location: "Metropolitan Hall",
     description: "A dramatic botanical sculpture designed to anchor ceremony vows.",
     gallery: [
-      { src: "/couple4.jpg", alt: "Grand Arch", caption: "Completed Installation" },
+        { src: "/couple4.jpg", alt: "", caption: "" },
+      { src: "/reff.jpg", alt: "", caption: "" },
+        { src: "/couple44.jpg", alt: "", caption: "" },
     ],
   },
   "velvet-galia-soiree": {

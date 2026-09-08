@@ -491,7 +491,7 @@ export default function ContactPage() {
 
                   <div className="pt-4 border-t border-[#E6DFDA]">
                     <p className="text-xs text-[#5C555B] leading-relaxed font-light">
-                      Consultations are held by appointment only in our studio or virtually for international clients.
+                      Consultations are held virtually via Zoom or Google Meet.
                     </p>
                   </div>
                 </div>

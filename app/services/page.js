@@ -11,7 +11,7 @@ const services = [
     description:
       "Creating spaces that feel like your love story.We transform venues into personalized wedding experiences where every detail works together beautifully, allowing you and your guests to feel immersed in the celebration of your journey.",
     image:
-      "/couple1.jpg",
+      "/personalizedwedding.jpg",
     features: [
       "Spatial & Tabletop Styling",
       "Custom Botanical Installations",
@@ -24,7 +24,7 @@ const services = [
     description:
       "Beautifully celebrating life's meaningful moments. Whether it's a milestone birthday, anniversary, baby shower, proposal, engagement, or special gathering, we design experiences that honour the occasion and the people at the heart of it.",
     image:
-      "/couple1.jpg",
+      "/po7.jpg",
     features: [
       "Botanical Sculptures",
       "Bridal & Party Artistry",
@@ -37,7 +37,7 @@ const services = [
     description:
       "Designed to completely elevate your venue, our bespoke floral installations transform architectural spaces into unforgettable, atmospheric backdrops that capture the beauty and emotion of your event.",
     image:
-      "/couple1.jpg",
+      "/milestone.png",
     features: [
       "Custom Backdrop & Stage Design",
       "Brand-Aligned Color Curation",
@@ -50,7 +50,7 @@ const services = [
     description:
       "For clients who want professional guidance before making decor decisions, we help shape your inspiration into a cohesive concept that brings clarity, confidence, and direction to your celebration.",
     image:
-      "/couple1.jpg",
+      "/d2.jpg",
     features: [
       "Overhead Suspended Greenery",
       "Architectural Entrance Arches",

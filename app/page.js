@@ -5,6 +5,7 @@ import Testimonials from "@/components/TestimonialSection";
 import FinalCTA from "@/components/FinalCTA";
 import FeaturedPortfolio from "@/components/FeaturedPortfolio";
 import HomeFounderSection from "@/components/HomeFounderSection";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <IntroSection />
         <FeaturedPortfolio />
         <ServicesSection />
+        <Gallery/>
         <Testimonials />
         <HomeFounderSection />
         <FinalCTA />

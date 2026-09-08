@@ -6,19 +6,19 @@ import { motion } from "framer-motion";
 const mergedServices = [
   {
     id: "full-scale-event-styling",
-    title: "Event & Venue Styling",
-    tagline: "Atmospheric Design",
+    title: "Personalized Wedding Decor",
+    tagline: "",
     description:
       "Curated wedding and event environments tailored to your venue. We unify custom layouts, fabrics, ambient lighting, and furniture for deeply personal experiences.",
     highlights: ["Weddings & Celebrations", "Spatial Transformation", "Ambient Lighting"],
   },
   {
     id: "botanical-floral-artistry",
-    title: "Floral Artistry",
-    tagline: "Architectural Statements",
+    title: "Floral Design Installation",
+    tagline: "",
     description:
       "Bespoke floral compositions crafted with precision—from delicate bridal bouquets and banquet tablescapes to dramatic suspended ceilings and grand botanical arches.",
-    highlights: ["Bespoke Floral Design", "Tablescapes & Centerpieces", "Ceiling & Arch Installations"],
+    highlights: ["Bespoke Floral Design", "Milestone Celebrations", "Design Development"],
   },
 ];
 
@@ -71,11 +71,11 @@ export default function ServicesSection() {
               <Link href="/services" className="block focus:outline-none h-full flex flex-col justify-between">
                 <div>
                   {/* CARD TOP: TAGLINE */}
-                  <div className="border-b border-[#E8E1DC] pb-4 mb-6 flex items-center justify-between">
+                  {/* <div className="border-b border-[#E8E1DC] pb-4 mb-6 flex items-center justify-between">
                     <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#5F327B] font-semibold">
                       {service.tagline}
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* TITLE */}
                   <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#1A1A1A] group-hover:text-[#5F327B] transition-colors duration-300 mb-4">

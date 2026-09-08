@@ -18,7 +18,7 @@ const portfolioItems = [
     category: "Event Decor",
     location: "Abuja",
     year: "2025",
-    image: "/p2.jpg",
+    image: "/por5.jpg",
     aspectRatio: "aspect-[3/4]",
     desktopGrid: "lg:col-span-5 lg:mt-16",
   },

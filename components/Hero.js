@@ -16,6 +16,7 @@ const heroSlides = [
     description: '',
     buttonText: 'REQUEST A QUOTE NOW!',
     buttonHref: '/contact',
+    objectPosition: '',
   },
   {
     id: 'hero-2',
@@ -26,16 +27,18 @@ const heroSlides = [
     description: '',
     buttonText: 'REQUEST A QUOTE NOW!',
     buttonHref: '/contact',
+    objectPosition: 'Top',
   },
   {
     id: 'her3',
-    src: '/reff.png',
+    src: '/why.jpg',
     alt: 'Sophisticated bridal bouquet with bespoke botanical elements',
     tagline: '',
     title: '85% Referral Rate',
     description: '',
     buttonText: 'REQUEST A QUOTE NOW!',
     buttonHref: '/contact',
+    objectPosition: 'Top'
   },
   {
     id: 'hero-4',
@@ -46,6 +49,7 @@ const heroSlides = [
     description: '',
     buttonText: 'REQUEST A QUOTE NOW!',
     buttonHref: '/contact',
+    objectPosition: '',
   },
 ];
 
@@ -114,6 +118,7 @@ export default function Hero() {
               quality={90}
               sizes="100vw"
               className="object-cover object-center w-full h-full"
+              style={{ objectPosition: slide.objectPosition || 'center' }}
             />
 
             {/* Dark Overlay for Text Legibility */}
