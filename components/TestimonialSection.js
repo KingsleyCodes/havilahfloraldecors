@@ -78,9 +78,9 @@ export default function Testimonials() {
           className="max-w-3xl mx-auto text-center mb-8 sm:mb-12"
         >
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] text-[#1A1A1A]">
-            What stays with our couples isn’t just how it looked — <br className="hidden sm:inline" />
+             Our <br className="hidden sm:inline" />
             <span className="italic font-light text-[#5F327B]">
-              it’s how it felt.
+             Testimonials
             </span>
           </h2>
         </motion.div>
@@ -92,7 +92,7 @@ export default function Testimonials() {
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={page}
-                custom={direction}
+                custom={direction}What
                 variants={slideVariants}
                 initial="enter"
                 animate="center"
