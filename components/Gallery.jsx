@@ -9,18 +9,18 @@ const galleryImages = [
   { id: "img-1", src: "/why.jpg", alt: "Gallery Image 1", gridPos: "lg:col-start-5 lg:col-span-4 lg:row-start-2 z-20", transform: "rotate-[-1deg] lg:translate-y-0", objectPosition: "top" },
 
   // INNER SPIRAL (Surrounding Center)
-  { id: "img-2", src: "/couple1.jpg", alt: "Gallery Image 2", gridPos: "lg:col-start-1 lg:col-span-4 lg:row-start-1 z-10", transform: "rotate-[3deg] lg:translate-y-8 lg:translate-x-4", objectPosition: "center" },
-  { id: "img-3", src: "/por5.jpg", alt: "Gallery Image 3", gridPos: "lg:col-start-5 lg:col-span-4 lg:row-start-1 z-10", transform: "rotate-[-2deg] lg:-translate-y-6", objectPosition: "top" },
-  { id: "img-4", src: "/couple4.jpg", alt: "Gallery Image 4", gridPos: "lg:col-start-9 lg:col-span-4 lg:row-start-1 z-10", transform: "rotate-[2deg] lg:translate-y-12 lg:-translate-x-4", objectPosition: "center" },
+  // { id: "img-2", src: "/couple1.jpg", alt: "Gallery Image 2", gridPos: "lg:col-start-1 lg:col-span-4 lg:row-start-1 z-10", transform: "rotate-[3deg] lg:translate-y-8 lg:translate-x-4", objectPosition: "center" },
+  // { id: "img-3", src: "/por5.jpg", alt: "Gallery Image 3", gridPos: "lg:col-start-5 lg:col-span-4 lg:row-start-1 z-10", transform: "rotate-[-2deg] lg:-translate-y-6", objectPosition: "top" },
+  // { id: "img-4", src: "/couple4.jpg", alt: "Gallery Image 4", gridPos: "lg:col-start-9 lg:col-span-4 lg:row-start-1 z-10", transform: "rotate-[2deg] lg:translate-y-12 lg:-translate-x-4", objectPosition: "center" },
 
   // MIDSPIRAL FLANKS
   { id: "img-5", src: "/personalizedwedding.jpg", alt: "Gallery Image 5", gridPos: "lg:col-start-1 lg:col-span-4 lg:row-start-2 z-10", transform: "rotate-[-3deg] lg:-translate-y-4 lg:translate-x-8", objectPosition: "center" },
   { id: "img-6", src: "/po7.jpg", alt: "Gallery Image 6", gridPos: "lg:col-start-9 lg:col-span-4 lg:row-start-2 z-10", transform: "rotate-[1deg] lg:-translate-y-8 lg:-translate-x-6", objectPosition: "top" },
 
   // BASE SPIRAL WRAP
-  { id: "img-7", src: "/milestone.png", alt: "Gallery Image 7", gridPos: "lg:col-start-2 lg:col-span-4 lg:row-start-3 z-10", transform: "rotate-[2deg] lg:-translate-y-10", objectPosition: "center" },
-  { id: "img-8", src: "/d2.jpg", alt: "Gallery Image 8", gridPos: "lg:col-start-6 lg:col-span-4 lg:row-start-3 z-10", transform: "rotate-[-2deg] lg:translate-y-6 lg:-translate-x-4", objectPosition: "top" },
-  { id: "img-9", src: "/serviceshavilahfloralsdecor.jpg", alt: "Gallery Image 9", gridPos: "lg:col-start-10 lg:col-span-3 lg:row-start-3 z-10", transform: "rotate-[3deg] lg:-translate-y-14 lg:-translate-x-8", objectPosition: "center" },
+  // { id: "img-7", src: "/milestone.png", alt: "Gallery Image 7", gridPos: "lg:col-start-2 lg:col-span-4 lg:row-start-3 z-10", transform: "rotate-[2deg] lg:-translate-y-10", objectPosition: "center" },
+  // { id: "img-8", src: "/d2.jpg", alt: "Gallery Image 8", gridPos: "lg:col-start-6 lg:col-span-4 lg:row-start-3 z-10", transform: "rotate-[-2deg] lg:translate-y-6 lg:-translate-x-4", objectPosition: "top" },
+  // { id: "img-9", src: "/serviceshavilahfloralsdecor.jpg", alt: "Gallery Image 9", gridPos: "lg:col-start-10 lg:col-span-3 lg:row-start-3 z-10", transform: "rotate-[3deg] lg:-translate-y-14 lg:-translate-x-8", objectPosition: "center" },
 ];
 
 export default function Gallery() {
