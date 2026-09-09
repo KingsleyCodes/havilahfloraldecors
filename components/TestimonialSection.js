@@ -6,31 +6,44 @@ import { motion, AnimatePresence } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "They completely brought our vision to life. The attention to detail and atmosphere created on our special day was beyond anything we could have imagined.",
-    author: "Sarah & David",
-    role: "Bride & Groom",
-    event: "Private Estate Wedding",
+      "We walked into the space and it looked like “PEACE”, the colors, the styling, florals - everything was perfect, picturesque and simply beautiful. Our favorite part of working with Havilah was Miracle, she was an embodiment of peace and vision, she handled everything calmly and took surprises in stride. One of our guest said the decor was international standard. Loved every part! Thank you.",
+    role: "Goldie & Ned.",
+    event: "Wedding",
   },
   {
     quote:
-      "Working with Havilah Florals was an absolute dream. Every single floral installation felt tailored, artistic, and breathtakingly luxury.",
-    author: "Elena R.",
+     "It was absolutely beautiful! Everything was exactly like the bride wanted it to be. What we loved most was the attention to detail, the seamless communication, and how well everything was executed. Our guests couldn't stop complimenting the tables, the lights, the seating - everything. We'd recommend Havilah Florals Decor to anyone; they did an amazing job",
+    author: "Aura By Omi.",
     role: "Event Planner",
-    event: "Gala Celebration",
+    event: "Milestone Celebration",
+  },
+   {
+    quote:
+      "I love that you were very patient with us, asking questions to understand what we really wanted and it was a good experience. Thank you.",
+    author: "Hamdy & Sani.",
+    role: "Couple.",
+    event: "Wedding",
   },
   {
     quote:
-      "Our guests are still talking about the ambiance and the stunning botanical design. It felt like stepping into an editorial magazine.",
-    author: "Michael & Clara",
+      "We feel Fulfilled. Yes, you captured the vision perfectly. What we loved most was the patience and the listening ears, and our guests loved the photo area. Yes, of course we'd recommend Havilah Florals Decor",
+    author: "Shirley & Reuben.",
     role: "Couple",
     event: "Milestone Celebration",
   },
   {
     quote:
-      "An incredible level of professionalism and artistic discipline from start to finish. They handled every single detail with perfection.",
-    author: "Amina B.",
-    role: "Host",
-    event: "Anniversary Gathering",
+      "Walking into our event space felt like stepping into a pretty garden. Our entire color palette came through beautifully, and the photo booth areas were stunning, everything was completely in sync with the space. What I loved most about working with Havilah was the ease, the calm, the professionalism, and how quickly they responded to everything. Our guests couldn't stop talking about it, some are even saying they want garden weddings now! I'd recommend Havilah Florals Decor to anyone. You can tell they genuinely pay attention to what their clients want.",
+    author: "Wani & Evans.",
+    role: "Couple.",
+    event: "Wedding",
+  },
+  {
+    quote:
+      "We loved the decor, so beautiful! It was so pretty, it felt so luxurious, like I was surrounded by wealth. We had so much fun celebrating our union, and the ambience you created for us was everything",
+    author: "Mary & Oswald.",
+    role: "Couple.",
+    event: "Wedding",
   },
 ];
 
@@ -92,7 +105,7 @@ export default function Testimonials() {
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={page}
-                custom={direction}What
+                custom={direction}
                 variants={slideVariants}
                 initial="enter"
                 animate="center"

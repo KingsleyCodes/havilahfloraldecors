@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Havilah Floral Decor",
+  title: "Havilah Floral Decor Abuja",
   description: "Bespoke floral and environmental styling concept",
 };
 
