@@ -173,45 +173,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* CLOSING INVITATION CTA */}
-        <section className="relative py-12 sm:py-16 bg-[#5F327B] text-[#FAF8F5] overflow-hidden">
-          <div 
-            aria-hidden="true" 
-            className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#FAF8F5_1px,transparent_1px)] [background-size:24px_24px]" 
-          />
-
-          <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 text-center">
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FAF8F5]/70 block mb-2">
-              Let&apos;s Create Something Beautiful
-            </span>
-
-            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#FAF8F5] max-w-3xl mx-auto mb-4">
-              Your celebration deserves a setting <br className="hidden sm:inline" />
-              <span className="italic font-light text-[#FAF8F5]/90">
-                designed with intention.
-              </span>
-            </h2>
-
-            <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
-              Allow us to bring our signature experience to your upcoming wedding, gala, or private event.
-            </p>
-
-            <div>
-              <Link
-                href="/contact"
-                className="group inline-flex items-center space-x-3 px-8 py-4 bg-[#FAF8F5] text-[#5F327B] text-xs uppercase tracking-[0.2em] font-medium rounded-sm transition-all duration-300 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF8F5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F327B]"
-              >
-                <span>Book a Consultation</span>
-                <span
-                  aria-hidden="true"
-                  className="transform transition-transform duration-300 group-hover:translate-x-1.5 text-base"
-                >
-                  →
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
+        
       </main>
     </div>
   );
