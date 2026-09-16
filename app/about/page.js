@@ -7,13 +7,13 @@ const philosophies = [
     title: "Discovery",
  
     description:
-      "We get to know YOU; your story, voision, and celebration goals via a scheduled call.",
+      "We get to know YOU; your story, vision, and celebration goals via a scheduled call.",
   },
   {
     title: "Design Conceptt",
  
     description:
-      "We listen to understand your desires, then together, we establish a clear design direction for your ddecor experience. Every detail is thoughtfully curated into a concept that feels uniquely yours.",
+      "We listen to understand your desires, then together, we establish a clear design direction for your decor experience. Every detail is thoughtfully curated into a concept that feels uniquely yours.",
   },
   {
     title: "Delivery",
