@@ -10,7 +10,7 @@ const philosophies = [
       "We get to know YOU; your story, vision, and celebration goals via a scheduled call.",
   },
   {
-    title: "Design Conceptt",
+    title: "Design Concept",
  
     description:
       "We listen to understand your desires, then together, we establish a clear design direction for your decor experience. Every detail is thoughtfully curated into a concept that feels uniquely yours.",
@@ -19,7 +19,7 @@ const philosophies = [
     title: "Delivery",
   
     description:
-      "We bring the vision to life through intentional styling and seemless execution.",
+      "We bring the vision to life through intentional styling and seamless execution.",
   },
 ];
 

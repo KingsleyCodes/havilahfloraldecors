@@ -63,7 +63,7 @@ export default function Footer() {
             </Link>
             
             <p className="text-xs sm:text-sm text-[#D4C8D6] font-light leading-relaxed max-w-sm">
-             We curate event decor experiences that are personalized, thoughful and detailedd leaving joyfyl memories!
+             We curate event decor experiences that are personalized, thoughful and detailedd leaving joyful memories!
             </p>
 
             {/* SOCIAL MEDIA LINKS */}

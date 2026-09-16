@@ -46,7 +46,7 @@ const eventGalleries = {
       { src: "/cruc4.webp", alt: "", caption: "" },
       { src: "/cruc5.webp", alt: "", caption: "" },
       { src: "/cruc6.webp", alt: "", caption: "" },
-      { src: "/cruc7.webp", alt: "", caption: "" },
+      { src: "/cruc8.webp", alt: "", caption: "" },
     ],
   },
   "love-in-colors-traditional-wedding": {
@@ -57,10 +57,10 @@ const eventGalleries = {
     description: "",
     gallery: [
       { src: "/loveintraditionalmarriage2.webp", alt: "", caption: "" },
-      { src: "/loveintraditionalmarriage3.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage9.webp", alt: "", caption: "" },
       { src: "/loveintraditionalmarriage4.webp", alt: "", caption: "" },
       { src: "/loveintraditionalmarriage5.webp", alt: "", caption: "" },
-      { src: "/loveintraditionalmarriage6.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage10.webp", alt: "", caption: "" },
       { src: "/loveintraditionalmarriage7.webp", alt: "", caption: "" },
     ],
   },
@@ -72,9 +72,9 @@ const eventGalleries = {
     description: "",
     gallery: [
       { src: "/theroyal.webp", alt: "", caption: "" },
-      { src: "/theroyal1.webp", alt: "", caption: "" },
+      { src: "/theroyal.jpeg", alt: "", caption: "" },
       { src: "/theroyal2.webp", alt: "", caption: "" },
-      { src: "/theroyal3.webp", alt: "", caption: "" },
+      { src: "/theroyal6.webp", alt: "", caption: "" },
       { src: "/theroyal4.webp", alt: "", caption: "" },
       { src: "/theroyal5.webp", alt: "", caption: "" },
     ],
@@ -116,8 +116,8 @@ const eventGalleries = {
     gallery: [
       { src: "/wetogetherforever.webp", alt: "Lounge Seating", caption: "" },
       { src: "/wetogetherforever1.webp", alt: "Lounge Seating", caption: "" },
-      { src: "/wetogetherforever9.webp", alt: "Lounge Seating", caption: "" },
-      { src: "/wetogetherforever3.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever6.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever10.webp", alt: "Lounge Seating", caption: "" },
       { src: "/wetogetherforever4.webp", alt: "Lounge Seating", caption: "" },
       { src: "/wetogetherforever5.webp", alt: "Lounge Seating", caption: "" },
      
@@ -130,12 +130,12 @@ const eventGalleries = {
     location: "",
     description: "",
     gallery: [
-      { src: "/celebrationoflife1.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife.webp", alt: "Lounge Seating", caption: "" },
       { src: "/celebrationoflife2.webp", alt: "Lounge Seating", caption: "" },
       { src: "/celebrationoflife3.webp", alt: "Lounge Seating", caption: "" },
       { src: "/celebrationoflife4.webp", alt: "Lounge Seating", caption: "" },
       { src: "/celebrationoflife5.webp", alt: "Lounge Seating", caption: "" },
-      { src: "/celebrationoflife6.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife7.webp", alt: "Lounge Seating", caption: "" },
      
     ],
   },

@@ -15,7 +15,7 @@ const testimonials = [
      "It was absolutely beautiful! Everything was exactly like the bride wanted it to be. What we loved most was the attention to detail, the seamless communication, and how well everything was executed. Our guests couldn't stop complimenting the tables, the lights, the seating - everything. We'd recommend Havilah Florals Decor to anyone; they did an amazing job",
     author: "Aura By Omi.",
     role: "Event Planner",
-    event: "Milestone Celebration",
+    event: "Wedding",
   },
    {
     quote:
@@ -29,7 +29,7 @@ const testimonials = [
       "We feel Fulfilled. Yes, you captured the vision perfectly. What we loved most was the patience and the listening ears, and our guests loved the photo area. Yes, of course we'd recommend Havilah Florals Decor",
     author: "Shirley & Reuben.",
     role: "Couple",
-    event: "Milestone Celebration",
+    event: "Wedding",
   },
   {
     quote:

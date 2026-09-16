@@ -92,6 +92,7 @@ export default function FeaturedPortfolio() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }} // Triggers individually as each card enters 20% into view
+              className={index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
             >
               <Link
                 href={`/portfolio/${event.slug}`}

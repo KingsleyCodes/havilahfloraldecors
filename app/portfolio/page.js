@@ -18,7 +18,7 @@ const projectsData = [
   {
     id: "love-in-colors-traditional-wedding",
     title: "Happiness and Demola",
-    category: "Love in Traditional Wedding",
+    category: "Love in color",
     location: "",
     image: "/loveintraditionalmarriage1.webp",
     description: "A lush botanical installation featuring immersive ceiling greenery."
@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: "the-royal-wedding-reception",
     title: "Mary and Oswald",
-    category: "The Royal Wedding",
+    category: "The Royal Regal",
     location: "",
     image: "/theroyal.jpeg",
     description: "An intimate outdoor dining experience featuring warm candlelit long tables."
