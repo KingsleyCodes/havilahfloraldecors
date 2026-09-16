@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const introImage1 = "/i1.jpg";
+const introImage1 = "/hm.jpg";
 const introImage2 = "/d2.jpg";
 
 // Motion variants for smooth image entrance
@@ -58,19 +58,25 @@ export default function IntroSection() {
             <div className="space-y-4 sm:space-y-5">
               <div className="border-l-2 border-[#5F327B] pl-4 sm:pl-5">
                 <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] block mb-1">
-                  Spatial Mastery
+                  Intimate Wedding Decor Experience
                 </span>
                 <p className="text-xs sm:text-sm text-[#1A1A1A] font-medium leading-relaxed">
-                  Every bloom, archway, and ambient element is curated to honor the distinct rhythm of your venue.
+                 Your love story deserves a space that feels like it
                 </p>
               </div>
 
               <div className="space-y-3 text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
                 <p>
-                  Havilah Florals &amp; Decor is a premier event architecture and floral design studio. We specialize in turning blank canvas spaces into grand, emotional environments.
+                 Every Couple has a story, a journey, a personality that makes up their unique love story. That's why we believe wedding decor should be more than beautiful, but an experience
                 </p>
                 <p>
-                  From structural ceiling canopies to bespoke tablescapes, our work merges architectural precision with natural botanical textures for an experience that lingers long after the final toast.
+                 Personalized. Thoughtful. Detailed.
+                </p>
+                <p>
+                This is why we want to shine through every decor we curate, an atmosphere where you and your guests experience your love story.
+                </p>
+                <p>
+                  At Havilah Florals Decor, we intentionally design wedding experiences that celebrate love, create connecttion and leave joyful memories that stays long after the day is over. 
                 </p>
               </div>
             </div>

@@ -138,7 +138,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-5 reveal active">
                 <div className="relative aspect-[4/5] w-full bg-[#E6DFDA] overflow-hidden rounded-sm border border-[#E6DFDA] shadow-sm">
                   <Image
-                    src="/serviceshavilahfloralsdecor.jpg"
+                    src="/h2.png"
                     alt="Elegant Havilah floral arrangement"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -273,7 +273,7 @@ export default function ServicesPage() {
             </h2>
 
             <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
-              We look forward to translating your event ideas into an immersive architectural and botanical experience.
+              We look forward to translating your event ideas into an immersive architectural and personalized experience.
             </p>
 
             <div>

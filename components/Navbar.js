@@ -154,19 +154,7 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* DESKTOP CTA BUTTON */}
-            <Link
-              href="/contact"
-              className="group inline-flex items-center space-x-3 bg-[#5F327B] hover:bg-[#1A1A1A] text-white px-6 py-3.5 text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B]"
-            >
-              <span>Book A Consultation</span>
-              <span 
-                aria-hidden="true" 
-                className="text-xs transform transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </Link>
+            
           </div>
         </div>
 
@@ -232,21 +220,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* RIGHT COLUMN: CTA BUTTON */}
-          <div className="flex items-center justify-end">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center space-x-2 bg-[#5F327B] hover:bg-[#1A1A1A] text-white px-3 sm:px-4 py-2 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium transition-colors duration-300 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5F327B]"
-            >
-              <span>Book</span>
-              <span 
-                aria-hidden="true" 
-                className="text-[10px] transform transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </Link>
-          </div>
+          
 
           {/* MOBILE MENU DRAWER */}
           <AnimatePresence>

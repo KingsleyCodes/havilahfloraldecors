@@ -578,7 +578,7 @@ export default function ContactPage() {
             </h2>
 
             <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
-              Let us transform your venue into an immersive botanical story.
+              Let us transform your venue into a personalized experience.
             </p>
 
             <div>

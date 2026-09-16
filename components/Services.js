@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 const mergedServices = [
   {
     id: "full-scale-event-styling",
-    title: "Personalized Wedding Decor",
+    title: "Wedding Decor Styling",
     tagline: "",
     description:
-      "Curated wedding and event environments tailored to your venue. We unify custom layouts, fabrics, ambient lighting, and furniture for deeply personal experiences.",
-    highlights: ["Weddings & Celebrations", "Spatial Transformation", "Ambient Lighting"],
+      "Creating spaces that ffeel like your love story. We transform venues into personalized wedding experiences where every detail works together beautifully, allowing you and your guests to feel immersed in the celebration of your journey",
+    highlights: ["Weddings & Celebrations", "Design Development", "Ambient Lighting"],
   },
   {
     id: "botanical-floral-artistry",
-    title: "Floral Design Installation",
+    title: "Milestone Celebrations",
     tagline: "",
     description:
-      "Bespoke floral compositions crafted with precision—from delicate bridal bouquets and banquet tablescapes to dramatic suspended ceilings and grand botanical arches.",
+      "Beautifully celebrating life's meaningful moments. Whether it's a milestone birthday, anniversary, baby shower, proposal, engagment, or special gathering, we design experiences that honour the occassion and the people at the heart of it",
     highlights: ["Bespoke Floral Design", "Milestone Celebrations", "Design Development"],
   },
 ];

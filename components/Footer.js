@@ -63,7 +63,7 @@ export default function Footer() {
             </Link>
             
             <p className="text-xs sm:text-sm text-[#D4C8D6] font-light leading-relaxed max-w-sm">
-              Floral artistry, bespoke event styling, and atmospheric venue transformations designed with intention for unforgettable celebrations.
+             We curate event decor experiences that are personalized, thoughful and detailedd leaving joyfyl memories!
             </p>
 
             {/* SOCIAL MEDIA LINKS */}
@@ -144,17 +144,17 @@ export default function Footer() {
              
               <li>
                 <Link href="/services#wedding-decor" className="transition-colors duration-300 hover:text-[#C4B5C7]">
-                  Wedding Decor
+                  Wedding Decor Styling
                 </Link>
               </li>
               <li>
                 <Link href="/services#event-styling" className="transition-colors duration-300 hover:text-[#C4B5C7]">
-                  Event Styling
+                  Milestone Celebrations
                 </Link>
               </li>
               <li>
                 <Link href="/services#venue-styling" className="transition-colors duration-300 hover:text-[#C4B5C7]">
-                  Venue Styling
+                  Floral Artistry
                 </Link>
               </li>
             
@@ -164,7 +164,7 @@ export default function Footer() {
           {/* CONTACT DETAILS COLUMN */}
           <div className="lg:col-span-3 space-y-4">
             <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#C4B5C7] font-semibold block">
-              Studio &amp; Contact
+             Contact
             </span>
             <div className="space-y-3 text-xs sm:text-sm font-light text-[#D4C8D6]">
               <p>Available worldwide for destination celebrations.</p>

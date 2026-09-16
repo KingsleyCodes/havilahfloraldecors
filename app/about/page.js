@@ -4,22 +4,22 @@ import Link from "next/link";
 // Data structures reflecting Havilah Florals & Decor actual brand positioning and editorial flow
 const philosophies = [
   {
-    title: "We Get To Know The Couple",
+    title: "Discovery",
  
     description:
-      "We believe floral design is an architectural discipline. We do not simply fill tables with blooms; we analyze spatial proportions, sightlines, ceiling heights, and guest movement to construct immersive structures that reframe venues into living canvases.",
+      "We get to know YOU; your story, voision, and celebration goals via a scheduled call.",
   },
   {
-    title: "Organic Materiality",
+    title: "Design Conceptt",
  
     description:
-      "Our work celebrates the natural movement, texture, and rare seasonal beauty of botanicals. Paired with custom linen selections, bespoke lighting design, and tactile tableware, every element is curated to evoke authentic sensory warmth.",
+      "We listen to understand your desires, then together, we establish a clear design direction for your ddecor experience. Every detail is thoughtfully curated into a concept that feels uniquely yours.",
   },
   {
-    title: "Atmospheric Storytelling",
+    title: "Delivery",
   
     description:
-      "Every celebration possesses a singular narrative. We reject template aesthetics, listening deeply to your vision to compose an environment that feels profoundly personal, emotionally resonant, and distinctly unforgettable.",
+      "We bring the vision to life through intentional styling and seemless execution.",
   },
 ];
 
@@ -124,9 +124,9 @@ export default function AboutPage() {
                   Beyond Havilah, I&apos;m a wife, a mother, and a woman deeply rooted in faith. Those roles shape how I serve every couple: with thoughtfulness, excellence, integrity, and joy.
                 </p>
 
-                <p className="pt-2 font-medium text-[#1A1A1A]">
-                  It would be an honour to help you create a celebration that feels beautifully and authentically yours.
-                </p>
+               <p className="pt-2 font-medium text-[#1A1A1A]">
+  It would be an honour to be part of your love story or milestone celebration.
+</p>
               </div>
 
             </div>
@@ -182,85 +182,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECTION — WHAT WE BELIEVE
-            ========================================================================= */}
-        <section
-          aria-label="What We Believe"
-          className="relative py-8 sm:py-10 bg-[#F4EFF6] text-[#1A1A1A] border-b border-[#E6DFDA]"
-        >
-          <div className="max-w-[1300px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
-            
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-3">
-              Core Belief
-            </span>
 
-            <blockquote className="font-serif text-xl sm:text-3xl md:text-4xl font-normal text-[#1A1A1A] leading-[1.25] max-w-4xl mx-auto mb-4">
-              “Beauty is not an afterthought added to a room. True design is the invisible energy that makes guests feel genuinely honored to be there.”
-            </blockquote>
-
-            <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
-              We believe in the quiet luxury of thoughtful detail, the power of organic botanical composition, and the lasting impact of a seamlessly executed event environment.
-            </p>
-
-          </div>
-        </section>
-
-        {/* =========================================================================
-            SECTION — THE HAVILAH EXPERIENCE
-            ========================================================================= */}
-        <section
-          aria-label="The Havilah Experience"
-          className="relative py-6 sm:py-8 md:py-10 bg-[#FAF8F5] border-b border-[#E6DFDA]"
-        >
-          <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-end mb-6">
-              <div className="lg:col-span-8">
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#5F327B] block mb-1.5">
-                  The Experience
-                </span>
-                <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#1A1A1A] leading-[1.1]">
-                  A collaborative creative journey designed for absolute peace of mind.
-                </h2>
-              </div>
-              <div className="lg:col-span-4 lg:pb-1">
-                <p className="text-xs sm:text-sm text-[#5C555B] font-light leading-relaxed">
-                  From initial vision mapping to late-night event teardown, our structural process guarantees clarity and artistic perfection.
-                </p>
-              </div>
-            </div>
-
-            {/* PROCESS GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {experienceSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className="p-5 bg-white border border-[#E6DFDA] rounded-sm flex flex-col justify-between group hover:border-[#5F327B] transition-colors duration-300"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-4 pb-2 border-b border-[#E6DFDA]">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#5C555B]">
-                        {step.duration}
-                      </span>
-                    </div>
-                    <h3 className="font-serif text-lg sm:text-xl font-normal text-[#1A1A1A] mb-2 group-hover:text-[#5F327B] transition-colors duration-300">
-                      {step.title}
-                    </h3>
-                    <p className="text-xs text-[#5C555B] font-light leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                  <div className="mt-4 pt-2 border-t border-[#E6DFDA]/60 text-[9px] uppercase tracking-widest text-[#5F327B]">
-                    Studio Standard
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </section>
-
+        
         {/* =========================================================================
             SECTION — VISUAL BRAND MOMENT
             ========================================================================= */}

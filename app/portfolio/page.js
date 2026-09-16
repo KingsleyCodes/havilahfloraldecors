@@ -193,7 +193,7 @@ export default function PortfolioPage() {
             </h2>
 
             <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
-              Allow us to bring our signature botanical aesthetic to your upcoming wedding, gala, or private event.
+              Allow us to bring our signature experience to your upcoming wedding, gala, or private event.
             </p>
 
             <div>

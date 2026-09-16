@@ -71,7 +71,7 @@ export default function HomeFounderSection() {
 
             {/* Standout Quote */}
             <p className="font-serif text-base sm:text-lg text-[#1A1A1A] italic leading-snug pt-1 border-l-2 border-[#5F327B]/30 pl-4">
-              "Wedding decor should be more than beautiful—it should feel personal. It should reflect the people at the heart of the celebration and tell a story guests experience the moment they step into the room."
+              "Wedding decor should be more than beautiful, it should feel personal. It should reflect the people at the heart of the celebration and tell a story guests experience the moment they step into the room."
             </p>
 
             {/* Concise Story Copy */}
@@ -80,7 +80,7 @@ export default function HomeFounderSection() {
                 When we work together, I look beyond colours and arrangements. I focus on the atmosphere you want to cultivate, the memories you want your guests to treasure, and the feeling you&apos;ll cherish every time you look back on your day.
               </p>
               <p>
-                Beyond floral architecture, I am a wife, a mother, and a woman deeply rooted in faith—values that guide every celebration we curate with excellence, integrity, and joy.
+                Beyond floral architecture, I am a wife, a mother, and a woman deeply rooted in faith;values that guide every celebration we curate with excellence, integrity, and joy.
               </p>
             </div>
 
