@@ -101,12 +101,42 @@ const eventGalleries = {
       { src: "/theadorables.webp", alt: "Lounge Seating", caption: "" },
       { src: "/theadorables1.webp", alt: "Lounge Seating", caption: "" },
       { src: "/theadorables2.webp", alt: "Lounge Seating", caption: "" },
-     
-      
-  
       { src: "/theadorables6.webp", alt: "Lounge Seating", caption: "" },
       { src: "/theadorables7.webp", alt: "Lounge Seating", caption: "" },
       { src: "/theadorables8.webp", alt: "Lounge Seating", caption: "" },
+     
+    ],
+  },
+  "we-together-forever": {
+    title: "",
+    category: "",
+    date: "",
+    location: "",
+    description: "",
+    gallery: [
+      { src: "/wetogetherforever.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever1.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever9.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever3.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever4.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/wetogetherforever5.webp", alt: "Lounge Seating", caption: "" },
+     
+    ],
+  },
+  "celebration-of-life-mummy-crown": {
+    title: "",
+    category: "",
+    date: "",
+    location: "",
+    description: "",
+    gallery: [
+      { src: "/celebrationoflife1.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife2.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife3.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife4.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife5.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/celebrationoflife6.webp", alt: "Lounge Seating", caption: "" },
+     
     ],
   },
   "opulent-imperial-reception": {

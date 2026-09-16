@@ -253,7 +253,7 @@ export default function AboutPage() {
         {/* =========================================================================
             SECTION — CLOSING BRAND STATEMENT
             ========================================================================= */}
-        <section
+        {/* <section
           aria-label="Closing Invitation"
           className="relative py-8 sm:py-12 bg-[#5F327B] text-[#FAF8F5] overflow-hidden"
         >
@@ -264,16 +264,9 @@ export default function AboutPage() {
 
           <div className="relative z-10 max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
             
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FAF8F5]/70 block mb-2">
-              Begin Your Story
-            </span>
+          
 
-            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#FAF8F5] max-w-3xl mx-auto mb-4">
-              Let’s create something <br className="hidden sm:inline" />
-              <span className="italic font-light text-[#FAF8F5]/90">
-                truly unforgettable.
-              </span>
-            </h2>
+           
 
             <p className="max-w-xl mx-auto text-xs sm:text-sm text-[#FAF8F5]/80 font-light leading-relaxed mb-6">
               Whether you are planning an intimate gathering or a grand destination wedding, we invite you to start a conversation with our design team.
@@ -295,7 +288,7 @@ export default function AboutPage() {
             </div>
 
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );

@@ -12,7 +12,7 @@ const heroSlides = [
     src: '/a2.jpg',
     alt: 'Luxury floral arrangement and table styling for a high-end wedding reception',
     tagline: '',
-    title: 'Telling love storires through decor',
+    title: 'Telling love stories through decor',
     description: '',
     buttonText: "LET'S CREATE YOUR DECOR EXPERIENCE!",
     buttonHref: '/contact',

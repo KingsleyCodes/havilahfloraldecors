@@ -14,6 +14,8 @@ export async function generateStaticParams() {
     { slug: "love-in-colors-traditional-wedding" },
     { slug: "the-royal-wedding-reception" },
     { slug: "the-adorables-milestone-celebration "},
+    { slug: "we-together-forever "},
+    {slug: "celebration-of-life-mummy-crown" },
     
   ];
 }

@@ -40,19 +40,19 @@ const projectsData = [
     description: "A dramatic botanical sculpture designed to anchor ceremony vows."
   },
   {
-    id: "velvet-galia-soiree",
-    title: "Velvet Soirée",
-    category: "Event Decor",
-    location: "The Glasshouse",
-    image: "/por4.jpg",
+    id: "we-together-forever",
+    title: "Wani and Evans",
+    category: "WE: Together FORVER",
+    location: "",
+    image: "/we.jpg",
     description: "Rich velvet textures paired with moody floral arrangements."
   },
   {
-    id: "opulent-imperial-reception",
-    title: "Imperial Reception",
-    category: "Weddings",
-    location: "Royal Ballroom",
-    image: "/por5.jpg",
+    id: "celebration-of-life-mummy-crown",
+    title: "Mummy Crown",
+    category: "celebration of life",
+    location: "",
+    image: "/celebrationoflife.webp",
     description: "Grand ballroom transformation incorporating height-scaled floral arrangements."
   }
 ];

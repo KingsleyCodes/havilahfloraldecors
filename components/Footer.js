@@ -72,32 +72,39 @@ export default function Footer() {
                 Follow Our Work
               </span>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs uppercase tracking-[0.15em] font-medium text-[#FAF6F0]">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
-                >
-                  Instagram <span className="text-[10px] text-[#C4B5C7]">↗</span>
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
-                >
-                  Facebook <span className="text-[10px] text-[#C4B5C7]">↗</span>
-                </a>
-                <a
-                  href="https://pinterest.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
-                >
-                  Pinterest <span className="text-[10px] text-[#C4B5C7]">↗</span>
-                </a>
-             
-              </div>
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
+  >
+    Instagram <span className="text-[10px] text-[#C4B5C7]">↗</span>
+  </a>
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
+  >
+    Facebook <span className="text-[10px] text-[#C4B5C7]">↗</span>
+  </a>
+  <a
+    href="https://pinterest.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
+  >
+    Pinterest <span className="text-[10px] text-[#C4B5C7]">↗</span>
+  </a>
+  <a
+    href="https://tiktok.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition-colors duration-300 hover:text-[#C4B5C7] focus-visible:outline-none"
+  >
+    TikTok <span className="text-[10px] text-[#C4B5C7]">↗</span>
+  </a>
+</div>
             </div>
           </div>
 

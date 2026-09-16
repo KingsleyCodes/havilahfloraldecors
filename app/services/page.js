@@ -72,7 +72,7 @@ const processSteps = [
   },
   {
     label: "Execution",
-    title: "Artisan On-Site Production",
+    title: "Team Production and Installation",
     text: "Our team manages complete installation, floral styling, and precise placement on the day of your event.",
   },
 ];
@@ -138,7 +138,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-5 reveal active">
                 <div className="relative aspect-[4/5] w-full bg-[#E6DFDA] overflow-hidden rounded-sm border border-[#E6DFDA] shadow-sm">
                   <Image
-                    src="/h2.png"
+                    src="/servicesimage.jpg"
                     alt="Elegant Havilah floral arrangement"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
