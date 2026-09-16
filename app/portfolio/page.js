@@ -8,35 +8,35 @@ import { motion, AnimatePresence } from "framer-motion";
 // NOTE: Ensure these IDs match the keys in your [slug] page's eventGalleries object
 const projectsData = [
   {
-    id: "royal-orchid-gala",
-    title: "Orchid Gala",
-    category: "Event Decor",
-    location: "The Grand Pavilion",
-    image: "/a1.jpg",
+    id: "the-beauty-of-nature",
+    title: "Goldie and Ned",
+    category: "The Beauty Of Nature",
+    location: "",
+    image: "/crucmain.jpg",
     description: "An ethereal evening environment defined by rare orchid compositions."
   },
   {
-    id: "celestial-botanical-wedding",
-    title: "Botanical Wedding",
-    category: "Weddings",
-    location: "Estate Conservatory",
-    image: "/por1.jpg",
+    id: "love-in-colors-traditional-wedding",
+    title: "Happiness and Demola",
+    category: "Love in Traditional Wedding",
+    location: "",
+    image: "/loveintraditionalmarriage1.webp",
     description: "A lush botanical installation featuring immersive ceiling greenery."
   },
   {
-    id: "candlelit-garden-reception",
-    title: "Garden Reception",
-    category: "Weddings",
-    location: "Private Residence",
-    image: "/por2.jpg",
+    id: "the-royal-wedding-reception",
+    title: "Mary and Oswald",
+    category: "The Royal Wedding",
+    location: "",
+    image: "/theroyal.jpeg",
     description: "An intimate outdoor dining experience featuring warm candlelit long tables."
   },
   {
-    id: "grand-arch-floral-installation",
-    title: "Floral Arch",
-    category: "Installations",
-    location: "Metropolitan Hall",
-    image: "/por3.jpg",
+    id: "the-adorables-milestone-celebration",
+    title: "The Adorables",
+    category: "One Year Birthday",
+    location: "",
+    image: "/theadorables1.webp",
     description: "A dramatic botanical sculpture designed to anchor ceremony vows."
   },
   {

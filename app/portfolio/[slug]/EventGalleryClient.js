@@ -30,19 +30,53 @@ const eventGalleries = {
     gallery: [
       { src: "/por5.jpg", alt: "", caption: "" },
       { src: "/porr.jpg", alt: "", caption: "" },
-      {src:"/ff2.png", alt:"", caption:""},
+      { src: "/ff2.png", alt: "", caption: "" },
     ],
   },
-  "featured-wedding-three": {
+  
+  "the-beauty-of-nature": {
     title: "",
-    category: "Weddings",
+    category: "",
     date: "",
     location: "",
     description: "",
     gallery: [
-      { src: "/couple4.jpg", alt: "", caption: "" },
-      { src: "/ref.jpg", alt: "", caption: "" },
-        { src: "/couple44.jpg", alt: "", caption: "" },
+      { src: "/cruc1.webp", alt: "", caption: "" },
+      { src: "/cruc2.webp", alt: "", caption: "" },
+      { src: "/cruc4.webp", alt: "", caption: "" },
+      { src: "/cruc5.webp", alt: "", caption: "" },
+      { src: "/cruc6.webp", alt: "", caption: "" },
+      { src: "/cruc7.webp", alt: "", caption: "" },
+    ],
+  },
+  "love-in-colors-traditional-wedding": {
+    title: "",
+    category: "",
+    date: "",
+    location: "",
+    description: "",
+    gallery: [
+      { src: "/loveintraditionalmarriage2.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage3.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage4.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage5.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage6.webp", alt: "", caption: "" },
+      { src: "/loveintraditionalmarriage7.webp", alt: "", caption: "" },
+    ],
+  },
+  "the-royal-wedding-reception": {
+    title: "",
+    category: "",
+    date: "",
+    location: "",
+    description: "",
+    gallery: [
+      { src: "/theroyal.webp", alt: "", caption: "" },
+      { src: "/theroyal1.webp", alt: "", caption: "" },
+      { src: "/theroyal2.webp", alt: "", caption: "" },
+      { src: "/theroyal3.webp", alt: "", caption: "" },
+      { src: "/theroyal4.webp", alt: "", caption: "" },
+      { src: "/theroyal5.webp", alt: "", caption: "" },
     ],
   },
   "featured-wedding-three": {
@@ -52,19 +86,27 @@ const eventGalleries = {
     location: "Metropolitan Hall",
     description: "A dramatic botanical sculpture designed to anchor ceremony vows.",
     gallery: [
-        { src: "/couple4.jpg", alt: "", caption: "" },
+      { src: "/couple4.jpg", alt: "", caption: "" },
       { src: "/reff.jpg", alt: "", caption: "" },
-        { src: "/couple44.jpg", alt: "", caption: "" },
+      { src: "/couple44.jpg", alt: "", caption: "" },
     ],
   },
-  "velvet-galia-soiree": {
-    title: "Velvet Soirée",
-    category: "Galas & Soirées",
-    date: "Fall 2025",
-    location: "The Glasshouse",
-    description: "Rich velvet textures paired with moody floral arrangements.",
+  "the-adorables-milestone-celebration": {
+    title: "",
+    category: "",
+    date: "",
+    location: "",
+    description: "",
     gallery: [
-      { src: "/d2.jpg", alt: "Lounge Seating", caption: "Lounge Seating Styling" },
+      { src: "/theadorables.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/theadorables1.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/theadorables2.webp", alt: "Lounge Seating", caption: "" },
+     
+      
+  
+      { src: "/theadorables6.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/theadorables7.webp", alt: "Lounge Seating", caption: "" },
+      { src: "/theadorables8.webp", alt: "Lounge Seating", caption: "" },
     ],
   },
   "opulent-imperial-reception": {
@@ -114,47 +156,64 @@ export default function EventGalleryClient({ slug }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex, showNext, showPrev]);
 
+  const hasHeaderContent =
+    Boolean(eventData.title) ||
+    Boolean(eventData.category) ||
+    Boolean(eventData.location) ||
+    Boolean(eventData.date) ||
+    Boolean(eventData.description);
+
   return (
-    <main className="w-full bg-white text-[#1A1A1A] pt-28 pb-16 sm:pb-24">
+    <main className="w-full bg-white text-[#1A1A1A] pt-32 sm:pt-36 pb-16 sm:pb-24">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
         
-        {/* BACK BUTTON */}
-        <div className="mb-8">
+        {/* BACK TO PORTFOLIO LINK */}
+        <div className={`relative z-20 block ${hasHeaderContent ? "mb-4 sm:mb-6" : "mb-6 sm:mb-8"}`}>
           <Link
             href="/portfolio"
-            className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-medium text-[#5F327B] hover:text-[#1A1A1A] transition-colors duration-300"
+            className="inline-flex items-center space-x-2 text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold text-[#5F327B] hover:text-[#1A1A1A] transition-colors duration-300 py-1"
           >
-            <ArrowLeft size={14} />
+            <ArrowLeft size={16} className="shrink-0" />
             <span>Back to Portfolio</span>
           </Link>
         </div>
 
-        {/* HEADER */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="border-b border-[#E8E1DC] pb-8 mb-10 sm:mb-12"
-        >
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-3">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#5F327B] font-semibold">
-              {eventData.category}
-            </span>
-            <div className="flex items-center space-x-4 text-xs tracking-wider text-[#5C555B] font-medium">
-              <span>{eventData.location}</span>
-              <span>•</span>
-              <span>{eventData.date}</span>
-            </div>
-          </div>
+        {/* HEADER SECTION */}
+        {hasHeaderContent && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="border-b border-[#E8E1DC] pb-4 mb-6"
+          >
+            {(eventData.category || eventData.location || eventData.date) && (
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-2">
+                {eventData.category && (
+                  <span className="text-xs uppercase tracking-[0.25em] text-[#5F327B] font-semibold">
+                    {eventData.category}
+                  </span>
+                )}
+                <div className="flex items-center space-x-4 text-xs tracking-wider text-[#5C555B] font-medium">
+                  {eventData.location && <span>{eventData.location}</span>}
+                  {eventData.location && eventData.date && <span>•</span>}
+                  {eventData.date && <span>{eventData.date}</span>}
+                </div>
+              </div>
+            )}
 
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-[#1A1A1A] mb-4">
-            {eventData.title}
-          </h1>
+            {eventData.title && (
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-[#1A1A1A] mb-2">
+                {eventData.title}
+              </h1>
+            )}
 
-          <p className="text-sm sm:text-base text-[#5C555B] font-light leading-relaxed max-w-2xl">
-            {eventData.description}
-          </p>
-        </motion.div>
+            {eventData.description && (
+              <p className="text-sm sm:text-base text-[#5C555B] font-light leading-relaxed max-w-2xl">
+                {eventData.description}
+              </p>
+            )}
+          </motion.div>
+        )}
 
         {/* GALLERY GRID */}
         <motion.div
@@ -173,7 +232,7 @@ export default function EventGalleryClient({ slug }) {
                 src={item.src}
                 alt={item.alt}
                 fill
-                priority={idx < 3} // Preloads top 3 images immediately
+                priority={idx < 3}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               />

@@ -10,6 +10,11 @@ export async function generateStaticParams() {
     { slug: "grand-arch-floral-installation" },
     { slug: "velvet-galia-soiree" },
     { slug: "opulent-imperial-reception" },
+    { slug: "the-beauty-of-nature" },
+    { slug: "love-in-colors-traditional-wedding" },
+    { slug: "the-royal-wedding-reception" },
+    { slug: "the-adorables-milestone-celebration "},
+    
   ];
 }
 
