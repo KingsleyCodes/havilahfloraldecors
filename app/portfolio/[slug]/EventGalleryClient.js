@@ -14,7 +14,7 @@ const eventGalleries = {
     category: "",
     date: "",
     location: "",
-    description: "An ethereal evening environment defined by rare orchid compositions.",
+    description: "",
     gallery: [
       { src: "/couple1.jpg", alt: "", caption: "" },
       { src: "/personalizedwedding.jpg", alt: "", caption: "" },
@@ -26,7 +26,7 @@ const eventGalleries = {
     category: "Weddings",
     date: "Summer 2025",
     location: "Estate Conservatory",
-    description: "A lush botanical installation featuring immersive ceiling greenery.",
+    description: "",
     gallery: [
       { src: "/por5.jpg", alt: "", caption: "" },
       { src: "/porr.jpg", alt: "", caption: "" },

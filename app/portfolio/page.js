@@ -13,7 +13,23 @@ const projectsData = [
     category: "The Beauty Of Nature",
     location: "",
     image: "/crucmain.jpg",
-    description: "An ethereal evening environment defined by rare orchid compositions."
+    description: ""
+  },
+  {
+    id: "featured-wedding-one",
+    title: "",
+    category: "",
+    location: "",
+    image: "/couple1.jpg",
+    description: ""
+  },
+  {
+    id: "featured-wedding-two",
+    title: "",
+    category: "",
+    location: "",
+    image: "/por5.jpg",
+    description: ""
   },
   {
     id: "love-in-colors-traditional-wedding",
@@ -21,7 +37,7 @@ const projectsData = [
     category: "Love in color",
     location: "",
     image: "/loveintraditionalmarriage1.webp",
-    description: "A lush botanical installation featuring immersive ceiling greenery."
+    description: ""
   },
   {
     id: "the-royal-wedding-reception",
@@ -122,7 +138,7 @@ export default function PortfolioPage() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6"
               >
                 {projectsData.map((event) => (
                   <motion.div key={event.id} variants={cardVariants}>
@@ -135,7 +151,7 @@ export default function PortfolioPage() {
                         src={event.image}
                         alt={event.title}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                       />
 

@@ -63,7 +63,7 @@ export default function Footer() {
             </Link>
             
             <p className="text-xs sm:text-sm text-[#D4C8D6] font-light leading-relaxed max-w-sm">
-             We curate event decor experiences that are personalized, thoughful and detailedd leaving joyful memories!
+             We curate event decor experiences that are personalized, thoughful and detailed leaving joyful memories!
             </p>
 
             {/* SOCIAL MEDIA LINKS */}
@@ -182,12 +182,12 @@ export default function Footer() {
                 >
                   havilahflorals@gmail.com
                 </a>
-                <a
-                  href="tel:+2349026810641"
-                  className="block text-[#FAF6F0] hover:text-[#C4B5C7] transition-colors duration-300"
-                >
-                  +2349026810641
-                </a>
+               <a
+  href="tel:+2349026810641"
+  className="block text-[#FAF6F0] hover:text-[#C4B5C7] transition-colors duration-300"
+>
+  Call / WhatsApp: +234 902 681 0641
+</a>
               </div>
             </div>
           </div>

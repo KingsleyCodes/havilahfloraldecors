@@ -7,22 +7,22 @@ import { motion } from "framer-motion";
 
 const portfolioEvents = [
   {
-    title: "Featured Wedding One",
+    title: "",
     category: "",
     slug: "featured-wedding-one",
     image: "/couple1.jpg",
   },
   {
-    title: "Featured Wedding Two",
+    title: "",
     category: "",
     slug: "featured-wedding-two",
     image: "/por5.jpg",
   },
   {
-    title: "Featured Wedding Three",
+    title: "Love In Colors",
     category: "",
-    slug: "featured-wedding-three",
-    image: "/couple4.jpg",
+    slug: "love-in-colors-traditional-wedding",
+    image: "/loveintraditionalmarriage1.webp",
   },
 ];
 
