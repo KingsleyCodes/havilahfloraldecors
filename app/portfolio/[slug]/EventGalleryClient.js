@@ -55,7 +55,7 @@ const eventGalleries = {
       { src: "/cruc4.webp", alt: "", caption: "" },
       { src: "/cruc5.webp", alt: "", caption: "" },
       { src: "/cruc6.webp", alt: "", caption: "" },
-      { src: "/cruc8.webp", alt: "", caption: "" },
+      { src: "/loveinnaturenature.webp", alt: "", caption: "" },
     ],
   },
   "love-in-colors-traditional-wedding": {
