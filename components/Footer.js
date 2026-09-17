@@ -201,7 +201,7 @@ export default function Footer() {
           <p>© {currentYear} Havilah Florals &amp; Decor. All rights reserved.</p>
           <div className="flex items-center space-x-6">
             <Link href="/privacy" className="hover:text-[#FAF6F0] transition-colors duration-300">
-              Privacy Policy
+              
             </Link>
             
           </div>

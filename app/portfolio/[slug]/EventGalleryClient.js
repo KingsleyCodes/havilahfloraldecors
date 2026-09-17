@@ -9,7 +9,7 @@ import { X, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 
 // YOUR EVENT IMAGES & DETAILS DATA
 const eventGalleries = {
-  "featured-wedding-one": {
+  "lauryn-and-ugo": {
     title: "",
     category: "",
     date: "",
@@ -19,18 +19,27 @@ const eventGalleries = {
       { src: "/couple1.jpg", alt: "", caption: "" },
       { src: "/personalizedwedding.jpg", alt: "", caption: "" },
       { src: "/a2.jpg", alt: "", caption: "" },
+      {src: "/lauryanandugo.webp", alt: "", caption: "" },
+      {src: "/lauryanandugo1.webp", alt: "", caption: "" },
+      {src: "/lauryanandugo2.webp", alt: "", caption: "" },
     ],
   },
-  "featured-wedding-two": {
+  "amanda-and-frank": {
     title: "",
     category: "Weddings",
-    date: "Summer 2025",
-    location: "Estate Conservatory",
+    date: "",
+    location: "",
     description: "",
     gallery: [
       { src: "/por5.jpg", alt: "", caption: "" },
       { src: "/porr.jpg", alt: "", caption: "" },
-      { src: "/ff2.png", alt: "", caption: "" },
+      { src: "/amandaandfrank5.webp", alt: "", caption: "" },
+      { src: "/amandaandfrank1.webp", alt: "", caption: "" },
+      { src: "/amandaandfrank2.webp", alt: "", caption: "" },
+      { src: "/amandaandfrank3.webp", alt: "", caption: "" },
+      { src: "/amandaandfrank4.webp", alt: "", caption: "" },
+      { src: "/amandaandfrank.webp", alt: "", caption: "" },
+      { src: "/amandaandfrank6.webp", alt: "", caption: "" },
     ],
   },
   

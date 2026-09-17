@@ -4,8 +4,8 @@ import EventGalleryClient from "./EventGalleryClient";
 // Tell Next.js to pre-build all 6 event pages during deployment
 export async function generateStaticParams() {
   return [
-    { slug: "featured-wedding-one" },
-    { slug: "featured-weeding-two" },
+    { slug: "lauryn-and-ugo" },
+    { slug: "amanda-and-frank" },
     { slug: "featured-weeding-three" },
     { slug: "grand-arch-floral-installation" },
     { slug: "velvet-galia-soiree" },

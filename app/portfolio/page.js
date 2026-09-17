@@ -16,22 +16,6 @@ const projectsData = [
     description: ""
   },
   {
-    id: "featured-wedding-one",
-    title: "",
-    category: "",
-    location: "",
-    image: "/couple1.jpg",
-    description: ""
-  },
-  {
-    id: "featured-wedding-two",
-    title: "",
-    category: "",
-    location: "",
-    image: "/por5.jpg",
-    description: ""
-  },
-  {
     id: "love-in-colors-traditional-wedding",
     title: "Happiness and Demola",
     category: "Love in color",
@@ -46,6 +30,22 @@ const projectsData = [
     location: "",
     image: "/theroyal.jpeg",
     description: "An intimate outdoor dining experience featuring warm candlelit long tables."
+  },
+  {
+    id: "lauryn-and-ugo",
+    title: "Lauryn and Ugo",
+    category: "",
+    location: "",
+    image: "/couple1.jpg",
+    description: ""
+  },
+  {
+    id: "amanda-and-frank",
+    title: "Amanda and Frank",
+    category: "",
+    location: "",
+    image: "/por5.jpg",
+    description: ""
   },
   {
     id: "the-adorables-milestone-celebration",

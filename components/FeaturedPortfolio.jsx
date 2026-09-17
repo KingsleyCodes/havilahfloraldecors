@@ -9,13 +9,13 @@ const portfolioEvents = [
   {
     title: "",
     category: "",
-    slug: "featured-wedding-one",
+    slug: "lauryn-and-ugo",
     image: "/couple1.jpg",
   },
   {
     title: "",
     category: "",
-    slug: "featured-wedding-two",
+    slug: "amanda-and-frank",
     image: "/por5.jpg",
   },
   {
