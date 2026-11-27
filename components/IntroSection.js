@@ -2,41 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const introImage1 = "/hm.jpg";
 const introImage2 = "/d2.jpg";
-
-// Motion variants for smooth image entrance
-const imageContainerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const imageSlideUpVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 80,
-    scale: 0.96,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 60,
-      damping: 16,
-      mass: 0.8,
-    },
-  },
-};
 
 export default function IntroSection() {
   return (
@@ -100,17 +68,12 @@ export default function IntroSection() {
           </div>
 
           {/* RIGHT COLUMN: STACKED DUAL PHOTOGRAPHY WITH FRAMER MOTION SLIDE-IN */}
-          <motion.div 
-            variants={imageContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+          <div
             className="lg:col-span-7 grid grid-cols-12 gap-4 items-center order-1 lg:order-2"
           >
             
             {/* Main Tall Image */}
-            <motion.div 
-              variants={imageSlideUpVariants}
+            <div
               className="col-span-7 relative aspect-[3/4] bg-[#FAF8F5] overflow-hidden rounded-sm border border-[#E8E1DC] shadow-sm group"
             >
               <Image
@@ -121,11 +84,10 @@ export default function IntroSection() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 priority={false}
               />
-            </motion.div>
+            </div>
 
             {/* Secondary Accent Detail Image */}
-            <motion.div 
-              variants={imageSlideUpVariants}
+            <div
               className="col-span-5 relative aspect-[4/5] bg-[#FAF8F5] overflow-hidden rounded-sm border border-[#E8E1DC] shadow-sm group -mt-6 sm:-mt-8"
             >
               <Image
@@ -135,9 +97,9 @@ export default function IntroSection() {
                 sizes="(max-width: 1024px) 40vw, 25vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               />
-            </motion.div>
+            </div>
 
-          </motion.div>
+          </div>
 
         </div>
 

@@ -114,7 +114,9 @@ export default function ServicesPage() {
                   We Curate Wedding Decor Experiences
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-[#5C555B] font-light leading-relaxed max-w-xl">
-                  We design immersive floral environments that tell your unique story. From intimate gatherings to grand celebrations, our approach is rooted in modern luxury and editorial refinement.
+                 Every celebration begins with a story.
+Our role is to understand that story, translate it into a cohesive visual direction and bring it to life through thoughtful styling, florals, atmosphere and detail.
+
                 </p>
                 <div className="pt-2">
                   <a

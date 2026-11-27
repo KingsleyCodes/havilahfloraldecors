@@ -1,8 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const galleryImages = [
   // CENTERPIECE ANCHOR
@@ -22,40 +20,6 @@ const galleryImages = [
 ];
 
 export default function Gallery() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      x: isMobile ? 50 : 0,
-      y: isMobile ? 0 : 50,
-      scale: 0.9,
-    },
-    visible: (index) => ({
-      opacity: 1,
-      x: 0,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 65,
-        damping: 18,
-        mass: 0.8,
-        delay: isMobile ? 0 : index * 0.1,
-      },
-    }),
-  };
-
   return (
     <section
       aria-label="Image Gallery"
@@ -65,14 +29,9 @@ export default function Gallery() {
         
         {/* RESPONSIVE GRID: 1 col on mobile, 2 cols on tablet, 4 cols in one line on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 relative">
-          {galleryImages.map((image, index) => (
-            <motion.div
+          {galleryImages.map((image) => (
+            <div
               key={image.id}
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
               className="w-full transition-all duration-500"
             >
               <div
@@ -91,7 +50,7 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
                 <div className="absolute inset-2.5 border border-white/0 group-hover:border-white/40 transition-all duration-500 rounded-sm pointer-events-none" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

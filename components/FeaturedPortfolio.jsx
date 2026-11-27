@@ -1,9 +1,7 @@
 'use client';
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const portfolioEvents = [
   {
@@ -27,41 +25,6 @@ const portfolioEvents = [
 ];
 
 export default function FeaturedPortfolio() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  // Card variants: Slide from side (x: 70) on mobile, slide from bottom (y: 70) on desktop
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      x: isMobile ? 70 : 0,
-      y: isMobile ? 0 : 70,
-      scale: 0.96,
-    },
-    visible: (index) => ({
-      opacity: 1,
-      x: 0,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 65,
-        damping: 16,
-        mass: 0.8,
-        delay: isMobile ? 0 : index * 0.1, // Stagger on desktop grid, scroll-driven per card on mobile
-      },
-    }),
-  };
-
   return (
     <section
       aria-label="Featured Portfolio"
@@ -70,28 +33,19 @@ export default function FeaturedPortfolio() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
 
         {/* EDITORIAL HEADER BLOCK */}
-        <motion.div 
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+        <div
           className="max-w-xl mx-auto text-center mb-6 sm:mb-8"
         >
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal leading-[1.15] text-[#1A1A1A] mb-2">
             Curated Portfolio <br className="hidden sm:inline" />
           </h2>
-        </motion.div>
+        </div>
 
         {/* 6-IMAGE GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-10">
           {portfolioEvents.map((event, index) => (
-            <motion.div 
+            <div
               key={event.slug} 
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }} // Triggers individually as each card enters 20% into view
               className={index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
             >
               <Link
@@ -134,16 +88,12 @@ export default function FeaturedPortfolio() {
                 {/* Inner Border Hover Effect */}
                 <div className="absolute inset-2.5 border border-white/0 group-hover:border-white/30 transition-all duration-500 rounded-sm pointer-events-none" />
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* FULL-SIZED CTA BUTTON */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <div
           className="flex justify-center"
         >
           <Link
@@ -158,7 +108,7 @@ export default function FeaturedPortfolio() {
               →
             </span>
           </Link>
-        </motion.div>
+        </div>
 
       </div>
     </section>

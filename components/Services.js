@@ -1,7 +1,6 @@
 'use client';
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const mergedServices = [
   {
@@ -9,7 +8,7 @@ const mergedServices = [
     title: "Wedding Decor Styling",
     tagline: "",
     description:
-      "Creating spaces that ffeel like your love story. We transform venues into personalized wedding experiences where every detail works together beautifully, allowing you and your guests to feel immersed in the celebration of your journey",
+      "For couples celebrating their love story. We thoughtfully design and transform wedding spaces into beautiful, personal experiences that reflect your story, your style and the feeling you want your celebration to leave behind. From the ceremony to the reception, every detail comes together to create an atmosphere you and your guests will remember.",
     highlights: ["Weddings & Celebrations", "Design Development", "Ambient Lighting"],
   },
   {
@@ -17,34 +16,10 @@ const mergedServices = [
     title: "Milestone Celebrations",
     tagline: "",
     description:
-      "Beautifully celebrating life's meaningful moments. Whether it's a milestone birthday, anniversary, baby shower, proposal, engagment, or special gathering, we design experiences that honour the occassion and the people at the heart of it",
+      "For life's moments worth celebrating. Some moments deserve more than a gathering; they deserve to be remembered. We create thoughtfully styled experiences for birthdays, anniversaries, proposals, baby showers and special gatherings, bringing together the details that make each occasion feel meaningful, beautiful and uniquely yours.",
     highlights: ["Bespoke Floral Design", "Milestone Celebrations", "Design Development"],
   },
 ];
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 50,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.215, 0.61, 0.355, 1],
-    },
-  },
-};
 
 export default function ServicesSection() {
   return (
@@ -55,17 +30,12 @@ export default function ServicesSection() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
         
         {/* CONSOLIDATED 2-CARD GRID */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+        <div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12"
         >
           {mergedServices.map((service) => (
-            <motion.div
+            <div
               key={service.id}
-              variants={cardVariants}
               className="group relative bg-[#FAF8F5] border border-[#E8E1DC] p-6 sm:p-8 md:p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-500 hover:border-[#5F327B]/50 flex flex-col justify-between"
             >
               <Link href="/services" className="block focus:outline-none h-full flex flex-col justify-between">
@@ -109,16 +79,12 @@ export default function ServicesSection() {
                   </span>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* BOTTOM CENTERED EXPLORE ALL CTA */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <div
           className="text-center"
         >
           <Link
@@ -133,7 +99,7 @@ export default function ServicesSection() {
               →
             </span>
           </Link>
-        </motion.div>
+        </div>
 
       </div>
     </section>
