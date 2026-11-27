@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes brand-stripe-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.brand-stripe-track {
+  animation: brand-stripe-scroll 34s linear infinite;
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .brand-stripe-track {
+    animation-duration: 27s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-stripe-track {
+    animation: none;
+  }
+
+  aside:has(.brand-stripe-track) {
+    overflow-x: auto;
+  }
+}

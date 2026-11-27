@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
@@ -47,22 +46,6 @@ const testimonials = [
   },
 ];
 
-// Motion variants for slide transition
-const slideVariants = {
-  enter: (direction) => ({
-    x: direction > 0 ? "100%" : "-100%",
-    opacity: 0,
-  }),
-  center: {
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction) => ({
-    x: direction < 0 ? "100%" : "-100%",
-    opacity: 0,
-  }),
-};
-
 export default function Testimonials() {
   const [[page, direction], setPage] = useState([0, 0]);
 
@@ -83,11 +66,7 @@ export default function Testimonials() {
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         
         {/* CENTERED EDITORIAL HEADER BLOCK */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+        <div
           className="max-w-3xl mx-auto text-center mb-8 sm:mb-12"
         >
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] text-[#1A1A1A]">
@@ -96,24 +75,14 @@ export default function Testimonials() {
              Testimonials
             </span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* TEXT SLIDER CONTAINER */}
         <div className="relative max-w-4xl mx-auto px-4 sm:px-12 min-h-[260px] sm:min-h-[220px] flex flex-col justify-between">
           
           <div className="relative overflow-hidden w-full flex-grow flex items-center justify-center">
-            <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.div
+              <div
                 key={page}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 350, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
                 className="w-full text-center px-2 sm:px-6 py-4"
               >
                 <p className="font-serif text-lg sm:text-2xl md:text-3xl text-[#1A1A1A] font-light leading-relaxed mb-6 italic">
@@ -128,8 +97,7 @@ export default function Testimonials() {
                     {currentTestimonial.role} — <span className="italic">{currentTestimonial.event}</span>
                   </p>
                 </div>
-              </motion.div>
-            </AnimatePresence>
+              </div>
           </div>
 
           {/* SLIDER CONTROLS & NAVIGATION */}

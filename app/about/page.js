@@ -4,22 +4,28 @@ import Link from "next/link";
 // Data structures reflecting Havilah Florals & Decor actual brand positioning and editorial flow
 const philosophies = [
   {
-    title: "Discovery",
+    title: "Your Story Shapes The Design",
  
     description:
-      "We get to know YOU; your story, vision, and celebration goals via a scheduled call.",
+      "Your wedding should feel like a reflection of you, not a recreation of someone else's. We draw inspiration from your story, preferences and the moments that matter to you to create a design that feels personal and considered.",
   },
   {
-    title: "Design Concept",
+    title: "We Think Beyoond What You See",
  
     description:
-      "We listen to understand your desires, then together, we establish a clear design direction for your decor experience. Every detail is thoughtfully curated into a concept that feels uniquely yours.",
+      "Beautiful decor is only part of the experience. We consider how guests move through the space, how the different elements come together and how the room feels, creating an atmosphere that is as enjoyable to experience as it is to photograph.",
   },
   {
-    title: "Delivery",
+    title: "We Bring Clarity To Your Vision",
   
     description:
-      "We bring the vision to life through intentional styling and seamless execution.",
+      "You don't need to have every detail figured out before working with us. Whether you have a Pinterest board, a few favourite colours or simply a feeling you want to create, we help you make sense of your ideas and develop them into a cohesive design.",
+  },
+  {
+    title: "We Care About How It All Comes Together",
+  
+    description:
+      "A beautiful concept needs thoughtful execution. From the placement of key design elements to the finishing touches on the day, we pay attention to the details that bring the entire space together as intended.",
   },
 ];
 
@@ -109,19 +115,54 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  Over the years, we&apos;ve had the privilege of helping couples transform ordinary venues into meaningful experiences that celebrate their journey, their personalities, and the love that brought them here.
+                  It started with a wedding setup in Abuja.
+My first real encounter with wedding decor was in December 2018, after my NYSC. I was working as a receptionist with an event rental company when my boss invited me to join the wedding decor team.
+
                 </p>
 
                 <p>
-                  When we work together, I&apos;m not simply thinking about colours, florals, or aesthetics. I&apos;m thinking about the atmosphere you want to create, the memories you want your guests to leave with, and the feeling you want to remember every time you look back on your wedding day.
+                  I remember setting tables in the Abuja harmattan sun, dressing them in white damask, clear crystal charger plates and neatly folded napkins. The details seemed simple, yet together, they transformed a garden into a beautiful setting for a couple celebrating with their loved ones. What stayed with me most was the joy in the atmosphere and how fulfilling it felt to be part of creating that experience.
+
                 </p>
 
                 <p>
-                  We design for the engaged couple, not just the bride, not just the details, but the story you&apos;re building together.
+I didn&apos;t know then that this moment would eventually lead me away from my 9–5 and into building Havilah Florals Decor.
+
                 </p>
 
                 <p>
-                  Beyond Havilah, I&apos;m a wife, a mother, and a woman deeply rooted in faith. Those roles shape how I serve every couple: with thoughtfulness, excellence, integrity, and joy.
+                  Today, as Creative Director, I believe wedding decor should be more than beautiful; it should feel personal. It should reflect the people at the heart of the celebration and tell a story guests can experience the moment they walk into the space.
+
+                </p>
+                <p>
+                  Over the years, we&apos;ve had the privilege of transforming venues into meaningful experiences that celebrate each couple&apos;s journey, personality and love.
+
+                </p>
+                <p>
+                  When I approach a design, I&apos;m thinking beyond colours and florals. I&apos;m thinking about the atmosphere you want to create, the memories you want your guests to carry home and the feeling you want to relive whenever you look back on your celebration.
+
+                </p>
+                <p>
+                  You don&apos;t need to have it all figured out.
+Maybe you have a Pinterest board. Maybe you have colours you love. Maybe you know you want something warm, intimate and beautiful but aren&apos;t quite sure how to translate that feeling into a space.
+
+                </p>
+                <p>
+                  That&apos;s where our creative direction comes in.
+We help you make sense of your ideas, bring the details together and thoughtfully shape them into a celebration that feels like you. You don&apos;t have to know exactly what you want before you come to us. You just have to share what matters to you; we&apos;ll help you find the design direction that brings it to life.
+
+                </p>
+                <p>
+                  We design for the couple, not just the bride; not just the details, but the story you&apos;re building together.
+
+                </p>
+                <p>
+                  Beyond Havilah, I&apos;m a wife, a mother and a woman deeply rooted in faith. These parts of my life shape how I serve every client, with thoughtfulness, excellence, integrity and joy.
+
+                </p>
+                <p>
+                  At Havilah, we believe every love story deserves to be told with intention, and every milestone deserves to be celebrated meaningfully.
+
                 </p>
 
                <p className="pt-2 font-medium text-[#1A1A1A]">
@@ -151,7 +192,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {philosophies.map((item, index) => (
                 <article
                   key={index}

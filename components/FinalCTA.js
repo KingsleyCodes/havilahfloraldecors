@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function FinalCTA() {
   return (
@@ -41,9 +40,7 @@ export default function FinalCTA() {
             </h2>
 
             <p className="max-w-2xl text-sm sm:text-base md:text-lg text-[#FAF8F5]/80 font-light leading-relaxed">
-              We translate personal visions into immersive, architectural environments. 
-              Whether planning a grand wedding or an intimate gala, every memorable experience 
-              begins with a single conversation.
+              We thoughtfully translate your vision into beautifully detailed spaces that feel personal, refined, and true to your story. Whether you&apos;re planning a wedding or an intimate celebration, every memorable experience begins with a conversation about what matters most to you.
             </p>
 
             {/* CALL TO ACTION GROUP */}
@@ -65,14 +62,7 @@ export default function FinalCTA() {
 
           {/* EDITORIAL BOTANICAL / ARCHITECTURAL ACCENT (RIGHT COLUMN) */}
           <div className="lg:col-span-4 relative mt-8 lg:mt-0 flex justify-start lg:justify-end">
-            <motion.div 
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.8,
-                ease: [0.21, 0.47, 0.32, 0.98]
-              }}
+            <div
               className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[340px] aspect-[4/5] p-2 border border-[#FAF8F5]/20 bg-[#5F327B]"
             >
               <div className="relative w-full h-full overflow-hidden bg-[#5F327B]/50">
@@ -86,7 +76,7 @@ export default function FinalCTA() {
                 {/* SUBTLE INNER BORDER FRAME */}
                 <div className="absolute inset-2 border border-[#FAF8F5]/20 pointer-events-none" />
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>

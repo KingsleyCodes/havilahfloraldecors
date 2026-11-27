@@ -25,7 +25,7 @@ const heroSlides = [
     tagline: '',
     title: 'Ambience Lighting And Moments',
     description: '',
-    buttonText: "LET'S CREATE YOUR DECOR EXPERIENCE!",
+    buttonText: "Wedding decor that feels like your love story",
     buttonHref: '/contact',
     objectPosition: 'Top',
   },

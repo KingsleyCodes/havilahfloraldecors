@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Great_Vibes } from "next/font/google";
 
 const signatureFont = Great_Vibes({
@@ -21,11 +20,7 @@ export default function HomeFounderSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* LEFT COLUMN — PORTRAIT WITH EDITORIAL FRAME */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+          <div
             className="lg:col-span-5 relative"
           >
             {/* Background Decorative Accent Block */}
@@ -47,14 +42,10 @@ export default function HomeFounderSection() {
 
             {/* Floating Title Tag */}
           
-          </motion.div>
+          </div>
 
           {/* RIGHT COLUMN — NARRATIVE STORY */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+          <div
             className="lg:col-span-7 space-y-5 mt-6 lg:mt-0"
           >
             {/* Header Tag */}
@@ -94,7 +85,7 @@ export default function HomeFounderSection() {
               </p>
             </div>
 
-          </motion.div>
+          </div>
 
         </div>
       </div>
